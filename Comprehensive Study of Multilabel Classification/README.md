@@ -1,13 +1,11 @@
 # Meta learning for Multi-label Classification
 
-Meta learning generalizes the empirical experience with different learning tasks and holds promise 
-for providing important empirical insight into the behavior of machine learning algorithms.
-
-In this paper, we present a comprehensive meta-learning study of data sets and methods for multilabel classification 
-(MLC). MLC is a practically relevant machine learning task where each example is labeled with multiple labels simultaneously. Here, we analyze 40 MLC data sets by using 50 meta features describing different properties of the data.
+Multi-label classification (MLC) has recently attracted increasing interest in the machine learning community. Several studies provide surveys of methods and datasets for MLC, and a few provide empirical comparisons of MLC methods. However, they are limited in the number of methods and datasets considered. 
 
 
-The main findings of this study are as follows. First, the most prominent meta features that describe the space of MLC data sets are the ones assessing different aspects of the label space. Second, the meta models show that the most important meta features describe the label space, and, the meta features describing the relationships among the labels tend to occur a bit more often than the meta features describing the distributions between and within the individual labels. Third, the optimization of the hyperparameters can improve the predictive performance, however, quite often the extent of the improvements does not always justify the resource utilization.
+This paper provides a comprehensive empirical investigation of a wide range of MLC methods on a wealth of datasets from different domains. More specifically, our study evaluates 26 methods on 42 benchmark datasets using 20 evaluation measures. The evaluation methodology used meets the highest literature standards for designing and conducting large-scale, time-limited experimental studies. First, the methods were selected based on their use in the community to ensure a balanced representation of methods across the MLC taxonomy of methods within the study. Second, the datasets cover a wide range of complexity and application domains. The selected evaluation measures assess the predictive performance and efficiency of the methods. The results of the analysis identify RFPCT, RFDTBR, ECCJ48, EBRJ48, and AdaBoost.MH as the best-performing methods across the spectrum of performance measures. Whenever a new method is introduced, it should be compared with different subsets of MLC methods selected according to relevant (and possibly different) evaluation criteria.
 
 
-Within the code folder one can find the scripts for different meta learning scenarios we tested. 
+The code folder contains the data for processing, running jobs and processing the output. 
+
+
