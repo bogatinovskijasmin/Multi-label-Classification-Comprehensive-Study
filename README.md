@@ -1,5 +1,8 @@
 # Multi-label Classification Comprehensive Study
 
+
+![image](bkgd.jpg)
+
 Multi-label classification is concerned with assigning multiple labels for a single example. The project **Multi-label Classification Comprehensive Study** is an effort to unify the existing resources
 for the task of multi-label classification on tabular data. The key motivation behind this work is the expanding interest in the task due to its practical relevance and omnipresnece across domains.
 One key advantage of models learned on this task is that they can compress the shared information between the multiple targets more effectivly. This results in 
@@ -10,7 +13,7 @@ This project studied more than 25 methods, including more than 50 datasets and e
 The project is composed of three separate projects. They are summarized content-wise, based on the papers they were published in. The paper were published in journals within the Q1 ratings. 
 The papers are listed in the following:  
 
-![image](bkgd.jpg)
+
 
 * *A catalogue with semantic annotations makes multilabel datasets FAIR*, **Bogatinovski J., et al.** 2022, Scientific Reports, **(IF 4.997, h-index 206)** https://www.nature.com/articles/s41598-022-11316-3
 * *Comprehensive comparative study of multi-label classification methods*, **Bogatinovski J., et al.** 2022, Expert Systems with Applications, **(IF 8.665, h-index 132)** https://www.sciencedirect.com/science/article/pii/S0957417422005991
