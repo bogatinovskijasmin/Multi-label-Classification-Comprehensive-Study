@@ -22,7 +22,7 @@ The papers are listed in the following:
 
 The MLC Dataset catalogue contains descriptions of 89 MLC datasets. Each dataset is annotated with a description of the problem the dataset is associated with and the different transformations performed. All dataset descriptions are enhanced with semantic annotations (metadata) based on classes/terms from ontologies and controlled vocabularies. The semantic annotations can be categorized into two groups: (1) Annotations of the dataset provenance information and (2) Annotations that capture the relevant machine-learning characteristics of the datasets.
 
-In addition, we held a tutorial on **Multi-label Classification at ECML PKDD 2021** (https://2021.ecmlpkdd.org/index.html@p=1705.html). The program can be found here: 
+In addition, we held a tutorial on **Multi-label Classification at ECML PKDD 2021**. The program can be found here: https://2021.ecmlpkdd.org/index.html@p=1705.html. 
 The link to the presentation is available here: https://drive.google.com/drive/folders/1B4tff9Mp3uW9Wq-nkvQj4KrOkLNF0mvY?usp=sharing. 
 
 The MLC Dataset Catalog can be accessed at: http://semantichub.ijs.si/MLCdatasets/.
