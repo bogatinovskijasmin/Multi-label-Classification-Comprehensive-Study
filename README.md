@@ -10,8 +10,7 @@ This project studied more than 25 methods, including more than 50 datasets and e
 The project is composed of three separate projects. They are summarized content-wise, based on the papers they were published in. The paper were published in journals within the Q1 ratings. 
 The papers are listed in the following:  
 
-
-[!image](bkgd.png)
+![image](bkgd.jpg)
 
 * *A catalogue with semantic annotations makes multilabel datasets FAIR*, **Bogatinovski J., et al.** 2022, Scientific Reports, **(IF 4.997, h-index 206)** https://www.nature.com/articles/s41598-022-11316-3
 * *Comprehensive comparative study of multi-label classification methods*, **Bogatinovski J., et al.** 2022, Expert Systems with Applications, **(IF 8.665, h-index 132)** https://www.sciencedirect.com/science/article/pii/S0957417422005991
