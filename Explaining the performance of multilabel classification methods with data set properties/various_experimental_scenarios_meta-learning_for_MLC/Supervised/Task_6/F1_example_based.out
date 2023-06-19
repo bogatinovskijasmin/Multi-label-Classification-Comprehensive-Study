@@ -1,0 +1,240 @@
+Clus run metaDataset
+********************
+
+Date: 2/26/20, 5:10 PM
+File: F1_example_based.out
+Attributes: 54 (input: 50, output: 3)
+Missing values: No
+
+[General]
+Verbose = 1
+RandomSeed = 0
+ResourceInfoLoaded = No
+DoNotInduce = No
+LoggingProperties = logging.properties
+
+[Data]
+File = /home/matilda/PycharmProjects/MetaLearningForMLC/Meta_learning_MLC/LearningScenarios/Supervised/Task_5/dataset_clus.arff
+TestSet = None
+PruneSet = None
+XVal = 40
+RemoveMissingTarget = No
+NormalizeData = None
+
+[Attributes]
+Target = 52-54
+Clustering = 52-54
+Descriptive = 2-51
+Key = 1
+Disable = None
+Weights = Normalize
+ClusteringWeights = 1.0
+ReduceMemoryNominalAttrs = No
+GIS = None
+
+[Constraints]
+Syntactic = None
+MaxSize = Infinity
+MaxError = 0.0
+MaxDepth = Infinity
+
+[Nominal]
+MEstimate = 1.0
+
+[Model]
+MinimalWeight = 2.0
+MinimalNumberExamples = 0
+MinimalKnownWeight = 0.0
+ParamTuneNumberFolds = 39
+NominalSubsetTests = Yes
+
+[Tree]
+Heuristic = VarianceReduction
+HeuristicComplexity = N2
+SetDistance = GSMDistance
+TupleDistance = Euclidean
+TSDistance = DTW
+PruningMethod = M5
+M5PruningMult = 2.0
+FTest = 0.01
+BinarySplit = Yes
+ConvertToRules = No
+AlternativeSplits = No
+Optimize = []
+MSENominal = No
+SplitSampling = None
+MissingClusteringAttrHandling = EstimateFromParentNode
+MissingTargetAttrHandling = ParentNode
+InductionOrder = DepthFirst
+EntropyType = StandardEntropy
+ConsiderUnlableInstancesInIGCalc = No
+SpatialMatrix = Binary
+SpatialMeasure = GlobalMoran
+Bandwidth = 0.001
+Longlat = No
+NumNeightbours = 0.0
+Alpha = 1.0
+SplitPosition = Exact
+
+[SemiSupervised]
+SemiSupervisedMethod = PCT
+StoppingCriteria = NoneAdded
+UnlabeledCriteria = Threshold
+ConfidenceThreshold = 0.8
+ConfidenceMeasure = Variance
+Iterations = 10
+K = 5
+UnlabeledData = 
+PercentageLabeled = 5
+UseWeights = No
+AirbagTrials = 0
+ExhaustiveSearchThresholds = [0.5,0.6,0.7,0.8,0.9,0.99]
+OOBErrorCalculation = LabeledOnly
+Normalization = MinMaxNormalization
+Aggregation = Average
+CalibrateHmcThreshold = No
+PruningWhenTuning = No
+InternalFolds = 5
+WeightScoresFile = NO
+PossibleWeights = [0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0]
+
+[Output]
+ShowModels = [Default, Pruned, Others]
+TrainErrors = Yes
+ValidErrors = Yes
+TestErrors = Yes
+AllFoldModels = Yes
+AllFoldErrors = No
+AllFoldDatasets = No
+UnknownFrequency = No
+BranchFrequency = No
+ShowInfo = [Key]
+PrintModelAndExamples = Yes
+WriteErrorFile = No
+WriteModelFile = No
+WritePerBagModelFile = Yes
+WriteOOBFile = No
+WritePredictions = []
+GzipOutput = No
+ModelIDFiles = No
+WriteCurves = No
+OutputPythonModel = No
+PythonModelType = Object
+OutputROSSubspaces = No
+OutputJSONModel = No
+OutputDatabaseQueries = No
+OutputClowdFlowsJSON = No
+ComputeSpearman = No
+
+Run: 01
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 13; Leaves = 7; Depth = 5
+     Pruned: Nodes = 9; Leaves = 5; Depth = 4
+
+Training error
+--------------
+
+Number of examples: 40
+Mean absolute error (MAE)
+   Default        : [1.7289E-1,1.7029E-1,1.9352E-1]: 1.7890E-1
+   Original       : [5.5021E-2,5.5837E-2,4.8143E-2]: 5.3000E-2
+   Pruned         : [6.5015E-2,6.9364E-2,7.9210E-2]: 7.1196E-2
+Mean squared error (MSE)
+   Default        : [4.5303E-2,4.2400E-2,5.3594E-2]: 4.7099E-2
+   Original       : [5.5200E-3,5.7136E-3,4.8833E-3]: 5.3723E-3
+   Pruned         : [8.4164E-3,8.3425E-3,1.5670E-2]: 1.0809E-2
+Root mean squared error (RMSE)
+   Default        : [2.1285E-1,2.0591E-1,2.3150E-1]: 2.1675E-1
+   Original       : [7.4297E-2,7.5588E-2,6.9881E-2]: 7.3255E-2
+   Pruned         : [9.1741E-2,9.1337E-2,1.2518E-1]: 1.0275E-1
+Weighted root mean squared error (RMSE) (Weights [22.073,23.585,18.659])
+   Default        : [1.0000E0,1.0000E0,1]: 1.0000E0
+   Original       : [3.4906E-1,3.6709E-1,3.0185E-1]: 3.3934E-1
+   Pruned         : [4.3102E-1,4.4357E-1,5.4072E-1]: 4.7177E-1
+Root Relative Squared Error (RRMSE)
+   Default        : [1.0000E0,1.0000E0,1]: 1.0000E0
+   Original       : [3.4906E-1,3.6709E-1,3.0185E-1]: 3.3934E-1
+   Pruned         : [4.3102E-1,4.4357E-1,5.4072E-1]: 4.7177E-1
+Pearson correlation coefficient
+   Default        : [0,8.3561E-8,0], Avg r^2: 2.3275E-15
+   Original       : [9.3710E-1,9.3019E-1,9.5335E-1], Avg r^2: 8.8410E-1
+   Pruned         : [9.0234E-1,8.9624E-1,8.4121E-1], Avg r^2: 7.7503E-1
+
+Testing error
+-------------
+
+Number of examples: 40
+Mean absolute error (MAE)
+   Default        : [1.7732E-1,1.7465E-1,1.9849E-1]: 1.8349E-1
+   Original       : [1.2866E-1,1.3239E-1,1.5396E-1]: 1.3834E-1
+   Pruned         : [1.2560E-1,1.3040E-1,1.4947E-1]: 1.3516E-1
+Mean squared error (MSE)
+   Default        : [4.7656E-2,4.4603E-2,5.6378E-2]: 4.9546E-2
+   Original       : [2.7516E-2,2.8004E-2,3.6774E-2]: 3.0765E-2
+   Pruned         : [2.6150E-2,2.6825E-2,3.6766E-2]: 2.9914E-2
+Root mean squared error (RMSE)
+   Default        : [2.1830E-1,2.1119E-1,2.3744E-1]: 2.2231E-1
+   Original       : [1.6588E-1,1.6734E-1,1.9177E-1]: 1.7500E-1
+   Pruned         : [1.6171E-1,1.6378E-1,1.9175E-1]: 1.7241E-1
+Weighted root mean squared error (RMSE) (Weights [22.073,23.585,18.659])
+   Default        : [1.0256,1.0256,1.0256]: 1.0256
+   Original       : [7.7935E-1,8.1269E-1,8.2835E-1]: 8.0680E-1
+   Pruned         : [7.5975E-1,7.9540E-1,8.2826E-1]: 7.9447E-1
+Root Relative Squared Error (RRMSE)
+   Default        : [1.0256,1.0256,1.0256]: 1.0256
+   Original       : [7.7935E-1,8.1269E-1,8.2835E-1]: 8.0680E-1
+   Pruned         : [7.5975E-1,7.9540E-1,8.2826E-1]: 7.9447E-1
+Pearson correlation coefficient
+   Default        : [-1,-1,-1], Avg r^2: 1
+   Original       : [6.6175E-1,6.2910E-1,6.0815E-1], Avg r^2: 4.0118E-1
+   Pruned         : [6.6605E-1,6.2691E-1,5.8711E-1], Avg r^2: 3.9378E-1
+
+Default Model
+*************
+
+[5.959250E-1,5.873000E-1,5.942250E-1]
+
+Original Model
+**************
+
+Ratio of number of labelsets up to 2 examples > 0.6394472361809045
++--yes: Density > 0.05081669691470055
+|      +--yes: [5.586000E-1,5.486000E-1,5.140000E-1]
+|      +--no:  [3.130000E-1,3.332222E-1,3.130000E-1]
++--no:  Mean of skewness of numeric attributes > 0.003614186172063957
+       +--yes: Average gain ratio > 9.027505776439844E-4
+       |      +--yes: Attributes > 440.0
+       |      |      +--yes: [6.516667E-1,4.990000E-1,9.046667E-1]
+       |      |      +--no:  [6.544444E-1,6.477778E-1,6.160000E-1]
+       |      +--no:  [4.572500E-1,4.747500E-1,4.030000E-1]
+       +--no:  LxIxF > 9342540.0
+              +--yes: [7.692000E-1,7.692000E-1,7.490000E-1]
+              +--no:  [9.414000E-1,9.356000E-1,9.534000E-1]
+
+Pruned Model
+************
+
+Ratio of number of labelsets up to 2 examples > 0.6394472361809045
++--yes: Density > 0.05081669691470055
+|      +--yes: [5.586000E-1,5.486000E-1,5.140000E-1]
+|      +--no:  [3.130000E-1,3.332222E-1,3.130000E-1]
++--no:  Mean of skewness of numeric attributes > 0.003614186172063957
+       +--yes: [6.046250E-1,5.766250E-1,6.168750E-1]
+       +--no:  LxIxF > 9342540.0
+              +--yes: [7.692000E-1,7.692000E-1,7.490000E-1]
+              +--no:  [9.414000E-1,9.356000E-1,9.534000E-1]
+

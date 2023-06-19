@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="clus/" kind="src" path=""/>
+	<classpathentry kind="lib" path="C:/Users/ana/Desktop/RepoSemanticDatasets/Clus3/lib/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ana/Desktop/RepoSemanticDatasets/Clus3/lib/commons-math-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ana/Desktop/RepoSemanticDatasets/Clus3/lib/commons-math3-3.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ana/Desktop/RepoSemanticDatasets/Clus3/lib/gson-2.8.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ana/Desktop/RepoSemanticDatasets/Clus3/lib/gson-2.8.0.zip"/>
+	<classpathentry kind="lib" path="C:/Users/ana/Desktop/RepoSemanticDatasets/Clus3/lib/jgap.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ana/Desktop/RepoSemanticDatasets/Clus3/lib/objenesis-2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ana/Desktop/RepoSemanticDatasets/Clus3/lib/weka-3.8.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

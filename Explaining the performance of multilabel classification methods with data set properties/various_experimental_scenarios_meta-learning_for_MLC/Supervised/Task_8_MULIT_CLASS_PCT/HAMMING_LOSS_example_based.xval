@@ -1,0 +1,2033 @@
+Clus run metaDataset
+********************
+
+Date: 5/1/20 7:36 PM
+File: HAMMING_LOSS_example_based.xval
+Attributes: 52 (input: 50, output: 1)
+Missing values: No
+
+[General]
+Verbose = 1
+RandomSeed = 0
+ResourceInfoLoaded = No
+DoNotInduce = No
+LoggingProperties = logging.properties
+
+[Data]
+File = /home/matilda/PycharmProjects/MetaLearningForMLC/Meta_learning_MLC/LearningScenarios/Supervised/Task_8_MULIT_CLASS_PCT/dataset_clus_HAMMING_LOSS_example_based_.arff
+TestSet = None
+PruneSet = None
+XVal = 40
+RemoveMissingTarget = No
+NormalizeData = None
+
+[Attributes]
+Target = 52
+Clustering = 52
+Descriptive = 2-51
+Key = None
+Disable = None
+Weights = Normalize
+ClusteringWeights = 1.0
+ReduceMemoryNominalAttrs = No
+GIS = None
+
+[Constraints]
+Syntactic = None
+MaxSize = Infinity
+MaxError = 0.0
+MaxDepth = Infinity
+
+[Nominal]
+MEstimate = 1.0
+
+[Model]
+MinimalWeight = 2.0
+MinimalNumberExamples = 8
+MinimalKnownWeight = 0.0
+ParamTuneNumberFolds = 39
+NominalSubsetTests = Yes
+
+[Tree]
+Heuristic = Gain
+HeuristicComplexity = N2
+SetDistance = GSMDistance
+TupleDistance = Euclidean
+TSDistance = DTW
+PruningMethod = Default
+BinarySplit = Yes
+ConvertToRules = No
+AlternativeSplits = No
+Optimize = []
+MSENominal = No
+SplitSampling = None
+MissingClusteringAttrHandling = EstimateFromParentNode
+MissingTargetAttrHandling = ParentNode
+InductionOrder = DepthFirst
+EntropyType = StandardEntropy
+ConsiderUnlableInstancesInIGCalc = No
+SpatialMatrix = Binary
+SpatialMeasure = GlobalMoran
+Bandwidth = 0.001
+Longlat = No
+NumNeightbours = 0.0
+Alpha = 1.0
+SplitPosition = Exact
+
+[SemiSupervised]
+SemiSupervisedMethod = PCT
+StoppingCriteria = NoneAdded
+UnlabeledCriteria = Threshold
+ConfidenceThreshold = 0.8
+ConfidenceMeasure = Variance
+Iterations = 10
+K = 5
+UnlabeledData = 
+PercentageLabeled = 5
+UseWeights = No
+AirbagTrials = 0
+ExhaustiveSearchThresholds = [0.5,0.6,0.7,0.8,0.9,0.99]
+OOBErrorCalculation = LabeledOnly
+Normalization = MinMaxNormalization
+Aggregation = Average
+CalibrateHmcThreshold = No
+PruningWhenTuning = No
+InternalFolds = 5
+WeightScoresFile = NO
+PossibleWeights = [0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0]
+
+[Output]
+ShowModels = [Default, Pruned, Others]
+TrainErrors = Yes
+ValidErrors = Yes
+TestErrors = Yes
+AllFoldModels = Yes
+AllFoldErrors = No
+AllFoldDatasets = No
+UnknownFrequency = No
+BranchFrequency = No
+ShowInfo = [Key]
+PrintModelAndExamples = Yes
+WriteErrorFile = No
+WriteModelFile = No
+WritePerBagModelFile = Yes
+WriteOOBFile = No
+WritePredictions = []
+GzipOutput = No
+ModelIDFiles = No
+WriteCurves = No
+OutputPythonModel = No
+PythonModelType = Object
+OutputROSSubspaces = No
+OutputJSONModel = No
+OutputDatabaseQueries = No
+OutputClowdFlowsJSON = No
+ComputeSpearman = No
+
+Run: 01
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 1.0000E-3 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [18.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 11
+       ExampleIDs: 
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 11
+       ExampleIDs: 
+
+Run: 02
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [18.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [11.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [11.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Run: 03
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 7; Leaves = 4; Depth = 4
+     Pruned: Nodes = 3; Leaves = 2; Depth = 2
+
+Default Model
+*************
+
+[0] [18.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+DefaultAccuracy > 0.2701863354037267
++--yes: [1] [4.0]: 11
++--no:  Cardinality > 2.3940298507462687
+       +--yes: [0] [8.0]: 9
+       +--no:  Kurtosis cardinality > 2.1346712881899466
+              +--yes: [0] [6.0]: 11
+              +--no:  [1] [7.0]: 8
+                     ExampleIDs: 
+
+Pruned Model
+************
+
+Cardinality > 2.3940298507462687
++--yes: [0] [8.0]: 10
++--no:  [1] [15.0]: 29
+       ExampleIDs: 
+
+Run: 04
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 0 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [17.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [10.0]: 12
+|             ExampleIDs: 
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [10.0]: 12
+|             ExampleIDs: 
++--no:  [2] [5.0]: 12
+
+Run: 05
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [17.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [10.0]: 12
+|             ExampleIDs: 
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [10.0]: 12
+|             ExampleIDs: 
++--no:  [2] [5.0]: 12
+
+Run: 06
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 0 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [17.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [10.0]: 12
+|             ExampleIDs: 
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [10.0]: 12
+|             ExampleIDs: 
++--no:  [2] [5.0]: 12
+
+Run: 07
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [17.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [10.0]: 12
+|             ExampleIDs: 
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [10.0]: 12
+|             ExampleIDs: 
++--no:  [2] [5.0]: 12
+
+Run: 08
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 0 sec
+Pruning Time: 1.0000E-3 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [18.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [11.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [11.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Run: 09
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [17.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Run: 10
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [18.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [11.0]: 12
+|             ExampleIDs: 
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [11.0]: 12
+|             ExampleIDs: 
++--no:  [2] [5.0]: 12
+
+Run: 11
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [17.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [10.0]: 12
+|             ExampleIDs: 
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [10.0]: 12
+|             ExampleIDs: 
++--no:  [2] [5.0]: 12
+
+Run: 12
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [18.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [11.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [11.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Run: 13
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [17.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 11
+       ExampleIDs: 
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 11
+       ExampleIDs: 
+
+Run: 14
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [18.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 11
+       ExampleIDs: 
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 11
+       ExampleIDs: 
+
+Run: 15
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 0 sec
+Pruning Time: 1.0000E-3 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [17.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [10.0]: 12
+|             ExampleIDs: 
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [10.0]: 12
+|             ExampleIDs: 
++--no:  [2] [5.0]: 12
+
+Run: 16
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 0 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [17.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [10.0]: 12
+|             ExampleIDs: 
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [10.0]: 12
+|             ExampleIDs: 
++--no:  [2] [5.0]: 12
+
+Run: 17
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 0 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [18.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [11.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [11.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Run: 18
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [17.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 11
+       ExampleIDs: 
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 11
+       ExampleIDs: 
+
+Run: 19
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 0 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [18.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [11.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [11.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Run: 20
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [17.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Run: 21
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [18.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.2673267326732673
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 16
+|      +--no:  [0] [11.0]: 15
++--no:  [0] [4.0]: 8
+       ExampleIDs: 
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.2673267326732673
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 16
+|      +--no:  [0] [11.0]: 15
++--no:  [0] [4.0]: 8
+       ExampleIDs: 
+
+Run: 22
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [18.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [11.0]: 12
+|             ExampleIDs: 
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [11.0]: 12
+|             ExampleIDs: 
++--no:  [2] [5.0]: 12
+
+Run: 23
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [18.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [11.0]: 13
++--no:  [0] [4.0]: 11
+       ExampleIDs: 
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [11.0]: 13
++--no:  [0] [4.0]: 11
+       ExampleIDs: 
+
+Run: 24
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [17.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 11
+       ExampleIDs: 
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 11
+       ExampleIDs: 
+
+Run: 25
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 0 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [17.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 11
+       ExampleIDs: 
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 11
+       ExampleIDs: 
+
+Run: 26
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [18.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [11.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [11.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Run: 27
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 0 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [18.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [11.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [11.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Run: 28
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 0 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [18.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [11.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [11.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Run: 29
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [17.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 69.0
+|      +--yes: [1] [12.0]: 15
+|      |      ExampleIDs: 
+|      +--no:  [0] [10.0]: 12
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 69.0
+|      +--yes: [1] [12.0]: 15
+|      |      ExampleIDs: 
+|      +--no:  [0] [10.0]: 12
++--no:  [2] [5.0]: 12
+
+Run: 30
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 0 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [18.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [11.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [11.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Run: 31
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 0 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [17.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Run: 32
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 0 sec
+Pruning Time: 1.0000E-3 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 7; Leaves = 4; Depth = 4
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [18.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.24641350210970464
++--yes: Max IR per labelset > 54.0
+|      +--yes: Mean of IR intra class > 42.934267701682565
+|      |      +--yes: [0] [6.0]: 11
+|      |      +--no:  [1] [9.0]: 9
+|      |             ExampleIDs: 
+|      +--no:  [0] [9.0]: 11
++--no:  [2] [4.0]: 8
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.24641350210970464
++--yes: Max IR per labelset > 54.0
+|      +--yes: [1] [14.0]: 20
+|      |      ExampleIDs: 
+|      +--no:  [0] [9.0]: 11
++--no:  [2] [4.0]: 8
+
+Run: 33
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 0 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [17.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [10.0]: 12
+|             ExampleIDs: 
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [10.0]: 12
+|             ExampleIDs: 
++--no:  [2] [5.0]: 12
+
+Run: 34
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [18.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [11.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [11.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Run: 35
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [18.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [11.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [11.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Run: 36
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [17.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [10.0]: 12
+|             ExampleIDs: 
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [10.0]: 12
+|             ExampleIDs: 
++--no:  [2] [5.0]: 12
+
+Run: 37
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [17.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [10.0]: 12
+|             ExampleIDs: 
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [10.0]: 12
+|             ExampleIDs: 
++--no:  [2] [5.0]: 12
+
+Run: 38
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 0 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 3; Leaves = 2; Depth = 2
+
+Default Model
+*************
+
+[0] [18.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+SCUMBLE > 0.0050544820007630605
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [9.0]: 14
+|      +--no:  [0] [11.0]: 14
+|             ExampleIDs: 
++--no:  [1] [5.0]: 11
+
+Pruned Model
+************
+
+Max IR per labelset > 72.0
++--yes: [1] [12.0]: 20
++--no:  [0] [12.0]: 19
+       ExampleIDs: 
+
+Run: 39
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [18.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [11.0]: 13
++--no:  [0] [4.0]: 11
+       ExampleIDs: 
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [12.0]: 15
+|      +--no:  [0] [11.0]: 13
++--no:  [0] [4.0]: 11
+       ExampleIDs: 
+
+Run: 40
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 0 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 5; Leaves = 3; Depth = 3
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[0] [18.0]: 39
+ExampleIDs: 
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [11.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 0.4635890767230169
++--yes: Max IR per labelset > 72.0
+|      +--yes: [1] [11.0]: 14
+|      |      ExampleIDs: 
+|      +--no:  [0] [11.0]: 13
++--no:  [2] [5.0]: 12
+
+Summary
+*******
+
+Runs: 40
+Induction time: 2.4000E-2 sec
+Preprocessing time: 0 sec
+Prediction Time (total for ClusModel.Original, 40 runs, 0 examples): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Mean number of tests
+     Original: 5.1
+     Pruned: 4.9
+
+Training error
+--------------
+
+Number of examples: 1560
+Classification Error
+   Default: 
+   Attribute: target
+     REAL\PRED |    0 | 1 | 2 |
+     -------------------------------
+             0 |  702 | 0 | 0 |  702
+             1 |  663 | 0 | 0 |  663
+             2 |  195 | 0 | 0 |  195
+     -------------------------------
+               | 1560 | 0 | 0 | 1560
+     Accuracy: 4.500000E-1
+     Cramer's coefficient: 0
+
+   Original: 
+   Attribute: target
+     REAL\PRED |   0 |   1 |   2 |
+     ----------------------------------
+             0 | 448 | 119 | 135 |  702
+             1 |  96 | 466 | 101 |  663
+             2 |  12 |   9 | 174 |  195
+     ----------------------------------
+               | 556 | 594 | 410 | 1560
+     Accuracy: 6.974359E-1
+     Cramer's coefficient: 5.505197E-1
+
+   Pruned: 
+   Attribute: target
+     REAL\PRED |   0 |   1 |   2 |
+     ----------------------------------
+             0 | 437 | 130 | 135 |  702
+             1 |  89 | 473 | 101 |  663
+             2 |  14 |   7 | 174 |  195
+     ----------------------------------
+               | 540 | 610 | 410 | 1560
+     Accuracy: 6.948718E-1
+     Cramer's coefficient: 5.478885E-1
+
+Weighted mean squared error (MSE) for Nominal Attributes (Weights [1.663])
+   Default        : [9.9934E-1]
+   Original       : [6.6733E-1]
+   Pruned         : [6.7775E-1]
+
+Testing error
+-------------
+
+Number of examples: 40
+Classification Error
+   Default: 
+   Attribute: target
+     REAL\PRED |  0 | 1 | 2 |
+     ---------------------------
+             0 | 18 | 0 | 0 | 18
+             1 | 17 | 0 | 0 | 17
+             2 |  5 | 0 | 0 |  5
+     ---------------------------
+               | 40 | 0 | 0 | 40
+     Accuracy: 4.500000E-1
+     Cramer's coefficient: 0
+
+   Original: 
+   Attribute: target
+     REAL\PRED |  0 |  1 | 2 |
+     ----------------------------
+             0 | 10 |  4 | 4 | 18
+             1 |  3 | 12 | 2 | 17
+             2 |  3 |  2 | 0 |  5
+     ----------------------------
+               | 16 | 18 | 6 | 40
+     Accuracy: 5.500000E-1
+     Cramer's coefficient: 3.497068E-1
+
+   Pruned: 
+   Attribute: target
+     REAL\PRED |  0 |  1 | 2 |
+     ----------------------------
+             0 | 10 |  4 | 4 | 18
+             1 |  3 | 12 | 2 | 17
+             2 |  3 |  2 | 0 |  5
+     ----------------------------
+               | 16 | 18 | 6 | 40
+     Accuracy: 5.500000E-1
+     Cramer's coefficient: 3.497068E-1
+
+Weighted mean squared error (MSE) for Nominal Attributes (Weights [1.663])
+   Default        : [1.0519]
+   Original       : [1.0034]
+   Pruned         : [9.4239E-1]
+

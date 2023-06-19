@@ -1,0 +1,2498 @@
+Clus run metaDataset
+********************
+
+Date: 8/29/20 9:40 PM
+File: test_time.xval
+Attributes: 54 (input: 50, output: 3)
+Missing values: No
+
+[General]
+Verbose = 1
+RandomSeed = 0
+ResourceInfoLoaded = No
+DoNotInduce = No
+LoggingProperties = logging.properties
+
+[Data]
+File = /home/matilda/PycharmProjects/MetaLearningForMLC/Meta_learning_MLC/LearningScenarios/Supervised/Task_11_times/dataset_clus.arff
+TestSet = None
+PruneSet = None
+XVal = 40
+RemoveMissingTarget = No
+NormalizeData = None
+
+[Attributes]
+Target = 52-54
+Clustering = 52-54
+Descriptive = 2-51
+Key = 1
+Disable = None
+Weights = Normalize
+ClusteringWeights = 1.0
+ReduceMemoryNominalAttrs = No
+GIS = None
+
+[Constraints]
+Syntactic = None
+MaxSize = Infinity
+MaxError = 0.0
+MaxDepth = Infinity
+
+[Nominal]
+MEstimate = 1.0
+
+[Model]
+MinimalWeight = 2.0
+MinimalNumberExamples = 0
+MinimalKnownWeight = 0.0
+ParamTuneNumberFolds = 39
+NominalSubsetTests = Yes
+
+[Tree]
+Heuristic = VarianceReduction
+HeuristicComplexity = N2
+SetDistance = GSMDistance
+TupleDistance = Euclidean
+TSDistance = DTW
+PruningMethod = Default
+FTest = 1.0
+BinarySplit = Yes
+ConvertToRules = No
+AlternativeSplits = No
+Optimize = []
+MSENominal = No
+SplitSampling = None
+MissingClusteringAttrHandling = EstimateFromParentNode
+MissingTargetAttrHandling = ParentNode
+InductionOrder = DepthFirst
+EntropyType = StandardEntropy
+ConsiderUnlableInstancesInIGCalc = No
+SpatialMatrix = Binary
+SpatialMeasure = GlobalMoran
+Bandwidth = 0.001
+Longlat = No
+NumNeightbours = 0.0
+Alpha = 1.0
+SplitPosition = Exact
+
+[SemiSupervised]
+SemiSupervisedMethod = PCT
+StoppingCriteria = NoneAdded
+UnlabeledCriteria = Threshold
+ConfidenceThreshold = 0.8
+ConfidenceMeasure = Variance
+Iterations = 10
+K = 5
+UnlabeledData = 
+PercentageLabeled = 5
+UseWeights = No
+AirbagTrials = 0
+ExhaustiveSearchThresholds = [0.5,0.6,0.7,0.8,0.9,0.99]
+OOBErrorCalculation = LabeledOnly
+Normalization = MinMaxNormalization
+Aggregation = Average
+CalibrateHmcThreshold = No
+PruningWhenTuning = No
+InternalFolds = 5
+WeightScoresFile = NO
+PossibleWeights = [0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0]
+
+[Output]
+ShowModels = [Default, Pruned, Others]
+TrainErrors = Yes
+ValidErrors = Yes
+TestErrors = Yes
+AllFoldModels = Yes
+AllFoldErrors = No
+AllFoldDatasets = No
+UnknownFrequency = No
+BranchFrequency = No
+ShowInfo = [Key]
+PrintModelAndExamples = Yes
+WriteErrorFile = No
+WriteModelFile = No
+WritePerBagModelFile = Yes
+WriteOOBFile = No
+WritePredictions = []
+GzipOutput = No
+ModelIDFiles = No
+WriteCurves = No
+OutputPythonModel = No
+PythonModelType = Object
+OutputROSSubspaces = No
+OutputJSONModel = No
+OutputDatabaseQueries = No
+OutputClowdFlowsJSON = No
+ComputeSpearman = No
+
+Run: 01
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 21; Leaves = 11; Depth = 11
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.189744E-4,5.858974E-4,3.154615E-2]
+ExampleIDs: index: 'medical'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.275000E-4,3.787500E-4,5.170000E-3]
+              +--no:  Max IR intra class > 291.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     |      ExampleIDs: index: 'medical'
+
+                     +--no:  Instances > 960.0
+                            +--yes: [2.500000E-5,5.000000E-5,7.100000E-4]
+                            +--no:  Mean of IR inter class > 1.10388
+                                   +--yes: Maximal entropy of labels > 0.75403
+                                   |      +--yes: Bound > 16.0
+                                   |      |      +--yes: Bound > 256.0
+                                   |      |      |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                                   |      |      |      +--no:  DefaultAccuracy > 0.33562
+                                   |      |      |             +--yes: [1.000000E-5,1.000000E-5,2.200000E-4]
+                                   |      |      |             +--no:  [1.000000E-5,1.000000E-5,9.000000E-5]
+                                   |      |      +--no:  [1.000000E-5,0,1.050000E-4]
+                                   |      +--no:  [2.000000E-5,1.500000E-5,4.400000E-4]
+                                   +--no:  [1.333333E-5,2.666667E-5,1.436667E-3]
+
+Pruned Model
+************
+
+[3.189744E-4,5.858974E-4,3.154615E-2]
+ExampleIDs: index: 'medical'
+
+
+Run: 02
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 19; Leaves = 10; Depth = 10
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.189744E-4,5.869231E-4,3.154821E-2]
+ExampleIDs: index: 'birds'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.275000E-4,3.787500E-4,5.170000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Mean of standard deviation of IR intra class > 168.87595
+                            +--yes: [2.285714E-5,4.142857E-5,9.771429E-4]
+                            +--no:  CVIR inter class > 0.10125
+                                   +--yes: Bound > 16.0
+                                   |      +--yes: Bound > 256.0
+                                   |      |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                                   |      |      |      ExampleIDs: index: 'birds'
+
+                                   |      |      +--no:  DefaultAccuracy > 0.33562
+                                   |      |             +--yes: [1.000000E-5,1.000000E-5,2.200000E-4]
+                                   |      |             +--no:  [1.000000E-5,1.000000E-5,9.000000E-5]
+                                   |      +--no:  [1.000000E-5,0,1.050000E-4]
+                                   +--no:  [1.000000E-5,3.000000E-5,6.350000E-4]
+
+Pruned Model
+************
+
+[3.189744E-4,5.869231E-4,3.154821E-2]
+ExampleIDs: index: 'birds'
+
+
+Run: 03
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 19; Leaves = 10; Depth = 10
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.192308E-4,5.869231E-4,3.153077E-2]
+ExampleIDs: index: 'proteins_plant'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.275000E-4,3.787500E-4,5.170000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Mean of standard deviation of IR intra class > 168.87595
+                            +--yes: [2.285714E-5,4.142857E-5,9.771429E-4]
+                            +--no:  Density > 0.05082
+                                   +--yes: Bound > 16.0
+                                   |      +--yes: Bound > 256.0
+                                   |      |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                                   |      |      |      ExampleIDs: index: 'proteins_plant'
+
+                                   |      |      +--no:  DefaultAccuracy > 0.33562
+                                   |      |             +--yes: [1.000000E-5,1.000000E-5,2.200000E-4]
+                                   |      |             +--no:  [1.000000E-5,1.000000E-5,9.000000E-5]
+                                   |      +--no:  [1.000000E-5,0,1.050000E-4]
+                                   +--no:  [1.500000E-5,3.000000E-5,2.950000E-4]
+
+Pruned Model
+************
+
+[3.192308E-4,5.869231E-4,3.153077E-2]
+ExampleIDs: index: 'proteins_plant'
+
+
+Run: 04
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 1.0000E-3 sec
+Pruning Time: 1.0000E-3 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 17; Leaves = 9; Depth = 9
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.192308E-4,5.871795E-4,3.155590E-2]
+ExampleIDs: index: 'emotions'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.275000E-4,3.787500E-4,5.170000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Mean of standard deviation of IR intra class > 168.87595
+                            +--yes: [2.285714E-5,4.142857E-5,9.771429E-4]
+                            +--no:  Maximal entropy of labels > 0.8221
+                                   +--yes: Bound > 16.0
+                                   |      +--yes: Bound > 256.0
+                                   |      |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                                   |      |      +--no:  [1.000000E-5,1.000000E-5,1.311111E-4]
+                                   |      |             ExampleIDs: index: 'emotions'
+
+                                   |      +--no:  [1.000000E-5,0,1.050000E-4]
+                                   +--no:  [1.333333E-5,2.666667E-5,5.600000E-4]
+
+Pruned Model
+************
+
+[3.192308E-4,5.871795E-4,3.155590E-2]
+ExampleIDs: index: 'emotions'
+
+
+Run: 05
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 11; Leaves = 6; Depth = 6
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.184615E-4,5.846154E-4,3.149513E-2]
+ExampleIDs: index: 'enron'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 309.0
+       +--yes: [2.275000E-4,5.975000E-4,1.812625E-2]
+       |      ExampleIDs: index: 'enron'
+
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [8.000000E-5,3.450000E-4,4.790000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Mean of standard deviation of IR intra class > 168.87595
+                            +--yes: [2.285714E-5,4.142857E-5,9.771429E-4]
+                            +--no:  [1.055556E-5,1.277778E-5,2.144444E-4]
+
+Pruned Model
+************
+
+[3.184615E-4,5.846154E-4,3.149513E-2]
+ExampleIDs: index: 'enron'
+
+
+Run: 06
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 17; Leaves = 9; Depth = 9
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.192308E-4,5.871795E-4,3.155615E-2]
+ExampleIDs: index: 'foodtruck'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.275000E-4,3.787500E-4,5.170000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Mean of standard deviation of IR intra class > 168.87595
+                            +--yes: [2.285714E-5,4.142857E-5,9.771429E-4]
+                            +--no:  Maximal entropy of labels > 0.8221
+                                   +--yes: Bound > 16.0
+                                   |      +--yes: Bound > 256.0
+                                   |      |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                                   |      |      +--no:  [1.000000E-5,1.000000E-5,1.322222E-4]
+                                   |      |             ExampleIDs: index: 'foodtruck'
+
+                                   |      +--no:  [1.000000E-5,0,1.050000E-4]
+                                   +--no:  [1.333333E-5,2.666667E-5,5.600000E-4]
+
+Pruned Model
+************
+
+[3.192308E-4,5.871795E-4,3.155615E-2]
+ExampleIDs: index: 'foodtruck'
+
+
+Run: 07
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.125
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 31; Leaves = 16; Depth = 11
+     Pruned: Nodes = 11; Leaves = 6; Depth = 6
+
+Default Model
+*************
+
+[8.076923E-5,2.010256E-4,5.917692E-3]
+ExampleIDs: index: 'delicious'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1026.0
++--yes: [4.933333E-4,1.156667E-3,4.874333E-2]
+|      ExampleIDs: index: 'delicious'
+
++--no:  Number of unconditionally dependent label pairs by chi-square test > 110.0
+       +--yes: Minimal entropy of labels > 0.0
+       |      +--yes: Density > 0.03134
+       |      |      +--yes: [1.500000E-4,5.100000E-4,5.615000E-3]
+       |      |      +--no:  [2.200000E-4,5.900000E-4,1.413500E-2]
+       |      +--no:  [1.200000E-4,3.233333E-4,6.496667E-3]
+       +--no:  Average gain ratio > 0.0
+              +--yes: LxIxF > 1.1943624E7
+              |      +--yes: CVIR inter class > 1.12649
+              |      |      +--yes: [4.000000E-5,1.050000E-4,1.495000E-3]
+              |      |      +--no:  Average gain ratio > 6.3E-4
+              |      |             +--yes: [3.000000E-5,4.000000E-5,1.820000E-3]
+              |      |             +--no:  [2.000000E-5,6.000000E-5,4.700000E-4]
+              |      +--no:  Labels > 12.0
+              |             +--yes: [1.600000E-5,3.200000E-5,5.060000E-4]
+              |             +--no:  CVIR inter class > 0.10125
+              |                    +--yes: Bound > 16.0
+              |                    |      +--yes: Attributes > 1538.0
+              |                    |      |      +--yes: [1.000000E-5,1.500000E-5,1.500000E-4]
+              |                    |      |      +--no:  Attributes > 72.0
+              |                    |      |             +--yes: Average examples per labelset > 7.55556
+              |                    |      |             |      +--yes: [1.000000E-5,1.000000E-5,3.400000E-4]
+              |                    |      |             |      +--no:  [1.000000E-5,1.000000E-5,1.300000E-4]
+              |                    |      |             +--no:  Cardinality > 2.56284
+              |                    |      |                    +--yes: [1.000000E-5,1.000000E-5,7.000000E-5]
+              |                    |      |                    +--no:  [1.000000E-5,1.000000E-5,1.033333E-4]
+              |                    |      +--no:  [1.000000E-5,0,1.050000E-4]
+              |                    +--no:  [1.500000E-5,1.500000E-5,7.800000E-4]
+              +--no:  [7.000000E-5,2.350000E-4,5.940000E-3]
+
+Pruned Model
+************
+
+Distinct labelsets > 1026.0
++--yes: [4.933333E-4,1.156667E-3,4.874333E-2]
+|      ExampleIDs: index: 'delicious'
+
++--no:  Number of unconditionally dependent label pairs by chi-square test > 110.0
+       +--yes: [1.571429E-4,4.528571E-4,8.427143E-3]
+       +--no:  Average gain ratio > 0.0
+              +--yes: LxIxF > 1.1943624E7
+              |      +--yes: [3.000000E-5,6.833333E-5,1.261667E-3]
+              |      +--no:  Labels > 12.0
+              |             +--yes: [1.600000E-5,3.200000E-5,5.060000E-4]
+              |             +--no:  [1.062500E-5,1.000000E-5,2.243750E-4]
+              +--no:  [7.000000E-5,2.350000E-4,5.940000E-3]
+
+Run: 08
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 19; Leaves = 10; Depth = 10
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.189744E-4,5.871795E-4,3.154667E-2]
+ExampleIDs: index: 'scene'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.275000E-4,3.787500E-4,5.170000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Mean of standard deviation of IR intra class > 168.87595
+                            +--yes: [2.333333E-5,4.666667E-5,1.061667E-3]
+                            |      ExampleIDs: index: 'scene'
+
+                            +--no:  Maximal entropy of labels > 0.8221
+                                   +--yes: Bound > 16.0
+                                   |      +--yes: Bound > 256.0
+                                   |      |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                                   |      |      +--no:  DefaultAccuracy > 0.33562
+                                   |      |             +--yes: [1.000000E-5,1.000000E-5,2.200000E-4]
+                                   |      |             +--no:  [1.000000E-5,1.000000E-5,9.000000E-5]
+                                   |      +--no:  [1.000000E-5,0,1.050000E-4]
+                                   +--no:  [1.333333E-5,2.666667E-5,5.600000E-4]
+
+Pruned Model
+************
+
+[3.189744E-4,5.871795E-4,3.154667E-2]
+ExampleIDs: index: 'scene'
+
+
+Run: 09
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 21; Leaves = 11; Depth = 11
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.189744E-4,5.864103E-4,3.152846E-2]
+ExampleIDs: index: 'HumanPseAAC'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.275000E-4,3.787500E-4,5.170000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Mean of standard deviation of numeric attributes > 0.02865
+                            +--yes: Bound > 349.0
+                            |      +--yes: [2.000000E-5,3.000000E-5,1.825000E-3]
+                            |      |      ExampleIDs: index: 'HumanPseAAC'
+
+                            |      +--no:  Maximal entropy of labels > 0.8221
+                            |             +--yes: Bound > 16.0
+                            |             |      +--yes: Bound > 256.0
+                            |             |      |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                            |             |      |      +--no:  DefaultAccuracy > 0.33562
+                            |             |      |             +--yes: [1.000000E-5,1.000000E-5,2.200000E-4]
+                            |             |      |             +--no:  [1.000000E-5,1.000000E-5,9.000000E-5]
+                            |             |      +--no:  [1.000000E-5,0,1.050000E-4]
+                            |             +--no:  [1.666667E-5,1.666667E-5,6.566667E-4]
+                            +--no:  [2.250000E-5,5.500000E-5,4.300000E-4]
+
+Pruned Model
+************
+
+[3.189744E-4,5.864103E-4,3.152846E-2]
+ExampleIDs: index: 'HumanPseAAC'
+
+
+Run: 10
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 17; Leaves = 9; Depth = 9
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.192308E-4,5.871795E-4,3.155692E-2]
+ExampleIDs: index: 'ABPM'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.275000E-4,3.787500E-4,5.170000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Mean of standard deviation of IR intra class > 168.87595
+                            +--yes: [2.285714E-5,4.142857E-5,9.771429E-4]
+                            +--no:  Maximal entropy of labels > 0.8221
+                                   +--yes: Bound > 16.0
+                                   |      +--yes: Bound > 256.0
+                                   |      |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                                   |      |      +--no:  [1.000000E-5,1.000000E-5,1.355556E-4]
+                                   |      |             ExampleIDs: index: 'ABPM'
+
+                                   |      +--no:  [1.000000E-5,0,1.050000E-4]
+                                   +--no:  [1.333333E-5,2.666667E-5,5.600000E-4]
+
+Pruned Model
+************
+
+[3.192308E-4,5.871795E-4,3.155692E-2]
+ExampleIDs: index: 'ABPM'
+
+
+Run: 11
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 11; Leaves = 6; Depth = 6
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.069231E-4,5.582051E-4,3.051256E-2]
+ExampleIDs: index: 'corel5k'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1388.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
+|      ExampleIDs: index: 'corel5k'
+
++--no:  Number of unconditionally dependent label pairs by chi-square test > 110.0
+       +--yes: [1.737500E-4,4.975000E-4,1.375000E-2]
+       +--no:  Average gain ratio > 0.0
+              +--yes: LxIxF > 1.1943624E7
+              |      +--yes: [3.000000E-5,6.833333E-5,1.261667E-3]
+              |      +--no:  Labels > 12.0
+              |             +--yes: [1.600000E-5,3.200000E-5,5.060000E-4]
+              |             +--no:  [1.062500E-5,1.000000E-5,2.243750E-4]
+              +--no:  [7.000000E-5,2.350000E-4,5.940000E-3]
+
+Pruned Model
+************
+
+[3.069231E-4,5.582051E-4,3.051256E-2]
+ExampleIDs: index: 'corel5k'
+
+
+Run: 12
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 21; Leaves = 11; Depth = 11
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.189744E-4,5.864103E-4,3.154308E-2]
+ExampleIDs: index: 'yeast'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.275000E-4,3.787500E-4,5.170000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Mean of standard deviation of numeric attributes > 0.02865
+                            +--yes: Bound > 349.0
+                            |      +--yes: [2.000000E-5,3.000000E-5,2.110000E-3]
+                            |      |      ExampleIDs: index: 'yeast'
+
+                            |      +--no:  Maximal entropy of labels > 0.8221
+                            |             +--yes: Bound > 16.0
+                            |             |      +--yes: Bound > 256.0
+                            |             |      |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                            |             |      |      +--no:  DefaultAccuracy > 0.33562
+                            |             |      |             +--yes: [1.000000E-5,1.000000E-5,2.200000E-4]
+                            |             |      |             +--no:  [1.000000E-5,1.000000E-5,9.000000E-5]
+                            |             |      +--no:  [1.000000E-5,0,1.050000E-4]
+                            |             +--no:  [1.666667E-5,1.666667E-5,6.566667E-4]
+                            +--no:  [2.250000E-5,5.500000E-5,4.300000E-4]
+
+Pruned Model
+************
+
+[3.189744E-4,5.864103E-4,3.154308E-2]
+ExampleIDs: index: 'yeast'
+
+
+Run: 13
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 11; Leaves = 6; Depth = 6
+     Pruned: Nodes = 3; Leaves = 2; Depth = 2
+
+Default Model
+*************
+
+[3.189744E-4,5.858974E-4,3.154718E-2]
+ExampleIDs: index: 'HumanGO'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  LxIxF > 5.3932736E7
+       +--yes: [2.155556E-4,5.822222E-4,1.656444E-2]
+       |      ExampleIDs: index: 'HumanGO'
+
+       +--no:  Labels > 45.0
+              +--yes: [4.000000E-5,1.533333E-4,5.360000E-3]
+              +--no:  Instances > 1024.0
+                     +--yes: [4.000000E-5,8.000000E-5,5.550000E-4]
+                     +--no:  Bound > 349.0
+                            +--yes: [2.000000E-5,4.000000E-5,1.330000E-3]
+                            +--no:  [1.105263E-5,1.263158E-5,2.278947E-4]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  [6.567568E-5,1.691892E-4,4.754595E-3]
+       ExampleIDs: index: 'HumanGO'
+
+
+Run: 14
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 15; Leaves = 8; Depth = 8
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.192308E-4,5.874359E-4,3.155564E-2]
+ExampleIDs: index: 'GpositivePseAAC'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.275000E-4,3.787500E-4,5.170000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Mean of standard deviation of IR intra class > 168.87595
+                            +--yes: [2.285714E-5,4.142857E-5,9.771429E-4]
+                            +--no:  Maximal entropy of labels > 0.8221
+                                   +--yes: Bound > 256.0
+                                   |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                                   |      +--no:  [1.000000E-5,9.090909E-6,1.254545E-4]
+                                   |             ExampleIDs: index: 'GpositivePseAAC'
+
+                                   +--no:  [1.333333E-5,2.666667E-5,5.600000E-4]
+
+Pruned Model
+************
+
+[3.192308E-4,5.874359E-4,3.155564E-2]
+ExampleIDs: index: 'GpositivePseAAC'
+
+
+Run: 15
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 11; Leaves = 6; Depth = 6
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.184615E-4,5.815385E-4,3.141744E-2]
+ExampleIDs: index: 'cal500'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Number of unconditionally dependent label pairs by chi-square test > 110.0
+       +--yes: [2.300000E-4,6.112500E-4,1.816125E-2]
+       |      ExampleIDs: index: 'cal500'
+
+       +--no:  Average gain ratio > 0.0
+              +--yes: LxIxF > 1.1943624E7
+              |      +--yes: [3.000000E-5,6.833333E-5,1.261667E-3]
+              |      +--no:  Labels > 12.0
+              |             +--yes: [1.600000E-5,3.200000E-5,5.060000E-4]
+              |             +--no:  [1.062500E-5,1.000000E-5,2.243750E-4]
+              +--no:  [7.000000E-5,2.350000E-4,5.940000E-3]
+
+Pruned Model
+************
+
+[3.184615E-4,5.815385E-4,3.141744E-2]
+ExampleIDs: index: 'cal500'
+
+
+Run: 16
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 11; Leaves = 6; Depth = 6
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.015385E-4,5.484615E-4,3.016333E-2]
+ExampleIDs: index: 'stackex_cs'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1388.0
++--yes: [4.900000E-3,8.105000E-3,5.204000E-1]
+|      ExampleIDs: index: 'stackex_cs'
+
++--no:  Number of unconditionally dependent label pairs by chi-square test > 110.0
+       +--yes: [1.737500E-4,4.975000E-4,1.375000E-2]
+       +--no:  Average gain ratio > 0.0
+              +--yes: LxIxF > 1.1943624E7
+              |      +--yes: [3.000000E-5,6.833333E-5,1.261667E-3]
+              |      +--no:  Labels > 12.0
+              |             +--yes: [1.600000E-5,3.200000E-5,5.060000E-4]
+              |             +--no:  [1.062500E-5,1.000000E-5,2.243750E-4]
+              +--no:  [7.000000E-5,2.350000E-4,5.940000E-3]
+
+Pruned Model
+************
+
+[3.015385E-4,5.484615E-4,3.016333E-2]
+ExampleIDs: index: 'stackex_cs'
+
+
+Run: 17
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 19; Leaves = 10; Depth = 9
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.169231E-4,5.784615E-4,3.146154E-2]
+ExampleIDs: index: 'ohsumed'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Number of unconditionally dependent label pairs by chi-square test > 110.0
+       +--yes: Distinct labelsets > 1026.0
+       |      +--yes: [3.900000E-4,9.750000E-4,4.590500E-2]
+       |      +--no:  [1.571429E-4,4.528571E-4,8.427143E-3]
+       +--no:  Max IR intra class > 419.0
+              +--yes: [4.000000E-5,1.100000E-4,3.693333E-3]
+              +--no:  Mean of standard deviation of IR intra class > 168.87595
+                     +--yes: [2.285714E-5,4.142857E-5,9.771429E-4]
+                     |      ExampleIDs: index: 'ohsumed'
+
+                     +--no:  Maximal entropy of labels > 0.8221
+                            +--yes: Bound > 16.0
+                            |      +--yes: Bound > 256.0
+                            |      |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                            |      |      +--no:  DefaultAccuracy > 0.33562
+                            |      |             +--yes: [1.000000E-5,1.000000E-5,2.200000E-4]
+                            |      |             +--no:  [1.000000E-5,1.000000E-5,9.000000E-5]
+                            |      +--no:  [1.000000E-5,0,1.050000E-4]
+                            +--no:  [1.333333E-5,2.666667E-5,5.600000E-4]
+
+Pruned Model
+************
+
+[3.169231E-4,5.784615E-4,3.146154E-2]
+ExampleIDs: index: 'ohsumed'
+
+
+Run: 18
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 17; Leaves = 9; Depth = 9
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.192308E-4,5.871795E-4,3.155590E-2]
+ExampleIDs: index: 'Virus_PseAAC'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.275000E-4,3.787500E-4,5.170000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Mean of standard deviation of IR intra class > 168.87595
+                            +--yes: [2.285714E-5,4.142857E-5,9.771429E-4]
+                            +--no:  Maximal entropy of labels > 0.8221
+                                   +--yes: Bound > 16.0
+                                   |      +--yes: Bound > 256.0
+                                   |      |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                                   |      |      +--no:  [1.000000E-5,1.000000E-5,1.311111E-4]
+                                   |      |             ExampleIDs: index: 'Virus_PseAAC'
+
+                                   |      +--no:  [1.000000E-5,0,1.050000E-4]
+                                   +--no:  [1.333333E-5,2.666667E-5,5.600000E-4]
+
+Pruned Model
+************
+
+[3.192308E-4,5.871795E-4,3.155590E-2]
+ExampleIDs: index: 'Virus_PseAAC'
+
+
+Run: 19
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.125
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 29; Leaves = 15; Depth = 11
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.164103E-4,5.756410E-4,3.145436E-2]
+ExampleIDs: index: 'ng20'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 704.0
+       +--yes: Cardinality > 2.25612
+       |      +--yes: [3.900000E-4,9.750000E-4,4.590500E-2]
+       |      +--no:  [2.000000E-4,5.800000E-4,1.553000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: Average gain ratio > 0.00189
+              |      +--yes: [4.000000E-5,1.700000E-4,3.995000E-3]
+              |      +--no:  Attributes > 500.0
+              |             +--yes: [1.250000E-4,3.550000E-4,5.995000E-3]
+              |             |      ExampleIDs: index: 'ng20'
+
+              |             +--no:  [1.950000E-4,4.800000E-4,5.075000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Mean of standard deviation of IR intra class > 168.87595
+                            +--yes: CVIR inter class > 0.11907
+                            |      +--yes: [2.400000E-5,5.200000E-5,6.660000E-4]
+                            |      +--no:  [2.000000E-5,1.500000E-5,1.755000E-3]
+                            +--no:  Maximal entropy of labels > 0.8221
+                                   +--yes: Bound > 16.0
+                                   |      +--yes: Bound > 256.0
+                                   |      |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                                   |      |      +--no:  Average examples per labelset > 11.25
+                                   |      |             +--yes: [1.000000E-5,1.000000E-5,2.250000E-4]
+                                   |      |             +--no:  CVIR inter class > 0.72814
+                                   |      |                    +--yes: [1.000000E-5,1.000000E-5,8.400000E-5]
+                                   |      |                    +--no:  [1.000000E-5,1.000000E-5,1.400000E-4]
+                                   |      +--no:  [1.000000E-5,0,1.050000E-4]
+                                   +--no:  [1.333333E-5,2.666667E-5,5.600000E-4]
+
+Pruned Model
+************
+
+[3.164103E-4,5.756410E-4,3.145436E-2]
+ExampleIDs: index: 'ng20'
+
+
+Run: 20
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.125
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 29; Leaves = 15; Depth = 11
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.138462E-4,5.725641E-4,3.144667E-2]
+ExampleIDs: index: 'Arabic200'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 704.0
+       +--yes: Cardinality > 2.25612
+       |      +--yes: [3.900000E-4,9.750000E-4,4.590500E-2]
+       |      +--no:  [2.000000E-4,5.800000E-4,1.553000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: Average gain ratio > 1.8E-4
+              |      +--yes: [4.000000E-5,1.700000E-4,3.995000E-3]
+              |      |      ExampleIDs: index: 'Arabic200'
+
+              |      +--no:  Attributes > 585.0
+              |             +--yes: [1.100000E-4,4.050000E-4,3.930000E-3]
+              |             +--no:  [1.600000E-4,3.700000E-4,6.990000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Mean of standard deviation of IR intra class > 168.87595
+                            +--yes: CVIR inter class > 0.11907
+                            |      +--yes: [2.400000E-5,5.200000E-5,6.660000E-4]
+                            |      +--no:  [2.000000E-5,1.500000E-5,1.755000E-3]
+                            +--no:  Maximal entropy of labels > 0.8221
+                                   +--yes: Bound > 16.0
+                                   |      +--yes: Bound > 256.0
+                                   |      |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                                   |      |      +--no:  Average examples per labelset > 11.25
+                                   |      |             +--yes: [1.000000E-5,1.000000E-5,2.250000E-4]
+                                   |      |             +--no:  CVIR inter class > 0.72814
+                                   |      |                    +--yes: [1.000000E-5,1.000000E-5,8.400000E-5]
+                                   |      |                    +--no:  [1.000000E-5,1.000000E-5,1.400000E-4]
+                                   |      +--no:  [1.000000E-5,0,1.050000E-4]
+                                   +--no:  [1.333333E-5,2.666667E-5,5.600000E-4]
+
+Pruned Model
+************
+
+[3.138462E-4,5.725641E-4,3.144667E-2]
+ExampleIDs: index: 'Arabic200'
+
+
+Run: 21
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 17; Leaves = 9; Depth = 9
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.192308E-4,5.864103E-4,3.155410E-2]
+ExampleIDs: index: 'genbase'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.275000E-4,3.787500E-4,5.170000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Mean of standard deviation of IR intra class > 168.87595
+                            +--yes: [2.285714E-5,4.142857E-5,9.771429E-4]
+                            +--no:  Bound > 256.0
+                                   +--yes: [1.200000E-5,1.800000E-5,4.360000E-4]
+                                   |      ExampleIDs: index: 'genbase'
+
+                                   +--no:  Bound > 16.0
+                                          +--yes: DefaultAccuracy > 0.33562
+                                          |      +--yes: [1.000000E-5,1.000000E-5,2.200000E-4]
+                                          |      +--no:  [1.000000E-5,1.000000E-5,9.000000E-5]
+                                          +--no:  [1.000000E-5,0,1.050000E-4]
+
+Pruned Model
+************
+
+[3.192308E-4,5.864103E-4,3.155410E-2]
+ExampleIDs: index: 'genbase'
+
+
+Run: 22
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 13; Leaves = 7; Depth = 7
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.156410E-4,5.782051E-4,3.134846E-2]
+ExampleIDs: index: 'stackex_chess'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 704.0
+       +--yes: [2.950000E-4,7.775000E-4,3.071750E-2]
+       +--no:  Bound > 2272.0
+              +--yes: [1.525000E-4,4.425000E-4,4.502500E-3]
+              +--no:  Labels > 45.0
+                     +--yes: [4.000000E-5,1.533333E-4,5.360000E-3]
+                     |      ExampleIDs: index: 'stackex_chess'
+
+                     +--no:  LxIxF > 1.1943624E7
+                            +--yes: [2.800000E-5,6.000000E-5,1.018000E-3]
+                            +--no:  Labels > 12.0
+                                   +--yes: [1.600000E-5,3.200000E-5,5.060000E-4]
+                                   +--no:  [1.062500E-5,1.000000E-5,2.243750E-4]
+
+Pruned Model
+************
+
+[3.156410E-4,5.782051E-4,3.134846E-2]
+ExampleIDs: index: 'stackex_chess'
+
+
+Run: 23
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 15; Leaves = 8; Depth = 8
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.192308E-4,5.874359E-4,3.155641E-2]
+ExampleIDs: index: 'GpositiveGO'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.275000E-4,3.787500E-4,5.170000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Mean of standard deviation of IR intra class > 168.87595
+                            +--yes: [2.285714E-5,4.142857E-5,9.771429E-4]
+                            +--no:  Maximal entropy of labels > 0.8221
+                                   +--yes: Bound > 256.0
+                                   |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                                   |      +--no:  [1.000000E-5,9.090909E-6,1.281818E-4]
+                                   |             ExampleIDs: index: 'GpositiveGO'
+
+                                   +--no:  [1.333333E-5,2.666667E-5,5.600000E-4]
+
+Pruned Model
+************
+
+[3.192308E-4,5.874359E-4,3.155641E-2]
+ExampleIDs: index: 'GpositiveGO'
+
+
+Run: 24
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 13; Leaves = 7; Depth = 7
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.192308E-4,5.869231E-4,3.155410E-2]
+ExampleIDs: index: 'PlantGO'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.275000E-4,3.787500E-4,5.170000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  LxIxF > 6304824.0
+                            +--yes: [2.166667E-5,4.666667E-5,9.900000E-4]
+                            |      ExampleIDs: index: 'PlantGO'
+
+                            +--no:  Number of unconditionally dependent label pairs by chi-square test > 12.0
+                                   +--yes: [1.750000E-5,2.250000E-5,4.100000E-4]
+                                   +--no:  [1.000000E-5,9.285714E-6,2.100000E-4]
+
+Pruned Model
+************
+
+[3.192308E-4,5.869231E-4,3.155410E-2]
+ExampleIDs: index: 'PlantGO'
+
+
+Run: 25
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 19; Leaves = 10; Depth = 10
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.192308E-4,5.871795E-4,3.155564E-2]
+ExampleIDs: index: 'GnegativeGO'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.275000E-4,3.787500E-4,5.170000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Mean of standard deviation of IR intra class > 168.87595
+                            +--yes: [2.285714E-5,4.142857E-5,9.771429E-4]
+                            +--no:  Maximal entropy of labels > 0.8221
+                                   +--yes: Bound > 16.0
+                                   |      +--yes: Bound > 256.0
+                                   |      |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                                   |      |      +--no:  DefaultAccuracy > 0.33562
+                                   |      |             +--yes: [1.000000E-5,1.000000E-5,2.700000E-4]
+                                   |      |             |      ExampleIDs: index: 'GnegativeGO'
+
+                                   |      |             +--no:  [1.000000E-5,1.000000E-5,9.000000E-5]
+                                   |      +--no:  [1.000000E-5,0,1.050000E-4]
+                                   +--no:  [1.333333E-5,2.666667E-5,5.600000E-4]
+
+Pruned Model
+************
+
+[3.192308E-4,5.871795E-4,3.155564E-2]
+ExampleIDs: index: 'GnegativeGO'
+
+
+Run: 26
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.125
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 33; Leaves = 17; Depth = 11
+     Pruned: Nodes = 3; Leaves = 2; Depth = 2
+
+Default Model
+*************
+
+[3.120513E-4,5.666667E-4,3.025077E-2]
+ExampleIDs: index: 'bibtex'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Number of unconditionally dependent label pairs by chi-square test > 110.0
+       +--yes: Density > 0.00968
+       |      +--yes: Bound > 7750.0
+       |      |      +--yes: [2.000000E-4,5.700000E-4,5.765000E-3]
+       |      |      +--no:  Average examples per labelset > 1.33733
+       |      |             +--yes: [1.450000E-4,4.200000E-4,4.925000E-3]
+       |      |             |      ExampleIDs: index: 'bibtex'
+
+       |      |             +--no:  [9.500000E-5,2.950000E-4,6.855000E-3]
+       |      +--no:  [3.550000E-4,8.700000E-4,3.235000E-2]
+       +--no:  Average gain ratio > 0.0
+              +--yes: LxIxF > 1.1943624E7
+              |      +--yes: CVIR inter class > 1.12649
+              |      |      +--yes: [4.000000E-5,1.050000E-4,1.495000E-3]
+              |      |      +--no:  Average gain ratio > 6.3E-4
+              |      |             +--yes: [3.000000E-5,4.000000E-5,1.820000E-3]
+              |      |             +--no:  [2.000000E-5,6.000000E-5,4.700000E-4]
+              |      +--no:  Labels > 12.0
+              |             +--yes: [1.600000E-5,3.200000E-5,5.060000E-4]
+              |             +--no:  CVIR inter class > 0.10125
+              |                    +--yes: Bound > 16.0
+              |                    |      +--yes: Attributes > 1538.0
+              |                    |      |      +--yes: [1.000000E-5,1.500000E-5,1.500000E-4]
+              |                    |      |      +--no:  Attributes > 72.0
+              |                    |      |             +--yes: Average examples per labelset > 7.55556
+              |                    |      |             |      +--yes: [1.000000E-5,1.000000E-5,3.400000E-4]
+              |                    |      |             |      +--no:  [1.000000E-5,1.000000E-5,1.300000E-4]
+              |                    |      |             +--no:  Cardinality > 2.56284
+              |                    |      |                    +--yes: [1.000000E-5,1.000000E-5,7.000000E-5]
+              |                    |      |                    +--no:  [1.000000E-5,1.000000E-5,1.033333E-4]
+              |                    |      +--no:  [1.000000E-5,0,1.050000E-4]
+              |                    +--no:  [1.500000E-5,1.500000E-5,7.800000E-4]
+              +--no:  [7.000000E-5,2.350000E-4,5.940000E-3]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  [5.837838E-5,1.489189E-4,3.388108E-3]
+       ExampleIDs: index: 'bibtex'
+
+
+Run: 27
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 21; Leaves = 11; Depth = 10
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.184615E-4,5.848718E-4,3.154564E-2]
+ExampleIDs: index: 'slashdot'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Bound > 1024.0
+       +--yes: Cardinality > 2.25612
+       |      +--yes: [3.900000E-4,9.750000E-4,4.590500E-2]
+       |      +--no:  [1.683333E-4,4.883333E-4,8.178333E-3]
+       |             ExampleIDs: index: 'slashdot'
+
+       +--no:  Labels > 75.0
+              +--yes: [9.500000E-5,2.950000E-4,6.855000E-3]
+              +--no:  Labels > 45.0
+                     +--yes: [4.000000E-5,1.150000E-4,5.285000E-3]
+                     +--no:  Mean of standard deviation of IR intra class > 168.87595
+                            +--yes: [2.285714E-5,4.142857E-5,9.771429E-4]
+                            +--no:  Maximal entropy of labels > 0.8221
+                                   +--yes: Bound > 16.0
+                                   |      +--yes: Bound > 256.0
+                                   |      |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                                   |      |      +--no:  DefaultAccuracy > 0.33562
+                                   |      |             +--yes: [1.000000E-5,1.000000E-5,2.200000E-4]
+                                   |      |             +--no:  [1.000000E-5,1.000000E-5,9.000000E-5]
+                                   |      +--no:  [1.000000E-5,0,1.050000E-4]
+                                   +--no:  [1.333333E-5,2.666667E-5,5.600000E-4]
+
+Pruned Model
+************
+
+[3.184615E-4,5.848718E-4,3.154564E-2]
+ExampleIDs: index: 'slashdot'
+
+
+Run: 28
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 19; Leaves = 10; Depth = 10
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.148718E-4,5.730769E-4,3.137513E-2]
+ExampleIDs: index: 'tmc2007_500'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 704.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       |      ExampleIDs: index: 'tmc2007_500'
+
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.200000E-4,3.528571E-4,4.885714E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Mean of standard deviation of IR intra class > 168.87595
+                            +--yes: [2.285714E-5,4.142857E-5,9.771429E-4]
+                            +--no:  Maximal entropy of labels > 0.8221
+                                   +--yes: Bound > 16.0
+                                   |      +--yes: Bound > 256.0
+                                   |      |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                                   |      |      +--no:  DefaultAccuracy > 0.33562
+                                   |      |             +--yes: [1.000000E-5,1.000000E-5,2.200000E-4]
+                                   |      |             +--no:  [1.000000E-5,1.000000E-5,9.000000E-5]
+                                   |      +--no:  [1.000000E-5,0,1.050000E-4]
+                                   +--no:  [1.333333E-5,2.666667E-5,5.600000E-4]
+
+Pruned Model
+************
+
+[3.148718E-4,5.730769E-4,3.137513E-2]
+ExampleIDs: index: 'tmc2007_500'
+
+
+Run: 29
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 11; Leaves = 6; Depth = 6
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.184615E-4,5.843590E-4,3.135128E-2]
+ExampleIDs: index: 'langlog'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 53.0
+              +--yes: [1.275000E-4,3.787500E-4,5.170000E-3]
+              |      ExampleIDs: index: 'langlog'
+
+              +--no:  LxIxF > 1.1943624E7
+                     +--yes: [2.800000E-5,6.000000E-5,1.018000E-3]
+                     +--no:  Labels > 12.0
+                            +--yes: [1.600000E-5,3.200000E-5,5.060000E-4]
+                            +--no:  [1.062500E-5,1.000000E-5,2.243750E-4]
+
+Pruned Model
+************
+
+[3.184615E-4,5.843590E-4,3.135128E-2]
+ExampleIDs: index: 'langlog'
+
+
+Run: 30
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 27; Leaves = 14; Depth = 11
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.138462E-4,5.720513E-4,3.094590E-2]
+ExampleIDs: index: 'stackex_philosophy'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.900000E-4,9.750000E-4,4.590500E-2]
+       |      ExampleIDs: index: 'stackex_philosophy'
+
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: Average gain ratio > 0.00189
+              |      +--yes: [4.000000E-5,1.700000E-4,3.995000E-3]
+              |      +--no:  Average gain ratio > 1.8E-4
+              |             +--yes: [2.000000E-4,5.700000E-4,5.765000E-3]
+              |             +--no:  [1.350000E-4,3.875000E-4,5.460000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Mean of standard deviation of IR intra class > 168.87595
+                            +--yes: CVIR inter class > 0.11907
+                            |      +--yes: [2.400000E-5,5.200000E-5,6.660000E-4]
+                            |      +--no:  [2.000000E-5,1.500000E-5,1.755000E-3]
+                            +--no:  Maximal entropy of labels > 0.8221
+                                   +--yes: Bound > 16.0
+                                   |      +--yes: Bound > 256.0
+                                   |      |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                                   |      |      +--no:  Average examples per labelset > 11.25
+                                   |      |             +--yes: [1.000000E-5,1.000000E-5,2.250000E-4]
+                                   |      |             +--no:  CVIR inter class > 0.72814
+                                   |      |                    +--yes: [1.000000E-5,1.000000E-5,8.400000E-5]
+                                   |      |                    +--no:  [1.000000E-5,1.000000E-5,1.400000E-4]
+                                   |      +--no:  [1.000000E-5,0,1.050000E-4]
+                                   +--no:  [1.333333E-5,2.666667E-5,5.600000E-4]
+
+Pruned Model
+************
+
+[3.138462E-4,5.720513E-4,3.094590E-2]
+ExampleIDs: index: 'stackex_philosophy'
+
+
+Run: 31
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 19; Leaves = 10; Depth = 10
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.151282E-4,5.776923E-4,3.141051E-2]
+ExampleIDs: index: 'reutersk500'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 704.0
+       +--yes: [2.950000E-4,7.775000E-4,3.071750E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.116667E-4,3.483333E-4,4.736667E-3]
+              |      ExampleIDs: index: 'reutersk500'
+
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Mean of standard deviation of IR intra class > 168.87595
+                            +--yes: [2.285714E-5,4.142857E-5,9.771429E-4]
+                            +--no:  Maximal entropy of labels > 0.8221
+                                   +--yes: Bound > 16.0
+                                   |      +--yes: Bound > 256.0
+                                   |      |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                                   |      |      +--no:  DefaultAccuracy > 0.33562
+                                   |      |             +--yes: [1.000000E-5,1.000000E-5,2.200000E-4]
+                                   |      |             +--no:  [1.000000E-5,1.000000E-5,9.000000E-5]
+                                   |      +--no:  [1.000000E-5,0,1.050000E-4]
+                                   +--no:  [1.333333E-5,2.666667E-5,5.600000E-4]
+
+Pruned Model
+************
+
+[3.151282E-4,5.776923E-4,3.141051E-2]
+ExampleIDs: index: 'reutersk500'
+
+
+Run: 32
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 13; Leaves = 7; Depth = 7
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.189744E-4,5.869231E-4,3.148077E-2]
+ExampleIDs: index: 'proteins_human'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.275000E-4,3.787500E-4,5.170000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  LxIxF > 1.1943624E7
+                            +--yes: [2.666667E-5,6.000000E-5,5.133333E-4]
+                            |      ExampleIDs: index: 'proteins_human'
+
+                            +--no:  Labels > 12.0
+                                   +--yes: [1.600000E-5,3.200000E-5,5.060000E-4]
+                                   +--no:  [1.062500E-5,1.000000E-5,2.243750E-4]
+
+Pruned Model
+************
+
+[3.189744E-4,5.869231E-4,3.148077E-2]
+ExampleIDs: index: 'proteins_human'
+
+
+Run: 33
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 15; Leaves = 8; Depth = 8
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.192308E-4,5.869231E-4,3.155487E-2]
+ExampleIDs: index: 'Water_quality'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.275000E-4,3.787500E-4,5.170000E-3]
+              +--no:  Distinct labelsets > 129.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     |      ExampleIDs: index: 'Water_quality'
+
+                     +--no:  Mean of standard deviation of IR intra class > 168.87595
+                            +--yes: [2.285714E-5,4.142857E-5,9.771429E-4]
+                            +--no:  Maximal entropy of labels > 0.8221
+                                   +--yes: Bound > 16.0
+                                   |      +--yes: [1.000000E-5,1.083333E-5,1.516667E-4]
+                                   |      +--no:  [1.000000E-5,0,1.050000E-4]
+                                   +--no:  [1.333333E-5,2.666667E-5,5.600000E-4]
+
+Pruned Model
+************
+
+[3.192308E-4,5.869231E-4,3.155487E-2]
+ExampleIDs: index: 'Water_quality'
+
+
+Run: 34
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 17; Leaves = 9; Depth = 9
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.192308E-4,5.871795E-4,3.154974E-2]
+ExampleIDs: index: 'PlantPseAAC'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.275000E-4,3.787500E-4,5.170000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Mean of standard deviation of IR intra class > 168.87595
+                            +--yes: [2.285714E-5,4.142857E-5,9.771429E-4]
+                            +--no:  Bound > 256.0
+                                   +--yes: [1.200000E-5,2.400000E-5,4.020000E-4]
+                                   |      ExampleIDs: index: 'PlantPseAAC'
+
+                                   +--no:  Bound > 16.0
+                                          +--yes: DefaultAccuracy > 0.33562
+                                          |      +--yes: [1.000000E-5,1.000000E-5,2.200000E-4]
+                                          |      +--no:  [1.000000E-5,1.000000E-5,9.000000E-5]
+                                          +--no:  [1.000000E-5,0,1.050000E-4]
+
+Pruned Model
+************
+
+[3.192308E-4,5.871795E-4,3.154974E-2]
+ExampleIDs: index: 'PlantPseAAC'
+
+
+Run: 35
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 19; Leaves = 10; Depth = 10
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.184615E-4,5.858974E-4,3.154333E-2]
+ExampleIDs: index: 'Yelp'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.275000E-4,3.787500E-4,5.170000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Bound > 349.0
+                            +--yes: [2.000000E-5,4.400000E-5,1.154000E-3]
+                            +--no:  Maximal entropy of labels > 0.8221
+                                   +--yes: Bound > 16.0
+                                   |      +--yes: Bound > 256.0
+                                   |      |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                                   |      |      +--no:  DefaultAccuracy > 0.33562
+                                   |      |             +--yes: [1.000000E-5,1.000000E-5,2.200000E-4]
+                                   |      |             +--no:  [1.000000E-5,1.000000E-5,9.000000E-5]
+                                   |      |                    ExampleIDs: index: 'Yelp'
+
+                                   |      +--no:  [1.000000E-5,0,1.050000E-4]
+                                   +--no:  [1.500000E-5,2.250000E-5,5.375000E-4]
+
+Pruned Model
+************
+
+[3.184615E-4,5.858974E-4,3.154333E-2]
+ExampleIDs: index: 'Yelp'
+
+
+Run: 36
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 19; Leaves = 10; Depth = 10
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.192308E-4,5.871795E-4,3.155615E-2]
+ExampleIDs: index: 'CHD_49'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.275000E-4,3.787500E-4,5.170000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Mean of mean of numeric attributes > 0.0024
+                            +--yes: Bound > 349.0
+                            |      +--yes: [2.000000E-5,3.000000E-5,2.110000E-3]
+                            |      +--no:  Maximal entropy of labels > 0.8221
+                            |             +--yes: Bound > 16.0
+                            |             |      +--yes: Bound > 256.0
+                            |             |      |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                            |             |      |      +--no:  [1.000000E-5,1.000000E-5,1.322222E-4]
+                            |             |      +--no:  [1.000000E-5,0,1.050000E-4]
+                            |             +--no:  [1.666667E-5,1.666667E-5,6.566667E-4]
+                            +--no:  [2.200000E-5,5.200000E-5,4.660000E-4]
+                                   ExampleIDs: index: 'CHD_49'
+
+
+Pruned Model
+************
+
+[3.192308E-4,5.871795E-4,3.155615E-2]
+ExampleIDs: index: 'CHD_49'
+
+
+Run: 37
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 17; Leaves = 9; Depth = 9
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.192308E-4,5.871795E-4,3.155692E-2]
+ExampleIDs: index: 'flags'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.275000E-4,3.787500E-4,5.170000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Mean of standard deviation of IR intra class > 168.87595
+                            +--yes: [2.285714E-5,4.142857E-5,9.771429E-4]
+                            +--no:  Maximal entropy of labels > 0.8221
+                                   +--yes: Bound > 16.0
+                                   |      +--yes: Bound > 256.0
+                                   |      |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                                   |      |      +--no:  [1.000000E-5,1.000000E-5,1.355556E-4]
+                                   |      |             ExampleIDs: index: 'flags'
+
+                                   |      +--no:  [1.000000E-5,0,1.050000E-4]
+                                   +--no:  [1.333333E-5,2.666667E-5,5.600000E-4]
+
+Pruned Model
+************
+
+[3.192308E-4,5.871795E-4,3.155692E-2]
+ExampleIDs: index: 'flags'
+
+
+Run: 38
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 17; Leaves = 9; Depth = 9
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.192308E-4,5.871795E-4,3.155333E-2]
+ExampleIDs: index: 'proteins_virus'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.275000E-4,3.787500E-4,5.170000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Mean of standard deviation of IR intra class > 168.87595
+                            +--yes: [2.285714E-5,4.142857E-5,9.771429E-4]
+                            +--no:  Maximal entropy of labels > 0.8221
+                                   +--yes: Bound > 16.0
+                                   |      +--yes: Bound > 256.0
+                                   |      |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                                   |      |      +--no:  [1.000000E-5,1.000000E-5,1.200000E-4]
+                                   |      |             ExampleIDs: index: 'proteins_virus'
+
+                                   |      +--no:  [1.000000E-5,0,1.050000E-4]
+                                   +--no:  [1.333333E-5,2.666667E-5,5.600000E-4]
+
+Pruned Model
+************
+
+[3.192308E-4,5.871795E-4,3.155333E-2]
+ExampleIDs: index: 'proteins_virus'
+
+
+Run: 39
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 17; Leaves = 9; Depth = 9
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.192308E-4,5.871795E-4,3.155692E-2]
+ExampleIDs: index: 'VirusGO'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.275000E-4,3.787500E-4,5.170000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Mean of standard deviation of IR intra class > 168.87595
+                            +--yes: [2.285714E-5,4.142857E-5,9.771429E-4]
+                            +--no:  Maximal entropy of labels > 0.8221
+                                   +--yes: Bound > 16.0
+                                   |      +--yes: Bound > 256.0
+                                   |      |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                                   |      |      +--no:  [1.000000E-5,1.000000E-5,1.355556E-4]
+                                   |      |             ExampleIDs: index: 'VirusGO'
+
+                                   |      +--no:  [1.000000E-5,0,1.050000E-4]
+                                   +--no:  [1.333333E-5,2.666667E-5,5.600000E-4]
+
+Pruned Model
+************
+
+[3.192308E-4,5.871795E-4,3.155692E-2]
+ExampleIDs: index: 'VirusGO'
+
+
+Run: 40
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.01
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 17; Leaves = 9; Depth = 9
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[3.192308E-4,5.871795E-4,3.155026E-2]
+ExampleIDs: index: 'GnegativePseACC'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [5.005000E-3,8.295000E-3,5.272100E-1]
++--no:  Distinct labelsets > 796.0
+       +--yes: [3.333333E-4,8.500000E-4,3.857000E-2]
+       +--no:  Number of unconditionally dependent label pairs by chi-square test > 78.0
+              +--yes: [1.275000E-4,3.787500E-4,5.170000E-3]
+              +--no:  Max IR intra class > 419.0
+                     +--yes: [4.000000E-5,1.100000E-4,4.300000E-3]
+                     +--no:  Mean of standard deviation of IR intra class > 168.87595
+                            +--yes: [2.285714E-5,4.142857E-5,9.771429E-4]
+                            +--no:  Maximal entropy of labels > 0.8221
+                                   +--yes: Bound > 16.0
+                                   |      +--yes: Bound > 256.0
+                                   |      |      +--yes: [1.000000E-5,1.666667E-5,2.266667E-4]
+                                   |      |      +--no:  [1.000000E-5,1.000000E-5,1.066667E-4]
+                                   |      |             ExampleIDs: index: 'GnegativePseACC'
+
+                                   |      +--no:  [1.000000E-5,0,1.050000E-4]
+                                   +--no:  [1.333333E-5,2.666667E-5,5.600000E-4]
+
+Pruned Model
+************
+
+[3.192308E-4,5.871795E-4,3.155026E-2]
+ExampleIDs: index: 'GnegativePseACC'
+
+
+Summary
+*******
+
+Runs: 40
+Induction time: 5.4000E-2 sec
+Preprocessing time: 0 sec
+Prediction Time (total for ClusModel.Original, 40 runs, 0 examples): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Mean number of tests
+     Original: 18.1
+     Pruned: 1.4
+
+Training error
+--------------
+
+Number of examples: 1560
+Mean absolute error (MAE)
+   Default        : [4.7899E-4,8.1535E-4,5.1154E-2]: 1.7483E-2
+   Original       : [2.3383E-4,3.7905E-4,2.5280E-2]: 8.6309E-3
+   Pruned         : [4.6701E-4,7.9556E-4,4.9859E-2]: 1.7041E-2
+Mean squared error (MSE)
+   Default        : [2.0943E-6,5.4958E-6,2.4240E-2]: 8.0826E-3
+   Original       : [9.2952E-7,2.3062E-6,1.1202E-2]: 3.7350E-3
+   Pruned         : [2.0344E-6,5.3322E-6,2.3570E-2]: 7.8593E-3
+Root mean squared error (RMSE)
+   Default        : [1.4472E-3,2.3443E-3,1.5569E-1]: 5.3161E-2
+   Original       : [9.6412E-4,1.5186E-3,1.0584E-1]: 3.6107E-2
+   Pruned         : [1.4263E-3,2.3092E-3,1.5353E-1]: 5.2421E-2
+Weighted root mean squared error (RMSE) (Weights [477176.015,181838.351,41.227])
+   Default        : [9.9967E-1,9.9967E-1,9.9967E-1]: 9.9967E-1
+   Original       : [6.6599E-1,6.4757E-1,6.7957E-1]: 6.6438E-1
+   Pruned         : [9.8528E-1,9.8468E-1,9.8576E-1]: 9.8524E-1
+Root Relative Squared Error (RRMSE)
+   Default        : [9.9967E-1,9.9967E-1,9.9967E-1]: 9.9967E-1
+   Original       : [6.6599E-1,6.4757E-1,6.7957E-1]: 6.6438E-1
+   Pruned         : [9.8528E-1,9.8468E-1,9.8576E-1]: 9.8524E-1
+Pearson correlation coefficient
+   Default        : [2.5641E-2,2.5641E-2,2.5641E-2], Avg r^2: 6.5746E-4
+   Original       : [7.4596E-1,7.6201E-1,7.3361E-1], Avg r^2: 5.5843E-1
+   Pruned         : [1.7095E-1,1.7437E-1,1.6814E-1], Avg r^2: 2.9300E-2
+
+Testing error
+-------------
+
+Number of examples: 40
+Mean absolute error (MAE)
+   Default        : [4.9054E-4,8.3505E-4,5.2469E-2]: 1.7932E-2
+   Original       : [4.8368E-4,8.0561E-4,5.2105E-2]: 1.7798E-2
+   Pruned         : [4.7913E-4,8.1119E-4,5.1400E-2]: 1.7564E-2
+Mean squared error (MSE)
+   Default        : [2.2045E-6,5.7850E-6,2.5516E-2]: 8.5080E-3
+   Original       : [2.9006E-6,7.2431E-6,3.4075E-2]: 1.1362E-2
+   Pruned         : [2.0175E-6,5.1002E-6,2.3455E-2]: 7.8209E-3
+Root mean squared error (RMSE)
+   Default        : [1.4848E-3,2.4052E-3,1.5974E-1]: 5.4542E-2
+   Original       : [1.7031E-3,2.6913E-3,1.8459E-1]: 6.2996E-2
+   Pruned         : [1.4204E-3,2.2584E-3,1.5315E-1]: 5.2277E-2
+Weighted root mean squared error (RMSE) (Weights [477176.015,181838.351,41.227])
+   Default        : [1.0256,1.0256,1.0256]: 1.0256
+   Original       : [1.1765,1.1476,1.1852]: 1.1698
+   Pruned         : [9.8118E-1,9.6302E-1,9.8336E-1]: 9.7585E-1
+Root Relative Squared Error (RRMSE)
+   Default        : [1.0256,1.0256,1.0256]: 1.0256
+   Original       : [1.1765,1.1476,1.1852]: 1.1698
+   Pruned         : [9.8118E-1,9.6302E-1,9.8336E-1]: 9.7585E-1
+Pearson correlation coefficient
+   Default        : [-1,-1.0000E0,-1.0000E0], Avg r^2: 1.0000E0
+   Original       : [1.0865E-1,1.6632E-1,8.6052E-2], Avg r^2: 1.5624E-2
+   Pruned         : [4.4963E-1,6.7633E-1,4.0823E-1], Avg r^2: 2.7541E-1
+

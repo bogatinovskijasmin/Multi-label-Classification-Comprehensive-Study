@@ -1,0 +1,276 @@
+Clus run metaDataset
+********************
+
+Date: 4/13/20 3:27 PM
+File: F1_example_based.out
+Attributes: 52 (input: 50, output: 1)
+Missing values: No
+
+[General]
+Verbose = 1
+RandomSeed = 0
+ResourceInfoLoaded = No
+DoNotInduce = No
+LoggingProperties = logging.properties
+
+[Data]
+File = /home/matilda/PycharmProjects/MetaLearningForMLC/Meta_learning_MLC/LearningScenarios/Supervised/Task_9_AA_vs_PT/dataset_clus_F1_example_based_.arff
+TestSet = None
+PruneSet = None
+XVal = 40
+RemoveMissingTarget = No
+NormalizeData = None
+
+[Attributes]
+Target = 52
+Clustering = 52
+Descriptive = 2-51
+Key = None
+Disable = None
+Weights = Normalize
+ClusteringWeights = 1.0
+ReduceMemoryNominalAttrs = No
+GIS = None
+
+[Constraints]
+Syntactic = None
+MaxSize = Infinity
+MaxError = 0.0
+MaxDepth = Infinity
+
+[Nominal]
+MEstimate = 1.0
+
+[Model]
+MinimalWeight = 2.0
+MinimalNumberExamples = 0
+MinimalKnownWeight = 0.0
+ParamTuneNumberFolds = 39
+NominalSubsetTests = Yes
+
+[Tree]
+Heuristic = Gain
+HeuristicComplexity = N2
+SetDistance = GSMDistance
+TupleDistance = Euclidean
+TSDistance = DTW
+PruningMethod = C45
+BinarySplit = Yes
+ConvertToRules = No
+AlternativeSplits = No
+Optimize = []
+MSENominal = No
+SplitSampling = None
+MissingClusteringAttrHandling = EstimateFromParentNode
+MissingTargetAttrHandling = ParentNode
+InductionOrder = DepthFirst
+EntropyType = StandardEntropy
+ConsiderUnlableInstancesInIGCalc = No
+SpatialMatrix = Binary
+SpatialMeasure = GlobalMoran
+Bandwidth = 0.001
+Longlat = No
+NumNeightbours = 0.0
+Alpha = 1.0
+SplitPosition = Exact
+
+[SemiSupervised]
+SemiSupervisedMethod = PCT
+StoppingCriteria = NoneAdded
+UnlabeledCriteria = Threshold
+ConfidenceThreshold = 0.8
+ConfidenceMeasure = Variance
+Iterations = 10
+K = 5
+UnlabeledData = 
+PercentageLabeled = 5
+UseWeights = No
+AirbagTrials = 0
+ExhaustiveSearchThresholds = [0.5,0.6,0.7,0.8,0.9,0.99]
+OOBErrorCalculation = LabeledOnly
+Normalization = MinMaxNormalization
+Aggregation = Average
+CalibrateHmcThreshold = No
+PruningWhenTuning = No
+InternalFolds = 5
+WeightScoresFile = NO
+PossibleWeights = [0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0]
+
+[Output]
+ShowModels = [Default, Pruned, Others]
+TrainErrors = Yes
+ValidErrors = Yes
+TestErrors = Yes
+AllFoldModels = Yes
+AllFoldErrors = No
+AllFoldDatasets = No
+UnknownFrequency = No
+BranchFrequency = No
+ShowInfo = [Key]
+PrintModelAndExamples = Yes
+WriteErrorFile = No
+WriteModelFile = No
+WritePerBagModelFile = Yes
+WriteOOBFile = No
+WritePredictions = []
+GzipOutput = No
+ModelIDFiles = No
+WriteCurves = No
+OutputPythonModel = No
+PythonModelType = Object
+OutputROSSubspaces = No
+OutputJSONModel = No
+OutputDatabaseQueries = No
+OutputClowdFlowsJSON = No
+ComputeSpearman = No
+
+Run: 01
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 9; Leaves = 5; Depth = 5
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Training error
+--------------
+
+Number of examples: 40
+Classification Error
+   Default: 
+   Attribute: target
+     REAL\PRED | 1 |  0 |
+     -----------------------
+             1 | 0 |  7 |  7
+             0 | 0 | 33 | 33
+     -----------------------
+               | 0 | 40 | 40
+     Accuracy: 8.250000E-1
+     Cramer's coefficient: 0
+
+   Original: 
+   Attribute: target
+     REAL\PRED | 1 |  0 |
+     -----------------------
+             1 | 7 |  0 |  7
+             0 | 1 | 32 | 33
+     -----------------------
+               | 8 | 32 | 40
+     Accuracy: 9.750000E-1
+     Cramer's coefficient: 9.211324E-1
+
+   Pruned: 
+   Attribute: target
+     REAL\PRED | 1 |  0 |
+     -----------------------
+             1 | 6 |  1 |  7
+             0 | 0 | 33 | 33
+     -----------------------
+               | 6 | 34 | 40
+     Accuracy: 9.750000E-1
+     Cramer's coefficient: 9.121035E-1
+
+Weighted mean squared error (MSE) for Nominal Attributes (Weights [3.463])
+   Default        : [1]
+   Original       : [8.6580E-2]
+   Pruned         : [1.2987E-1]
+averageAUROC
+   Default        : 5.000000E-1
+   Original       : 9.978355E-1
+   Pruned         : 9.935065E-1
+averageAUPRC
+   Default        : 1.750000E-1
+   Original       : 9.910714E-1
+   Pruned         : 9.785714E-1
+
+Testing error
+-------------
+
+Number of examples: 40
+Classification Error
+   Default: 
+   Attribute: target
+     REAL\PRED | 1 |  0 |
+     -----------------------
+             1 | 0 |  7 |  7
+             0 | 0 | 33 | 33
+     -----------------------
+               | 0 | 40 | 40
+     Accuracy: 8.250000E-1
+     Cramer's coefficient: 0
+
+   Original: 
+   Attribute: target
+     REAL\PRED |  1 |  0 |
+     ------------------------
+             1 |  3 |  4 |  7
+             0 |  7 | 26 | 33
+     ------------------------
+               | 10 | 30 | 40
+     Accuracy: 7.250000E-1
+     Cramer's coefficient: 1.899343E-1
+
+   Pruned: 
+   Attribute: target
+     REAL\PRED |  1 |  0 |
+     ------------------------
+             1 |  3 |  4 |  7
+             0 |  7 | 26 | 33
+     ------------------------
+               | 10 | 30 | 40
+     Accuracy: 7.250000E-1
+     Cramer's coefficient: 1.899343E-1
+
+Weighted mean squared error (MSE) for Nominal Attributes (Weights [3.463])
+   Default        : [1.0519]
+   Original       : [1.6423]
+   Pruned         : [1.6317]
+averageAUROC
+   Default        : 0
+   Original       : 7.402597E-1
+   Pruned         : 7.943723E-1
+averageAUPRC
+   Default        : 9.298874E-2
+   Original       : 4.240325E-1
+   Pruned         : 4.529120E-1
+
+Default Model
+*************
+
+[0] [33.0]: 40
+
+Original Model
+**************
+
+Ratio of number of instances to the number of attributes > 3.26530612244898
++--yes: Proportion of unique label combination (PUniq) > 0.03825136612021858
+|      +--yes: Attributes > 499.0
+|      |      +--yes: Attributes > 500.0
+|      |      |      +--yes: [1] [1.0]: 2
+|      |      |      +--no:  [0] [2.0]: 2
+|      |      +--no:  [1] [6.0]: 6
+|      +--no:  [0] [6.0]: 6
++--no:  [0] [24.0]: 24
+
+Pruned Model
+************
+
+Ratio of number of instances to the number of attributes > 3.26530612244898
++--yes: Proportion of unique label combination (PUniq) > 0.03825136612021858
+|      +--yes: Attributes > 499.0
+|      |      +--yes: [0] [3.0]: 4
+|      |      +--no:  [1] [6.0]: 6
+|      +--no:  [0] [6.0]: 6
++--no:  [0] [24.0]: 24
+

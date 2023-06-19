@@ -1,0 +1,21 @@
+Number of unique labelsets > 401.0
++--yes:  5
++--no:  Bound > 2404.0
+       +--yes: Average examples per labelset > 14.399497487437186
+       |      +--yes:  2
+       |      +--no:   2
+       +--no:  Ratio of number of labelsets up to 10 examples > 0.8294573643410853
+              +--yes: DefaultAccuracy > 0.1595238095238095
+              |      +--yes: Average gain ratio > 0.00704546422330818
+              |      |      +--yes:  2
+              |      |      +--no:   2
+              |      +--no:   6
+              +--no:  Max IR intra class > 20.375
+                     +--yes: Mean of standard deviation of numeric attributes > 0.02864556033176652
+                     |      +--yes: CVIR inter class > 1.3242091007375567
+                     |      |      +--yes:  3
+                     |      |      +--no:  Average absolute correlation between numeric attributes > 0.0
+                     |      |             +--yes:  3
+                     |      |             +--no:   7
+                     |      +--no:   2
+                     +--no:   5

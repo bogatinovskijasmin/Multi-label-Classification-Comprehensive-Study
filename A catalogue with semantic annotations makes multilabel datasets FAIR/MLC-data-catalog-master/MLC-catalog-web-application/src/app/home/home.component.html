@@ -1,0 +1,31 @@
+
+
+
+    
+<div class="containerA">
+  <div class="centered-div">
+    <p id = "about-title">About MLC Dataset Catalog</p>
+    <p>
+      The MLC Dataset catalogue contains descriptions of <b>89 MLC datasets</b>. Each dataset is annotated with a description of the problem the dataset is associated with and the different transformations performed. All dataset descriptions are enhanced with semantic annotations (metadata) based on classes/terms from ontologies and controlled vocabularies. The semantic annotations can be categorized into two groups: (1) Annotations of the dataset provenance information and (2) Annotations that capture the relevant machine learning characteristics of the datasets.
+      <br/>
+      For a semantic description of provenance information, <a  href="https://schema.org/">Schema.org</a> vocabulary is used. <a  href="https://schema.org/Dataseta">Schema.org</a> is a shared collection of schemas widely used for providing structured data on the Web. Specifically for annotation of the MLC datasets, the <a>Dataset schema</a> is used. It provides a list of properties that can be used for annotation, such as name, description, identifier, citation, and license, among others.
+      <br/>
+      From an ML perspective, there are different types of annotations that are relevant and beneficial, such as annotation of dataset specification, learning task, datatypes, and meta-features. To enable annotation of ML-specific information, ontological concepts from two external ontologies are combined, i.e., the ontology of core data mining entities (<a  href="http://www.ontodm.com/doku.php?id=ontodm-core">OntoDM-core</a>), and the ontology of datatypes (<a  href="http://www.ontodm.com/doku.php?id=ontodt">OntoDT</a>). In order to further characterize the MLC datasets, MLC-specific meta-features are made available. Meta-features describe the MLC datasets from a task level, as they encode the knowledge for the task properties. As such, meta-features can be used as a base of an empirical study for the properties of the learning task or to guide practitioners to understand better the common challenges for solving their problem.
+      MLC meta-features are grouped in several groups: (1) Dataset specific meta-features, such as the number of attributes, data instances, and labels; (2) Attribute specific meta-features, containing statistical and information-theoretic properties of the attributes; (3) Label specific meta-features that describe the distribution of the label space, as well as the relationship between the labels. All meta-features are calculated using two Java-based libraries, i.e., <a href="https://www.researchgate.net/publication/312351777_MLDA_A_tool_for_analyzing_multi-label_datasets">MLDA</a> and <a href="http://www.uco.es/kdis/mllresources/">MULAN</a>, that implement the meta-features.
+      <br/>
+      All semantic annotations are Open and published under the <a href="https://creativecommons.org/licenses/by/4.0">https://creativecommons.org/licenses/by/4.0</a> license. For each dataset in the catalogue the semantic annotations can be downloaded in RDF (subject, predicate, object) triples. The publicly available datasets are also available for download in ARFF format. The calculated MLC meta-features that appear as RDF triples in the semantic annotations are also available for download in JSON format.
+    </p>
+    <p id = "about-title">Contact</p>
+    <p style="text-align: center;">
+      Ana Kostovska · Jožef Stefan Institute · <a href="mailto:ana.kostovska@ijs.si">ana.kostovska@ijs.si</a><br/>
+      Panče Panov · Jožef Stefan Institute ·<a href="mailto:pance.panov@ijs.si">pance.panov@ijs.si</a>  <br/>
+      Dragi Kocev · Jožef Stefan Institute · <a href="mailto:dragi.kocev@ijs.si">dragi.kocev@ijs.si</a> <br/>
+      Jasmin Bogatinovski · Technical University Berlin · <a href="mailto:jasmin.bogatinovski@tu-berlin.de">jasmin.bogatinovski@tu-berlin.de</a> <br/>
+      Sašo Džeroski · Jožef Stefan Institute · <a href="mailto:saso.dzeroski@ijs.si">saso.dzeroski@ijs.si</a> <br/>
+      
+      
+    </p>
+   
+  </div>
+  
+</div>

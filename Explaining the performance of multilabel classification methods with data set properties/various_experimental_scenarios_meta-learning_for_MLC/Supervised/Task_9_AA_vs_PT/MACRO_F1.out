@@ -1,0 +1,262 @@
+Clus run metaDataset
+********************
+
+Date: 4/13/20 3:25 PM
+File: MACRO_F1.out
+Attributes: 52 (input: 50, output: 1)
+Missing values: No
+
+[General]
+Verbose = 1
+RandomSeed = 0
+ResourceInfoLoaded = No
+DoNotInduce = No
+LoggingProperties = logging.properties
+
+[Data]
+File = /home/matilda/PycharmProjects/MetaLearningForMLC/Meta_learning_MLC/LearningScenarios/Supervised/Task_9_AA_vs_PT/dataset_clus_MACRO_F1_.arff
+TestSet = None
+PruneSet = None
+XVal = 40
+RemoveMissingTarget = No
+NormalizeData = None
+
+[Attributes]
+Target = 52
+Clustering = 52
+Descriptive = 2-51
+Key = None
+Disable = None
+Weights = Normalize
+ClusteringWeights = 1.0
+ReduceMemoryNominalAttrs = No
+GIS = None
+
+[Constraints]
+Syntactic = None
+MaxSize = Infinity
+MaxError = 0.0
+MaxDepth = Infinity
+
+[Nominal]
+MEstimate = 1.0
+
+[Model]
+MinimalWeight = 2.0
+MinimalNumberExamples = 0
+MinimalKnownWeight = 0.0
+ParamTuneNumberFolds = 39
+NominalSubsetTests = Yes
+
+[Tree]
+Heuristic = Gain
+HeuristicComplexity = N2
+SetDistance = GSMDistance
+TupleDistance = Euclidean
+TSDistance = DTW
+PruningMethod = C45
+BinarySplit = Yes
+ConvertToRules = No
+AlternativeSplits = No
+Optimize = []
+MSENominal = No
+SplitSampling = None
+MissingClusteringAttrHandling = EstimateFromParentNode
+MissingTargetAttrHandling = ParentNode
+InductionOrder = DepthFirst
+EntropyType = StandardEntropy
+ConsiderUnlableInstancesInIGCalc = No
+SpatialMatrix = Binary
+SpatialMeasure = GlobalMoran
+Bandwidth = 0.001
+Longlat = No
+NumNeightbours = 0.0
+Alpha = 1.0
+SplitPosition = Exact
+
+[SemiSupervised]
+SemiSupervisedMethod = PCT
+StoppingCriteria = NoneAdded
+UnlabeledCriteria = Threshold
+ConfidenceThreshold = 0.8
+ConfidenceMeasure = Variance
+Iterations = 10
+K = 5
+UnlabeledData = 
+PercentageLabeled = 5
+UseWeights = No
+AirbagTrials = 0
+ExhaustiveSearchThresholds = [0.5,0.6,0.7,0.8,0.9,0.99]
+OOBErrorCalculation = LabeledOnly
+Normalization = MinMaxNormalization
+Aggregation = Average
+CalibrateHmcThreshold = No
+PruningWhenTuning = No
+InternalFolds = 5
+WeightScoresFile = NO
+PossibleWeights = [0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0]
+
+[Output]
+ShowModels = [Default, Pruned, Others]
+TrainErrors = Yes
+ValidErrors = Yes
+TestErrors = Yes
+AllFoldModels = Yes
+AllFoldErrors = No
+AllFoldDatasets = No
+UnknownFrequency = No
+BranchFrequency = No
+ShowInfo = [Key]
+PrintModelAndExamples = Yes
+WriteErrorFile = No
+WriteModelFile = No
+WritePerBagModelFile = Yes
+WriteOOBFile = No
+WritePredictions = []
+GzipOutput = No
+ModelIDFiles = No
+WriteCurves = No
+OutputPythonModel = No
+PythonModelType = Object
+OutputROSSubspaces = No
+OutputJSONModel = No
+OutputDatabaseQueries = No
+OutputClowdFlowsJSON = No
+ComputeSpearman = No
+
+Run: 01
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 0 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 1; Leaves = 1; Depth = 1
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Training error
+--------------
+
+Number of examples: 40
+Classification Error
+   Default: 
+   Attribute: target
+     REAL\PRED | 1 |  0 |
+     -----------------------
+             1 | 0 |  0 |  0
+             0 | 0 | 40 | 40
+     -----------------------
+               | 0 | 40 | 40
+     Accuracy: 1
+     Cramer's coefficient: 0
+
+   Original: 
+   Attribute: target
+     REAL\PRED | 1 |  0 |
+     -----------------------
+             1 | 0 |  0 |  0
+             0 | 0 | 40 | 40
+     -----------------------
+               | 0 | 40 | 40
+     Accuracy: 1
+     Cramer's coefficient: 0
+
+   Pruned: 
+   Attribute: target
+     REAL\PRED | 1 |  0 |
+     -----------------------
+             1 | 0 |  0 |  0
+             0 | 0 | 40 | 40
+     -----------------------
+               | 0 | 40 | 40
+     Accuracy: 1
+     Cramer's coefficient: 0
+
+Weighted mean squared error (MSE) for Nominal Attributes (Weights [1])
+   Default        : [0]
+   Original       : [0]
+   Pruned         : [0]
+averageAUROC
+   Default        : 5.000000E-1
+   Original       : 5.000000E-1
+   Pruned         : 5.000000E-1
+averageAUPRC
+   Default        : 0
+   Original       : 0
+   Pruned         : 0
+
+Testing error
+-------------
+
+Number of examples: 40
+Classification Error
+   Default: 
+   Attribute: target
+     REAL\PRED | 1 |  0 |
+     -----------------------
+             1 | 0 |  0 |  0
+             0 | 0 | 40 | 40
+     -----------------------
+               | 0 | 40 | 40
+     Accuracy: 1
+     Cramer's coefficient: 0
+
+   Original: 
+   Attribute: target
+     REAL\PRED | 1 |  0 |
+     -----------------------
+             1 | 0 |  0 |  0
+             0 | 0 | 40 | 40
+     -----------------------
+               | 0 | 40 | 40
+     Accuracy: 1
+     Cramer's coefficient: 0
+
+   Pruned: 
+   Attribute: target
+     REAL\PRED | 1 |  0 |
+     -----------------------
+             1 | 0 |  0 |  0
+             0 | 0 | 40 | 40
+     -----------------------
+               | 0 | 40 | 40
+     Accuracy: 1
+     Cramer's coefficient: 0
+
+Weighted mean squared error (MSE) for Nominal Attributes (Weights [1])
+   Default        : [0]
+   Original       : [0]
+   Pruned         : [0]
+averageAUROC
+   Default        : 5.000000E-1
+   Original       : 5.000000E-1
+   Pruned         : 5.000000E-1
+averageAUPRC
+   Default        : 0
+   Original       : 0
+   Pruned         : 0
+
+Default Model
+*************
+
+[0] [40.0]: 40
+
+Original Model
+**************
+
+[0] [40.0]: 40
+
+Pruned Model
+************
+
+[0] [40.0]: 40
+

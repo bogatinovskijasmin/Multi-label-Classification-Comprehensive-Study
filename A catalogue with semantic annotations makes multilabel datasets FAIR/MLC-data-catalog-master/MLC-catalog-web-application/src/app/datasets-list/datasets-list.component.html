@@ -1,0 +1,109 @@
+    <div class="content container-fluid">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1" style="padding-top: 120px;">
+                <!-- <h2 [ngClass]='dataSource?.data?.length > 0  ? "visible": "hidden"'>Datasets</h2>  -->
+                <!-- <h3 [ngClass]='dataSource?.data?.length > 0  ? "visible": "hidden"' >
+                        <a (click)="isCollapsed = !isCollapsed" >
+                            <i class="fa fa-sliders" aria-hidden="true"></i> Filter datasets
+                        </a>
+                    </h3>           -->
+                    <ng4-loading-spinner > </ng4-loading-spinner>                 
+                   
+                        <div style="padding-bottom: 30px" *ngIf = "fromFilter == true && dataSource?.data?.length > 0">
+                            <plotly-plot 
+                                [data]="pieChartData"
+                                [layout]="{
+                                    autosize: true
+                                    }"
+                                [config]= "{displayModeBar: false}"
+                                [useResizeHandler]="true" [style]="{position: 'relative', width: '100%', height: '100%'}"
+                                >
+                            </plotly-plot>
+                        </div>
+                        <div *ngIf="mataFeaturesPlotData!=undefined">
+                            <div>
+                                <ng-multiselect-dropdown
+                                    [placeholder]="'Select meta-features'"
+                                    [data]="metaFeaturesMLC"
+                                    [(ngModel)]="selectedMetaFeatures"
+                                    [settings]="dropdownSettings"
+                                    (onSelect)="onItemSelect($event)"
+                                    (onSelectAll)="onSelectAll($event)"
+                                    (onDeSelect)="onItemDeSelect($event)">
+                                </ng-multiselect-dropdown>
+                            </div>
+                            <div style="padding-bottom: 30px">
+                                <plotly-plot 
+                                    [data]="mataFeaturesPlotData"
+                                    [layout]="{
+                                        autosize: true,
+                                        height: 600,
+                                        margin:{
+                                            b:180
+                                        }
+                                    }"
+                                    [config]= "{displayModeBar: false}"
+                                    [useResizeHandler]="true" [style]="{position: 'relative', width: '100%', height: '100%'}"
+                                    >
+                                </plotly-plot>
+                            </div>
+                     </div>
+                    <!-- *ngIf='dataSource?.data?.length > 0' -->
+                    <div [ngClass]='(dataSource?.data?.length == 0 )? "visible": "hidden"' style="visibility: hidden" >
+                        <div class = "row">
+                            <div class = "col">
+                                <div class = "noMatch">
+                                    <span>No results found. <a href="#" [routerLink] ="['/filter']">Try searching again.</a> </span>
+                                    <a (click)="open(content)">(Show query)</a>
+                                </div>                            
+                            </div>
+                        </div>
+                    </div>
+                    <div [ngClass]='dataSource?.data?.length > 0  ? "visible": "hidden"' style="padding-bottom:100px;">
+                        <table mat-table [dataSource]="dataSource" matSort  class="mat-elevation-z8" matSortActive="created" matSortDisableClear matSortDirection="asc" >
+                            <ng-container matColumnDef="datasetLabel">                       
+                                <th mat-header-cell *matHeaderCellDef style="font-size:13pt;" mat-sort-header><a>Dataset name</a></th>
+                                <td mat-cell *matCellDef="let element"><a href="#" [routerLink] ="['/dataset', element.dsetInstance]" target="_blank">{{element.datasetLabel}}</a></td>
+                            </ng-container> 
+                            <ng-container matColumnDef="numInstances">                       
+                                <th mat-header-cell *matHeaderCellDef style="font-size:13pt;" mat-sort-header> No. of instances </th>
+                                <td mat-cell *matCellDef="let element">{{element.numInstances}}</td>
+                            </ng-container> 
+                            <ng-container matColumnDef="numDescriptive">                       
+                                <th mat-header-cell *matHeaderCellDef style="font-size:13pt;" mat-sort-header> No. of descriptive features </th>
+                                <td mat-cell *matCellDef="let element">{{element.numDescriptive}}</td>
+                            </ng-container> 
+                            <ng-container matColumnDef="numTargets">                       
+                                <th mat-header-cell *matHeaderCellDef style="font-size:13pt;" mat-sort-header> No. of labels </th>
+                                <td mat-cell *matCellDef="let element">{{element.numTargets}}</td>
+                            </ng-container> 
+                            <ng-container matColumnDef="hasMissingValues">                       
+                                <th mat-header-cell *matHeaderCellDef style="font-size:13pt;" mat-sort-header> Missing values </th>
+                                <td mat-cell *matCellDef="let element">{{element.hasMissingValues}}</td>
+                            </ng-container> 
+                            
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> 
+                        </table>
+                        <div class="paginator">
+                            <mat-paginator [pageSizeOptions]="[20, 50, 100]" showFirstLastButtons ></mat-paginator>
+                        </div>   
+                        <div>
+                            <a class = "showQuery" (click)="open(content)">Show query</a>
+                        </div> 
+                                     
+                    </div>                        
+                    <ng-template #content let-modal>
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="modal-basic-title">SPARQL Query</h4>
+                            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body angular-with-newlines">
+                            <p>{{query}}</p>
+                        </div>
+                    </ng-template>
+                 </div>
+        </div>                        
+    </div> 

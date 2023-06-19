@@ -1,0 +1,109 @@
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+}
+
+/* input.form-control{
+    max-width: 80px;
+} */
+
+.btn-style{
+    background-color: #4c6677!important;
+    font-size: 20pt;
+    color: rgb(221, 223, 233);
+}
+.btn-style:hover{
+   background-color: #3a5364!important;
+}
+.filter{
+    height: 100%;
+    background-color: #e9ecef;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: auto;
+    font-size: 10pt;
+    padding-left: 30px;
+}
+.filter h3{
+    padding-top: 20px;
+}
+.filter label{
+    padding-right: 30px;
+    
+}
+.content{
+    position: relative;
+}
+label{
+    font-size: 11pt;
+}
+mat-checkbox{
+    padding-left: 15px;
+}
+
+.range {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(111, 111, 111);
+    max-width: 200px;
+    margin-left: 15px;
+}
+
+mat-radio-button{
+    display: block;
+    margin-left: 16px;
+}
+
+.content{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+a {
+    color: black;
+}
+
+#content{
+    position: fixed;
+    top: 55px;
+    bottom: 32px;
+    left: 0;
+    right: 0;
+} 
+
+a:hover { 
+    text-decoration: underline!important; 
+}
+.input-group-prepend, .input-group-append{
+    display: initial;
+}
+
+.example-full-width {
+    width: 100%;
+}
+.error{
+    color: red;
+    margin-top: -15px;
+    font-size: 10pt;
+}
+
+mat-label.ng-star-inserted{
+    font-size: large;
+}
+
+.clickable{
+    cursor: pointer!important;
+}
+
+span.selected-item.ng-star-inserted {
+    background: white!important;
+    border: 0px!important;
+    color: black!important;
+}

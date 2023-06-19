@@ -1,0 +1,97 @@
+<div class="col-lg-6 offset-lg-3" style="background-color: white; margin-top: 100px; margin-bottom: 100px;">
+    <div class="row">
+        <div class="col" style="text-align: center; padding-top: 20px; padding-bottom: 40px">
+            <h3>Filter datasets</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <mat-form-field class="example-full-width">
+                <mat-label>Choose with/without missing</mat-label>
+                <mat-select class="dim4" [(ngModel)] = "selected4">
+                        <mat-option ></mat-option>
+                    <mat-option *ngFor="let item of dimension4"  [value]="item">{{item}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <mat-form-field class="example-full-width">
+                <mat-label>Enter number of descriptive features</mat-label>
+                <input matInput #desc = 'ngModel' pattern= "(\d*(-\d+)?|[><]=?\d+)" [(ngModel)]="numberOfDescriptiveFeatures" placeholder="e.g. 10, 5-10, >5, <=5">                                
+            </mat-form-field>
+            <div *ngIf="desc.errors" class="error">Invalid format</div>
+        </div>
+        <div class="col-sm-12">
+            <mat-form-field class="example-full-width" >
+                <mat-label>Enter number of labels</mat-label>                                
+                <input matInput #targ = 'ngModel' pattern= "(\d*(-\d+)?|[><]=?\d+)" [(ngModel)]="numberOfTargetFeatures" placeholder="e.g. 10, 5-10, >5, <=5" >                                 
+            </mat-form-field>
+            <div *ngIf="targ.errors" class="error">Invalid format</div>
+        </div>
+    </div>
+    <div class="multi-label">
+            <div class="row">
+                    <div class="col">
+                        <h6 style="color: rgba(0,0,0,.54); font-size: large; padding-bottom: 5px; padding-top: 55px">Filter datasets by meta features</h6>
+                    </div>
+                </div>						
+                <div *ngFor="let choice of choices" style="padding-bottom: 5px">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-5">
+                                <ng-multiselect-dropdown
+                                name = "selectedFeature"
+                                [placeholder]="'Select feature'"
+                                [data]="metaFeaturesMLC"
+                                [(ngModel)]="mappings[choice.id].feature"
+                                [settings]="dropdownSettingsSingle"
+                                (onSelect)="onItemSelect($event)"
+                                (onSelectAll)="onSelectAll($event)">
+                            </ng-multiselect-dropdown>
+                        </div>
+                        <div class="col-sm-5 col-xs-5">
+                            <mat-form-field class="example-full-width">
+                                    <mat-label>Add range</mat-label>
+                                    <!-- \d+(\.\d)?\d* regex for decimal number -->
+                                    <input matInput #map = 'ngModel' pattern= "(\d+(\.\d)?\d*(-\d+(\.\d)?\d*)?|[><]=?\d+(\.\d)?\d*)" [(ngModel)]="mappings[choice.id].range" placeholder="e.g. 10, 5-10, >5, <=5"> 
+                            </mat-form-field>
+                            <div *ngIf="map.errors" class="error">Invalid format</div>
+                        </div>
+                        <div class="col-sm-1 col-xs-1">
+                            <button style="float: right; margin-top: 14px; margin-left: -15px;padding-left: 15px; padding-right: 15px" type = "button" class="btn btn-danger btn-sm" (click)="removeNewChoice(choice)" name="remove">
+                                <span><i class="fa fa-trash"></i></span> 
+                            </button>	
+                        </div>
+                    </div>            
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button style="margin-top: -15px" type = "button" class="btn btn-link btn-md " (click)="addNewChoice()" name="add" [disabled] = "disableNewMapping()">
+                            <span><i class="fa fa-plus"></i> Add meta-feature</span>
+                        </button>	
+                    </div>
+                    
+                </div>
+
+    </div>
+    
+ 				
+    <br>
+    <br>
+    <div class="row">
+        <div class="col">
+                <div class="form-group">
+                        <button  type = "button" class="btn btn-md btn-block btn-style" 
+                        [disabled]= "targ?.errors|| desc.errors || disableNewMapping()" 
+                        (click)="createQuery()">
+                            <span>
+                                <!-- <i class="fa fa-sliders" aria-hidden="true"></i>  -->
+                                Filter</span>
+                        </button>		
+                        <ng4-loading-spinner > </ng4-loading-spinner>
+                    </div>	
+        </div>
+    </div>
+    
+</div>

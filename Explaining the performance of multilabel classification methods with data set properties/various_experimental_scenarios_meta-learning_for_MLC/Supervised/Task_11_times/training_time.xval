@@ -1,0 +1,2802 @@
+Clus run metaDataset
+********************
+
+Date: 8/29/20 9:23 PM
+File: training_time.xval
+Attributes: 54 (input: 50, output: 3)
+Missing values: No
+
+[General]
+Verbose = 1
+RandomSeed = 0
+ResourceInfoLoaded = No
+DoNotInduce = No
+LoggingProperties = logging.properties
+
+[Data]
+File = /home/matilda/PycharmProjects/MetaLearningForMLC/Meta_learning_MLC/LearningScenarios/Supervised/Task_11_times/dataset_clus.arff
+TestSet = None
+PruneSet = None
+XVal = 40
+RemoveMissingTarget = No
+NormalizeData = None
+
+[Attributes]
+Target = 52-54
+Clustering = 52-54
+Descriptive = 2-51
+Key = 1
+Disable = None
+Weights = Normalize
+ClusteringWeights = 1.0
+ReduceMemoryNominalAttrs = No
+GIS = None
+
+[Constraints]
+Syntactic = None
+MaxSize = Infinity
+MaxError = 0.0
+MaxDepth = Infinity
+
+[Nominal]
+MEstimate = 1.0
+
+[Model]
+MinimalWeight = 2.0
+MinimalNumberExamples = 0
+MinimalKnownWeight = 0.0
+ParamTuneNumberFolds = 39
+NominalSubsetTests = Yes
+
+[Tree]
+Heuristic = VarianceReduction
+HeuristicComplexity = N2
+SetDistance = GSMDistance
+TupleDistance = Euclidean
+TSDistance = DTW
+PruningMethod = Default
+FTest = 1.0
+BinarySplit = Yes
+ConvertToRules = No
+AlternativeSplits = No
+Optimize = []
+MSENominal = No
+SplitSampling = None
+MissingClusteringAttrHandling = EstimateFromParentNode
+MissingTargetAttrHandling = ParentNode
+InductionOrder = DepthFirst
+EntropyType = StandardEntropy
+ConsiderUnlableInstancesInIGCalc = No
+SpatialMatrix = Binary
+SpatialMeasure = GlobalMoran
+Bandwidth = 0.001
+Longlat = No
+NumNeightbours = 0.0
+Alpha = 1.0
+SplitPosition = Exact
+
+[SemiSupervised]
+SemiSupervisedMethod = PCT
+StoppingCriteria = NoneAdded
+UnlabeledCriteria = Threshold
+ConfidenceThreshold = 0.8
+ConfidenceMeasure = Variance
+Iterations = 10
+K = 5
+UnlabeledData = 
+PercentageLabeled = 5
+UseWeights = No
+AirbagTrials = 0
+ExhaustiveSearchThresholds = [0.5,0.6,0.7,0.8,0.9,0.99]
+OOBErrorCalculation = LabeledOnly
+Normalization = MinMaxNormalization
+Aggregation = Average
+CalibrateHmcThreshold = No
+PruningWhenTuning = No
+InternalFolds = 5
+WeightScoresFile = NO
+PossibleWeights = [0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0]
+
+[Output]
+ShowModels = [Default, Pruned, Others]
+TrainErrors = Yes
+ValidErrors = Yes
+TestErrors = Yes
+AllFoldModels = Yes
+AllFoldErrors = No
+AllFoldDatasets = No
+UnknownFrequency = No
+BranchFrequency = No
+ShowInfo = [Key]
+PrintModelAndExamples = Yes
+WriteErrorFile = No
+WriteModelFile = No
+WritePerBagModelFile = Yes
+WriteOOBFile = No
+WritePredictions = []
+GzipOutput = No
+ModelIDFiles = No
+WriteCurves = No
+OutputPythonModel = No
+PythonModelType = Object
+OutputROSSubspaces = No
+OutputJSONModel = No
+OutputDatabaseQueries = No
+OutputClowdFlowsJSON = No
+ComputeSpearman = No
+
+Run: 01
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 5.0000E-3 sec
+Pruning Time: 1.0000E-3 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 21; Leaves = 11; Depth = 9
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[2.766667E-4,1.247949E-3,4.443538E-2]
+ExampleIDs: index: 'medical'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: DefaultAccuracy > 0.19411
+                            |      +--yes: [2.200000E-5,1.600000E-5,3.240000E-4]
+                            |      +--no:  [6.200000E-5,8.800000E-5,4.198000E-3]
+                            |             ExampleIDs: index: 'medical'
+
+                            +--no:  Bound > 62.0
+                                   +--yes: Attributes > 19.0
+                                   |      +--yes: Mean of kurtosis > 2.88893
+                                   |      |      +--yes: [0,0,2.500000E-5]
+                                   |      |      +--no:  [0,0,1.000000E-5]
+                                   |      +--no:  [0,5.000000E-6,1.500000E-5]
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  [7.741935E-5,1.219355E-4,5.404516E-3]
+              ExampleIDs: index: 'medical'
+
+
+Run: 02
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 23; Leaves = 12; Depth = 9
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[2.766667E-4,1.248205E-3,4.444718E-2]
+ExampleIDs: index: 'birds'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Mean of IR per labelset > 63.70005
+              +--yes: [2.583333E-4,4.916667E-4,2.331000E-2]
+              |      ExampleIDs: index: 'birds'
+
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.600000E-4,9.500000E-5,2.150000E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Attributes > 1004.0
+                            |      +--yes: [1.500000E-5,1.750000E-5,3.825000E-4]
+                            |      +--no:  Cardinality > 1.06522
+                            |             +--yes: [6.333333E-5,8.833333E-5,3.563333E-3]
+                            |             +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                            +--no:  Bound > 62.0
+                                   +--yes: Attributes > 19.0
+                                   |      +--yes: Mean of kurtosis > 2.88893
+                                   |      |      +--yes: [0,0,2.500000E-5]
+                                   |      |      +--no:  [0,0,1.000000E-5]
+                                   |      +--no:  [0,5.000000E-6,1.500000E-5]
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  [7.741935E-5,1.222581E-4,5.419355E-3]
+              ExampleIDs: index: 'birds'
+
+
+Run: 03
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 21; Leaves = 11; Depth = 10
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[2.728205E-4,1.247436E-3,4.442410E-2]
+ExampleIDs: index: 'proteins_plant'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Labels > 75.0
+                     +--yes: [1.150000E-4,1.450000E-4,1.770000E-3]
+                     +--no:  Instances > 459.0
+                            +--yes: [5.750000E-5,7.250000E-5,5.187500E-3]
+                            +--no:  Max IR per labelset > 65.0
+                                   +--yes: [2.500000E-5,2.000000E-5,3.616667E-4]
+                                   |      ExampleIDs: index: 'proteins_plant'
+
+                                   +--no:  Bound > 62.0
+                                          +--yes: Bound > 146.0
+                                          |      +--yes: [0,1.000000E-5,6.500000E-5]
+                                          |      +--no:  Attributes > 49.0
+                                          |             +--yes: [0,0,2.000000E-5]
+                                          |             +--no:  [0,0,1.000000E-5]
+                                          +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  [7.258065E-5,1.212903E-4,5.390323E-3]
+              ExampleIDs: index: 'proteins_plant'
+
+
+Run: 04
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 19; Leaves = 10; Depth = 8
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.771795E-4,1.248718E-3,4.444923E-2]
+ExampleIDs: index: 'emotions'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Diversity > 0.16429
+                            |      +--yes: [6.200000E-5,8.800000E-5,4.198000E-3]
+                            |      +--no:  Attributes > 440.0
+                            |             +--yes: [1.500000E-5,1.750000E-5,3.825000E-4]
+                            |             +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                            +--no:  Bound > 62.0
+                                   +--yes: [0,1.428571E-6,1.428571E-5]
+                                   |      ExampleIDs: index: 'emotions'
+
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  [3.333333E-5,3.208333E-5,1.159583E-3]
+                     ExampleIDs: index: 'emotions'
+
+
+Run: 05
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 23; Leaves = 12; Depth = 8
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.758974E-4,1.247179E-3,4.434077E-2]
+ExampleIDs: index: 'enron'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 610.0
+              +--yes: [2.212500E-4,3.975000E-4,1.794375E-2]
+              |      ExampleIDs: index: 'enron'
+
+              +--no:  LxIxF > 1432600.0
+                     +--yes: Instances > 288.0
+                     |      +--yes: Diversity > 0.16429
+                     |      |      +--yes: [6.000000E-5,7.666667E-5,5.500000E-3]
+                     |      |      +--no:  Attributes > 440.0
+                     |      |             +--yes: [1.500000E-5,1.750000E-5,3.825000E-4]
+                     |      |             +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                     |      +--no:  [1.250000E-4,1.000000E-4,6.200000E-4]
+                     +--no:  DefaultAccuracy > 0.33562
+                            +--yes: [1.000000E-5,5.000000E-6,6.500000E-5]
+                            +--no:  Attributes > 19.0
+                                   +--yes: Mean of kurtosis > 2.88893
+                                   |      +--yes: [0,0,2.500000E-5]
+                                   |      +--no:  [0,0,1.000000E-5]
+                                   +--no:  [0,5.000000E-6,1.500000E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  Bound > 610.0
+              +--yes: [2.212500E-4,3.975000E-4,1.794375E-2]
+              |      ExampleIDs: index: 'enron'
+
+              +--no:  [2.608696E-5,2.478261E-5,8.826087E-4]
+
+Run: 06
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 19; Leaves = 10; Depth = 8
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.771795E-4,1.248718E-3,4.444949E-2]
+ExampleIDs: index: 'foodtruck'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Diversity > 0.16429
+                            |      +--yes: [6.200000E-5,8.800000E-5,4.198000E-3]
+                            |      +--no:  Attributes > 440.0
+                            |             +--yes: [1.500000E-5,1.750000E-5,3.825000E-4]
+                            |             +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                            +--no:  Bound > 62.0
+                                   +--yes: [0,1.428571E-6,1.571429E-5]
+                                   |      ExampleIDs: index: 'foodtruck'
+
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  [3.333333E-5,3.208333E-5,1.160000E-3]
+                     ExampleIDs: index: 'foodtruck'
+
+
+Run: 07
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 9; Leaves = 5; Depth = 5
+     Pruned: Nodes = 3; Leaves = 2; Depth = 2
+
+Default Model
+*************
+
+[2.064103E-4,4.266667E-4,1.880872E-2]
+ExampleIDs: index: 'delicious'
+
+
+Original Model
+**************
+
+LxIxF > 1.26082E8
++--yes: [8.042857E-4,1.832857E-3,8.077714E-2]
+|      ExampleIDs: index: 'delicious'
+
++--no:  Bound > 710.0
+       +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+       +--no:  Proportion of numeric attributes with outliers > 0.81364
+              +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+              +--no:  LxIxF > 623808.0
+                     +--yes: [4.000000E-5,5.000000E-5,2.106364E-3]
+                     +--no:  [1.818182E-6,9.090909E-7,2.545455E-5]
+
+Pruned Model
+************
+
+LxIxF > 1.26082E8
++--yes: [8.042857E-4,1.832857E-3,8.077714E-2]
+|      ExampleIDs: index: 'delicious'
+
++--no:  [7.562500E-5,1.190625E-4,5.253125E-3]
+
+Run: 08
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 23; Leaves = 12; Depth = 9
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.756410E-4,1.247692E-3,4.444051E-2]
+ExampleIDs: index: 'scene'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Diversity > 0.16429
+                            |      +--yes: [6.250000E-5,1.000000E-4,5.157500E-3]
+                            |      |      ExampleIDs: index: 'scene'
+
+                            |      +--no:  Attributes > 440.0
+                            |             +--yes: [1.500000E-5,1.750000E-5,3.825000E-4]
+                            |             +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                            +--no:  Bound > 62.0
+                                   +--yes: Attributes > 19.0
+                                   |      +--yes: Mean of kurtosis > 2.88893
+                                   |      |      +--yes: [0,0,2.500000E-5]
+                                   |      |      +--no:  [0,0,1.000000E-5]
+                                   |      +--no:  [0,5.000000E-6,1.500000E-5]
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  [3.083333E-5,3.041667E-5,1.145417E-3]
+                     ExampleIDs: index: 'scene'
+
+
+Run: 09
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 23; Leaves = 12; Depth = 9
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.725641E-4,1.246154E-3,4.438872E-2]
+ExampleIDs: index: 'HumanPseAAC'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.400000E-4,4.900000E-4,2.297833E-2]
+              |      ExampleIDs: index: 'HumanPseAAC'
+
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Diversity > 0.16429
+                            |      +--yes: [6.200000E-5,8.800000E-5,4.198000E-3]
+                            |      +--no:  Attributes > 440.0
+                            |             +--yes: [1.500000E-5,1.750000E-5,3.825000E-4]
+                            |             +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                            +--no:  Bound > 62.0
+                                   +--yes: Attributes > 19.0
+                                   |      +--yes: Mean of kurtosis > 2.88893
+                                   |      |      +--yes: [0,0,2.500000E-5]
+                                   |      |      +--no:  [0,0,1.000000E-5]
+                                   |      +--no:  [0,5.000000E-6,1.500000E-5]
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  Bound > 710.0
+              +--yes: [2.400000E-4,4.900000E-4,2.297833E-2]
+              |      ExampleIDs: index: 'HumanPseAAC'
+
+              +--no:  [3.200000E-5,3.080000E-5,1.114000E-3]
+
+Run: 10
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 19; Leaves = 10; Depth = 8
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.771795E-4,1.248718E-3,4.444949E-2]
+ExampleIDs: index: 'ABPM'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Diversity > 0.16429
+                            |      +--yes: [6.200000E-5,8.800000E-5,4.198000E-3]
+                            |      +--no:  Attributes > 440.0
+                            |             +--yes: [1.500000E-5,1.750000E-5,3.825000E-4]
+                            |             +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                            +--no:  Bound > 62.0
+                                   +--yes: [0,1.428571E-6,1.571429E-5]
+                                   |      ExampleIDs: index: 'ABPM'
+
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  [3.333333E-5,3.208333E-5,1.160000E-3]
+                     ExampleIDs: index: 'ABPM'
+
+
+Run: 11
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 1.0000E-3 sec
+Pruning Time: 1.0000E-3 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 23; Leaves = 12; Depth = 9
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.666667E-4,1.220000E-3,4.337282E-2]
+ExampleIDs: index: 'corel5k'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1388.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
+|      ExampleIDs: index: 'corel5k'
+
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.733333E-4,9.000000E-4,4.323000E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Diversity > 0.16429
+                            |      +--yes: [6.200000E-5,8.800000E-5,4.198000E-3]
+                            |      +--no:  Attributes > 440.0
+                            |             +--yes: [1.500000E-5,1.750000E-5,3.825000E-4]
+                            |             +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                            +--no:  Bound > 62.0
+                                   +--yes: Attributes > 19.0
+                                   |      +--yes: Mean of kurtosis > 2.88893
+                                   |      |      +--yes: [0,0,2.500000E-5]
+                                   |      |      +--no:  [0,0,1.000000E-5]
+                                   |      +--no:  [0,5.000000E-6,1.500000E-5]
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1388.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
+|      ExampleIDs: index: 'corel5k'
+
++--no:  LxIxF > 1.26082E8
+       +--yes: [7.180000E-4,1.572000E-3,8.584200E-2]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  [3.200000E-5,3.080000E-5,1.114000E-3]
+
+Run: 12
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 23; Leaves = 12; Depth = 9
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.753846E-4,1.246410E-3,4.443974E-2]
+ExampleIDs: index: 'yeast'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.583333E-4,4.916667E-4,2.331000E-2]
+              |      ExampleIDs: index: 'yeast'
+
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Diversity > 0.16429
+                            |      +--yes: [6.200000E-5,8.800000E-5,4.198000E-3]
+                            |      +--no:  Attributes > 440.0
+                            |             +--yes: [1.500000E-5,1.750000E-5,3.825000E-4]
+                            |             +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                            +--no:  Bound > 62.0
+                                   +--yes: Attributes > 19.0
+                                   |      +--yes: Mean of kurtosis > 2.88893
+                                   |      |      +--yes: [0,0,2.500000E-5]
+                                   |      |      +--no:  [0,0,1.000000E-5]
+                                   |      +--no:  [0,5.000000E-6,1.500000E-5]
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  Bound > 710.0
+              +--yes: [2.583333E-4,4.916667E-4,2.331000E-2]
+              |      ExampleIDs: index: 'yeast'
+
+              +--no:  [3.200000E-5,3.080000E-5,1.114000E-3]
+
+Run: 13
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.125
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 25; Leaves = 13; Depth = 9
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.656410E-4,1.231795E-3,4.415359E-2]
+ExampleIDs: index: 'HumanGO'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: Attributes > 1002.0
+       |      +--yes: [9.350000E-4,2.580000E-3,1.497600E-1]
+       |      |      ExampleIDs: index: 'HumanGO'
+
+       |      +--no:  [5.600000E-4,1.053333E-3,5.338000E-2]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Diversity > 0.16429
+                            |      +--yes: [6.200000E-5,8.800000E-5,4.198000E-3]
+                            |      +--no:  Attributes > 440.0
+                            |             +--yes: Bound > 292.0
+                            |             |      +--yes: [2.000000E-5,2.500000E-5,5.800000E-4]
+                            |             |      +--no:  [1.000000E-5,1.000000E-5,1.850000E-4]
+                            |             +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                            +--no:  Bound > 62.0
+                                   +--yes: Attributes > 19.0
+                                   |      +--yes: Mean of kurtosis > 2.88893
+                                   |      |      +--yes: [0,0,2.500000E-5]
+                                   |      |      +--no:  [0,0,1.000000E-5]
+                                   |      +--no:  [0,5.000000E-6,1.500000E-5]
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [7.100000E-4,1.664000E-3,9.193200E-2]
+       |      ExampleIDs: index: 'HumanGO'
+
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  [3.200000E-5,3.080000E-5,1.114000E-3]
+
+Run: 14
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 23; Leaves = 12; Depth = 9
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.769231E-4,1.248718E-3,4.444846E-2]
+ExampleIDs: index: 'GpositivePseAAC'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Diversity > 0.16429
+                            |      +--yes: [6.200000E-5,8.800000E-5,4.198000E-3]
+                            |      +--no:  Attributes > 440.0
+                            |             +--yes: [1.500000E-5,1.750000E-5,3.825000E-4]
+                            |             +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                            +--no:  Attributes > 749.0
+                                   +--yes: [5.000000E-6,0,5.500000E-5]
+                                   +--no:  Attributes > 19.0
+                                          +--yes: Mean of kurtosis > 2.88893
+                                          |      +--yes: [0,0,2.500000E-5]
+                                          |      |      ExampleIDs: index: 'GpositivePseAAC'
+
+                                          |      +--no:  [0,0,1.000000E-5]
+                                          +--no:  [0,5.000000E-6,1.500000E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  [3.291667E-5,3.208333E-5,1.158333E-3]
+                     ExampleIDs: index: 'GpositivePseAAC'
+
+
+Run: 15
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 23; Leaves = 12; Depth = 10
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.751282E-4,1.244872E-3,4.444359E-2]
+ExampleIDs: index: 'cal500'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  Instances > 459.0
+                            +--yes: [5.750000E-5,7.250000E-5,5.187500E-3]
+                            +--no:  Max IR per labelset > 65.0
+                                   +--yes: Attributes > 440.0
+                                   |      +--yes: [2.000000E-5,2.000000E-5,4.733333E-4]
+                                   |      +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                                   +--no:  Bound > 62.0
+                                          +--yes: Bound > 146.0
+                                          |      +--yes: [0,1.000000E-5,6.500000E-5]
+                                          |      |      ExampleIDs: index: 'cal500'
+
+                                          |      +--no:  Attributes > 49.0
+                                          |             +--yes: [0,0,2.000000E-5]
+                                          |             +--no:  [0,0,1.000000E-5]
+                                          +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  [3.000000E-5,2.583333E-5,1.150417E-3]
+                     ExampleIDs: index: 'cal500'
+
+
+Run: 16
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 11; Leaves = 6; Depth = 6
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[2.353846E-4,1.150000E-3,4.203359E-2]
+ExampleIDs: index: 'stackex_cs'
+
+
+Original Model
+**************
+
+LxIxF > 3.7885078E8
++--yes: [1.850000E-3,1.762000E-2,5.933300E-1]
+|      ExampleIDs: index: 'stackex_cs'
+
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.120000E-4,1.160000E-3,5.691000E-2]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: [4.000000E-5,5.000000E-5,2.106364E-3]
+                            +--no:  [1.818182E-6,9.090909E-7,2.545455E-5]
+
+Pruned Model
+************
+
+LxIxF > 3.7885078E8
++--yes: [1.850000E-3,1.762000E-2,5.933300E-1]
+|      ExampleIDs: index: 'stackex_cs'
+
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.120000E-4,1.160000E-3,5.691000E-2]
+       +--no:  [7.562500E-5,1.190625E-4,5.253125E-3]
+
+Run: 17
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 11; Leaves = 6; Depth = 6
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[2.610256E-4,1.216923E-3,4.221128E-2]
+ExampleIDs: index: 'ohsumed'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.740000E-4,1.548000E-3,7.678200E-2]
+       |      ExampleIDs: index: 'ohsumed'
+
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: [4.000000E-5,5.000000E-5,2.106364E-3]
+                            +--no:  [1.818182E-6,9.090909E-7,2.545455E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.740000E-4,1.548000E-3,7.678200E-2]
+       |      ExampleIDs: index: 'ohsumed'
+
+       +--no:  [7.562500E-5,1.190625E-4,5.253125E-3]
+
+Run: 18
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 19; Leaves = 10; Depth = 8
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.771795E-4,1.248718E-3,4.444897E-2]
+ExampleIDs: index: 'Virus_PseAAC'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Diversity > 0.16429
+                            |      +--yes: [6.200000E-5,8.800000E-5,4.198000E-3]
+                            |      +--no:  Attributes > 440.0
+                            |             +--yes: [1.500000E-5,1.750000E-5,3.825000E-4]
+                            |             +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                            +--no:  Bound > 62.0
+                                   +--yes: [0,1.428571E-6,1.285714E-5]
+                                   |      ExampleIDs: index: 'Virus_PseAAC'
+
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  [3.333333E-5,3.208333E-5,1.159167E-3]
+                     ExampleIDs: index: 'Virus_PseAAC'
+
+
+Run: 19
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 11; Leaves = 6; Depth = 6
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[2.533333E-4,1.197949E-3,4.155590E-2]
+ExampleIDs: index: 'ng20'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.140000E-4,1.400000E-3,7.167000E-2]
+       |      ExampleIDs: index: 'ng20'
+
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: [4.000000E-5,5.000000E-5,2.106364E-3]
+                            +--no:  [1.818182E-6,9.090909E-7,2.545455E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.140000E-4,1.400000E-3,7.167000E-2]
+       |      ExampleIDs: index: 'ng20'
+
+       +--no:  [7.562500E-5,1.190625E-4,5.253125E-3]
+
+Run: 20
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 23; Leaves = 12; Depth = 9
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.717949E-4,1.229744E-3,4.392846E-2]
+ExampleIDs: index: 'Arabic200'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.350000E-4,3.833333E-4,1.998667E-2]
+              |      ExampleIDs: index: 'Arabic200'
+
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Diversity > 0.16429
+                            |      +--yes: [6.200000E-5,8.800000E-5,4.198000E-3]
+                            |      +--no:  Attributes > 440.0
+                            |             +--yes: [1.500000E-5,1.750000E-5,3.825000E-4]
+                            |             +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                            +--no:  Bound > 62.0
+                                   +--yes: Attributes > 19.0
+                                   |      +--yes: Mean of kurtosis > 2.88893
+                                   |      |      +--yes: [0,0,2.500000E-5]
+                                   |      |      +--no:  [0,0,1.000000E-5]
+                                   |      +--no:  [0,5.000000E-6,1.500000E-5]
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  Bound > 710.0
+              +--yes: [2.350000E-4,3.833333E-4,1.998667E-2]
+              |      ExampleIDs: index: 'Arabic200'
+
+              +--no:  [3.200000E-5,3.080000E-5,1.114000E-3]
+
+Run: 21
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 23; Leaves = 12; Depth = 9
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[2.771795E-4,1.248462E-3,4.444692E-2]
+ExampleIDs: index: 'genbase'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  LxIxF > 1615680.0
+                     +--yes: Kurtosis cardinality > -0.43829
+                     |      +--yes: Diversity > 0.16429
+                     |      |      +--yes: [6.200000E-5,8.800000E-5,4.198000E-3]
+                     |      |      +--no:  [2.500000E-5,2.000000E-5,4.400000E-4]
+                     |      +--no:  [1.600000E-4,9.500000E-5,2.150000E-3]
+                     |             ExampleIDs: index: 'genbase'
+
+                     +--no:  DefaultAccuracy > 0.36257
+                            +--yes: [2.500000E-5,2.000000E-5,2.050000E-4]
+                            +--no:  Bound > 62.0
+                                   +--yes: Attributes > 19.0
+                                   |      +--yes: Mean of kurtosis > 2.88893
+                                   |      |      +--yes: [0,0,2.500000E-5]
+                                   |      |      +--no:  [0,0,1.000000E-5]
+                                   |      +--no:  [0,5.000000E-6,1.500000E-5]
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  [7.806452E-5,1.225806E-4,5.419032E-3]
+              ExampleIDs: index: 'genbase'
+
+
+Run: 22
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 23; Leaves = 12; Depth = 8
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.733333E-4,1.245128E-3,4.436513E-2]
+ExampleIDs: index: 'stackex_chess'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  LxIxF > 1432600.0
+                     +--yes: Instances > 288.0
+                     |      +--yes: Diversity > 0.16429
+                     |      |      +--yes: [5.750000E-5,7.250000E-5,5.187500E-3]
+                     |      |      |      ExampleIDs: index: 'stackex_chess'
+
+                     |      |      +--no:  Attributes > 440.0
+                     |      |             +--yes: [1.500000E-5,1.750000E-5,3.825000E-4]
+                     |      |             +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                     |      +--no:  [1.250000E-4,1.000000E-4,6.200000E-4]
+                     +--no:  DefaultAccuracy > 0.33562
+                            +--yes: [1.000000E-5,5.000000E-6,6.500000E-5]
+                            +--no:  Attributes > 19.0
+                                   +--yes: Mean of kurtosis > 2.88893
+                                   |      +--yes: [0,0,2.500000E-5]
+                                   |      +--no:  [0,0,1.000000E-5]
+                                   +--no:  [0,5.000000E-6,1.500000E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  [2.708333E-5,2.625000E-5,1.022917E-3]
+                     ExampleIDs: index: 'stackex_chess'
+
+
+Run: 23
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 23; Leaves = 12; Depth = 9
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.771795E-4,1.248718E-3,4.444897E-2]
+ExampleIDs: index: 'GpositiveGO'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 572136.0
+                            +--yes: Diversity > 0.16429
+                            |      +--yes: [6.200000E-5,8.800000E-5,4.198000E-3]
+                            |      |      ExampleIDs: index: 'GpositiveGO'
+
+                            |      +--no:  Attributes > 440.0
+                            |             +--yes: [1.500000E-5,1.750000E-5,3.825000E-4]
+                            |             +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                            +--no:  Bound > 62.0
+                                   +--yes: Attributes > 19.0
+                                   |      +--yes: Mean of kurtosis > 2.88893
+                                   |      |      +--yes: [0,0,2.500000E-5]
+                                   |      |      +--no:  [0,0,1.000000E-5]
+                                   |      +--no:  [0,5.000000E-6,1.500000E-5]
+                                   +--no:  [1.000000E-5,0,6.500000E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  [3.333333E-5,3.208333E-5,1.159167E-3]
+                     ExampleIDs: index: 'GpositiveGO'
+
+
+Run: 24
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 21; Leaves = 11; Depth = 9
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[2.766667E-4,1.248205E-3,4.443436E-2]
+ExampleIDs: index: 'PlantGO'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Diversity > 0.16429
+                            |      +--yes: [6.200000E-5,8.800000E-5,4.198000E-3]
+                            |      +--no:  [2.200000E-5,1.800000E-5,3.160000E-4]
+                            |             ExampleIDs: index: 'PlantGO'
+
+                            +--no:  Bound > 62.0
+                                   +--yes: Attributes > 19.0
+                                   |      +--yes: Mean of kurtosis > 2.88893
+                                   |      |      +--yes: [0,0,2.500000E-5]
+                                   |      |      +--no:  [0,0,1.000000E-5]
+                                   |      +--no:  [0,5.000000E-6,1.500000E-5]
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  [7.741935E-5,1.222581E-4,5.403226E-3]
+              ExampleIDs: index: 'PlantGO'
+
+
+Run: 25
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 21; Leaves = 11; Depth = 9
+     Pruned: Nodes = 5; Leaves = 3; Depth = 3
+
+Default Model
+*************
+
+[2.766667E-4,1.248462E-3,4.444308E-2]
+ExampleIDs: index: 'GnegativeGO'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Diversity > 0.16429
+                            |      +--yes: [6.200000E-5,8.800000E-5,4.198000E-3]
+                            |      +--no:  [2.200000E-5,2.000000E-5,3.840000E-4]
+                            |             ExampleIDs: index: 'GnegativeGO'
+
+                            +--no:  Bound > 62.0
+                                   +--yes: Attributes > 19.0
+                                   |      +--yes: Mean of kurtosis > 2.88893
+                                   |      |      +--yes: [0,0,2.500000E-5]
+                                   |      |      +--no:  [0,0,1.000000E-5]
+                                   |      +--no:  [0,5.000000E-6,1.500000E-5]
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  [7.741935E-5,1.225806E-4,5.414194E-3]
+              ExampleIDs: index: 'GnegativeGO'
+
+
+Run: 26
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.05
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 15; Leaves = 8; Depth = 7
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.530769E-4,1.167179E-3,3.966359E-2]
+ExampleIDs: index: 'bibtex'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.120000E-4,1.160000E-3,5.691000E-2]
+       |      ExampleIDs: index: 'bibtex'
+
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Diversity > 0.16429
+                            |      +--yes: [6.200000E-5,8.800000E-5,4.198000E-3]
+                            |      +--no:  [2.166667E-5,1.833333E-5,3.633333E-4]
+                            +--no:  Bound > 62.0
+                                   +--yes: [0,1.250000E-6,1.500000E-5]
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.120000E-4,1.160000E-3,5.691000E-2]
+       |      ExampleIDs: index: 'bibtex'
+
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  [3.200000E-5,3.080000E-5,1.114000E-3]
+
+Run: 27
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 23; Leaves = 12; Depth = 9
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.723077E-4,1.242051E-3,4.425564E-2]
+ExampleIDs: index: 'slashdot'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.383333E-4,4.633333E-4,2.211333E-2]
+              |      ExampleIDs: index: 'slashdot'
+
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Diversity > 0.16429
+                            |      +--yes: [6.200000E-5,8.800000E-5,4.198000E-3]
+                            |      +--no:  Attributes > 440.0
+                            |             +--yes: [1.500000E-5,1.750000E-5,3.825000E-4]
+                            |             +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                            +--no:  Bound > 62.0
+                                   +--yes: Attributes > 19.0
+                                   |      +--yes: Mean of kurtosis > 2.88893
+                                   |      |      +--yes: [0,0,2.500000E-5]
+                                   |      |      +--no:  [0,0,1.000000E-5]
+                                   |      +--no:  [0,5.000000E-6,1.500000E-5]
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  Bound > 710.0
+              +--yes: [2.383333E-4,4.633333E-4,2.211333E-2]
+              |      ExampleIDs: index: 'slashdot'
+
+              +--no:  [3.200000E-5,3.080000E-5,1.114000E-3]
+
+Run: 28
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 21; Leaves = 11; Depth = 8
+     Pruned: Nodes = 9; Leaves = 5; Depth = 5
+
+Default Model
+*************
+
+[2.725641E-4,1.217692E-3,4.208154E-2]
+ExampleIDs: index: 'tmc2007_500'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.23806E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      |      ExampleIDs: index: 'tmc2007_500'
+
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Proportion of numeric attributes with outliers > 0.81364
+              +--yes: [2.137500E-4,2.437500E-4,6.487500E-3]
+              +--no:  LxIxF > 623808.0
+                     +--yes: Attributes > 1004.0
+                     |      +--yes: [1.500000E-5,1.750000E-5,3.825000E-4]
+                     |      +--no:  Cardinality > 1.06522
+                     |             +--yes: [6.333333E-5,8.833333E-5,3.563333E-3]
+                     |             +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                     +--no:  Bound > 62.0
+                            +--yes: Attributes > 19.0
+                            |      +--yes: Mean of kurtosis > 2.88893
+                            |      |      +--yes: [0,0,2.500000E-5]
+                            |      |      +--no:  [0,0,1.000000E-5]
+                            |      +--no:  [0,5.000000E-6,1.500000E-5]
+                            +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.23806E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       |      ExampleIDs: index: 'tmc2007_500'
+
+       +--no:  Proportion of numeric attributes with outliers > 0.81364
+              +--yes: [2.137500E-4,2.437500E-4,6.487500E-3]
+              +--no:  LxIxF > 623808.0
+                     +--yes: [4.250000E-5,5.333333E-5,1.963333E-3]
+                     +--no:  [1.818182E-6,9.090909E-7,2.545455E-5]
+
+Run: 29
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.125
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 29; Leaves = 15; Depth = 9
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.756410E-4,1.247436E-3,4.436615E-2]
+ExampleIDs: index: 'langlog'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: Average gain ratio > 9.0E-5
+       |      |      +--yes: [4.300000E-4,8.900000E-4,2.677500E-2]
+       |      |      +--no:  [6.350000E-4,1.020000E-3,5.907000E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Diversity > 0.16429
+                            |      +--yes: Attributes > 294.0
+                            |      |      +--yes: [5.500000E-5,1.000000E-4,8.565000E-3]
+                            |      |      |      ExampleIDs: index: 'langlog'
+
+                            |      |      +--no:  [7.000000E-5,9.500000E-5,3.000000E-4]
+                            |      +--no:  Attributes > 440.0
+                            |             +--yes: Bound > 292.0
+                            |             |      +--yes: [2.000000E-5,2.500000E-5,5.800000E-4]
+                            |             |      +--no:  [1.000000E-5,1.000000E-5,1.850000E-4]
+                            |             +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                            +--no:  Bound > 62.0
+                                   +--yes: Attributes > 19.0
+                                   |      +--yes: Mean of kurtosis > 2.88893
+                                   |      |      +--yes: [0,0,2.500000E-5]
+                                   |      |      +--no:  [0,0,1.000000E-5]
+                                   |      +--no:  [0,5.000000E-6,1.500000E-5]
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  [3.083333E-5,3.000000E-5,1.024583E-3]
+                     ExampleIDs: index: 'langlog'
+
+
+Run: 30
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 23; Leaves = 12; Depth = 9
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.607692E-4,1.228205E-3,4.365897E-2]
+ExampleIDs: index: 'stackex_philosophy'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [4.966667E-4,1.006667E-3,4.695000E-2]
+       |      |      ExampleIDs: index: 'stackex_philosophy'
+
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Diversity > 0.16429
+                            |      +--yes: [6.200000E-5,8.800000E-5,4.198000E-3]
+                            |      +--no:  Attributes > 440.0
+                            |             +--yes: [1.500000E-5,1.750000E-5,3.825000E-4]
+                            |             +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                            +--no:  Bound > 62.0
+                                   +--yes: Attributes > 19.0
+                                   |      +--yes: Mean of kurtosis > 2.88893
+                                   |      |      +--yes: [0,0,2.500000E-5]
+                                   |      |      +--no:  [0,0,1.000000E-5]
+                                   |      +--no:  [0,5.000000E-6,1.500000E-5]
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.720000E-4,1.636000E-3,8.807400E-2]
+       |      ExampleIDs: index: 'stackex_philosophy'
+
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  [3.200000E-5,3.080000E-5,1.114000E-3]
+
+Run: 31
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 25; Leaves = 13; Depth = 10
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.705128E-4,1.237436E-3,4.414590E-2]
+ExampleIDs: index: 'reutersk500'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Max IR per labelset > 169.0
+              +--yes: [2.250000E-4,4.416667E-4,2.348167E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     |      ExampleIDs: index: 'reutersk500'
+
+                     +--no:  Number of unconditionally dependent label pairs by chi-square test > 34.0
+                            +--yes: Attributes > 103.0
+                            |      +--yes: [5.500000E-5,5.500000E-5,3.755000E-3]
+                            |      +--no:  [7.500000E-5,1.200000E-4,3.150000E-4]
+                            +--no:  Max IR per labelset > 65.0
+                                   +--yes: Attributes > 440.0
+                                   |      +--yes: [2.000000E-5,2.000000E-5,4.733333E-4]
+                                   |      +--no:  [4.333333E-5,2.666667E-5,3.366667E-4]
+                                   +--no:  Bound > 62.0
+                                          +--yes: Bound > 146.0
+                                          |      +--yes: [0,1.000000E-5,6.500000E-5]
+                                          |      +--no:  Attributes > 49.0
+                                          |             +--yes: [0,0,2.000000E-5]
+                                          |             +--no:  [0,0,1.000000E-5]
+                                          +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  Max IR per labelset > 169.0
+              +--yes: [2.250000E-4,4.416667E-4,2.348167E-2]
+              +--no:  [3.240000E-5,2.880000E-5,6.144000E-4]
+                     ExampleIDs: index: 'reutersk500'
+
+
+Run: 32
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 23; Leaves = 12; Depth = 9
+     Pruned: Nodes = 1; Leaves = 1; Depth = 1
+
+Default Model
+*************
+
+[2.635897E-4,1.243590E-3,4.431205E-2]
+ExampleIDs: index: 'proteins_human'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 967.0
+              +--yes: [2.040000E-4,5.500000E-4,2.689800E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     |      ExampleIDs: index: 'proteins_human'
+
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Attributes > 1004.0
+                            |      +--yes: [1.500000E-5,1.750000E-5,3.825000E-4]
+                            |      +--no:  Cardinality > 1.06522
+                            |             +--yes: [6.333333E-5,8.833333E-5,3.563333E-3]
+                            |             +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                            +--no:  Bound > 62.0
+                                   +--yes: Attributes > 19.0
+                                   |      +--yes: Mean of kurtosis > 2.88893
+                                   |      |      +--yes: [0,0,2.500000E-5]
+                                   |      |      +--no:  [0,0,1.000000E-5]
+                                   |      +--no:  [0,5.000000E-6,1.500000E-5]
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+[2.635897E-4,1.243590E-3,4.431205E-2]
+ExampleIDs: index: 'proteins_human'
+
+
+Run: 33
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 21; Leaves = 11; Depth = 8
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.771795E-4,1.248462E-3,4.444923E-2]
+ExampleIDs: index: 'Water_quality'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Diversity > 0.16429
+                            |      +--yes: [6.200000E-5,8.800000E-5,4.198000E-3]
+                            |      +--no:  Attributes > 440.0
+                            |             +--yes: [1.500000E-5,1.750000E-5,3.825000E-4]
+                            |             +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                            +--no:  Bound > 62.0
+                                   +--yes: Attributes > 49.0
+                                   |      +--yes: [0,0,2.000000E-5]
+                                   |      +--no:  [0,0,1.000000E-5]
+                                   |             ExampleIDs: index: 'Water_quality'
+
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  [3.333333E-5,3.166667E-5,1.159583E-3]
+                     ExampleIDs: index: 'Water_quality'
+
+
+Run: 34
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 21; Leaves = 11; Depth = 9
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.761538E-4,1.248205E-3,4.444103E-2]
+ExampleIDs: index: 'PlantPseAAC'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.8125
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     |      ExampleIDs: index: 'PlantPseAAC'
+
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Diversity > 0.16429
+                            |      +--yes: [6.200000E-5,8.800000E-5,4.198000E-3]
+                            |      +--no:  [1.800000E-5,1.800000E-5,3.680000E-4]
+                            +--no:  Bound > 62.0
+                                   +--yes: Attributes > 19.0
+                                   |      +--yes: Mean of kurtosis > 2.88893
+                                   |      |      +--yes: [0,0,2.500000E-5]
+                                   |      |      +--no:  [0,0,1.000000E-5]
+                                   |      +--no:  [0,5.000000E-6,1.500000E-5]
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  [3.166667E-5,3.125000E-5,1.146250E-3]
+                     ExampleIDs: index: 'PlantPseAAC'
+
+
+Run: 35
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 23; Leaves = 12; Depth = 10
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.756410E-4,1.245128E-3,4.411949E-2]
+ExampleIDs: index: 'Yelp'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  Labels > 45.0
+                            +--yes: [6.333333E-5,8.666667E-5,2.583333E-3]
+                            +--no:  Max IR per labelset > 65.0
+                                   +--yes: Attributes > 440.0
+                                   |      +--yes: [2.000000E-5,2.000000E-5,4.733333E-4]
+                                   |      |      ExampleIDs: index: 'Yelp'
+
+                                   |      +--no:  [4.333333E-5,2.666667E-5,3.366667E-4]
+                                   +--no:  Bound > 62.0
+                                          +--yes: Bound > 146.0
+                                          |      +--yes: [0,1.000000E-5,6.500000E-5]
+                                          |      +--no:  Attributes > 49.0
+                                          |             +--yes: [0,0,2.000000E-5]
+                                          |             +--no:  [0,0,1.000000E-5]
+                                          +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  [3.083333E-5,2.625000E-5,6.237500E-4]
+                     ExampleIDs: index: 'Yelp'
+
+
+Run: 36
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 19; Leaves = 10; Depth = 8
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.771795E-4,1.248718E-3,4.444949E-2]
+ExampleIDs: index: 'CHD_49'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Diversity > 0.16429
+                            |      +--yes: [6.200000E-5,8.800000E-5,4.198000E-3]
+                            |      +--no:  Attributes > 440.0
+                            |             +--yes: [1.500000E-5,1.750000E-5,3.825000E-4]
+                            |             +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                            +--no:  Bound > 62.0
+                                   +--yes: [0,1.428571E-6,1.571429E-5]
+                                   |      ExampleIDs: index: 'CHD_49'
+
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  [3.333333E-5,3.208333E-5,1.160000E-3]
+                     ExampleIDs: index: 'CHD_49'
+
+
+Run: 37
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 19; Leaves = 10; Depth = 8
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.771795E-4,1.248718E-3,4.444949E-2]
+ExampleIDs: index: 'flags'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Diversity > 0.16429
+                            |      +--yes: [6.200000E-5,8.800000E-5,4.198000E-3]
+                            |      +--no:  Attributes > 440.0
+                            |             +--yes: [1.500000E-5,1.750000E-5,3.825000E-4]
+                            |             +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                            +--no:  Bound > 62.0
+                                   +--yes: [0,1.428571E-6,1.571429E-5]
+                                   |      ExampleIDs: index: 'flags'
+
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  [3.333333E-5,3.208333E-5,1.160000E-3]
+                     ExampleIDs: index: 'flags'
+
+
+Run: 38
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 23; Leaves = 12; Depth = 9
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.769231E-4,1.248718E-3,4.444769E-2]
+ExampleIDs: index: 'proteins_virus'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Diversity > 0.16429
+                            |      +--yes: [6.200000E-5,8.800000E-5,4.198000E-3]
+                            |      +--no:  Attributes > 440.0
+                            |             +--yes: [1.500000E-5,1.750000E-5,3.825000E-4]
+                            |             +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                            +--no:  Average examples per labelset > 11.25
+                                   +--yes: [5.000000E-6,0,4.000000E-5]
+                                   +--no:  Attributes > 19.0
+                                          +--yes: Mean of kurtosis > 2.88893
+                                          |      +--yes: [0,0,2.500000E-5]
+                                          |      |      ExampleIDs: index: 'proteins_virus'
+
+                                          |      +--no:  [0,0,1.000000E-5]
+                                          +--no:  [0,5.000000E-6,1.500000E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  [3.291667E-5,3.208333E-5,1.157083E-3]
+                     ExampleIDs: index: 'proteins_virus'
+
+
+Run: 39
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 1.0000E-3 sec
+Pruning Time: 1.0000E-3 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 19; Leaves = 10; Depth = 8
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.771795E-4,1.248718E-3,4.444949E-2]
+ExampleIDs: index: 'VirusGO'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Diversity > 0.16429
+                            |      +--yes: [6.200000E-5,8.800000E-5,4.198000E-3]
+                            |      +--no:  Attributes > 440.0
+                            |             +--yes: [1.500000E-5,1.750000E-5,3.825000E-4]
+                            |             +--no:  [3.500000E-5,2.000000E-5,3.250000E-4]
+                            +--no:  Bound > 62.0
+                                   +--yes: [0,1.428571E-6,1.571429E-5]
+                                   |      ExampleIDs: index: 'VirusGO'
+
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  [3.333333E-5,3.208333E-5,1.160000E-3]
+                     ExampleIDs: index: 'VirusGO'
+
+
+Run: 40
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.1
+Induction Time: 1.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 21; Leaves = 11; Depth = 9
+     Pruned: Nodes = 7; Leaves = 4; Depth = 4
+
+Default Model
+*************
+
+[2.764103E-4,1.248205E-3,4.444179E-2]
+ExampleIDs: index: 'GnegativePseACC'
+
+
+Original Model
+**************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: CVIR inter class > 0.43293
+       |      +--yes: [5.325000E-4,9.550000E-4,4.292250E-2]
+       |      +--no:  [9.350000E-4,2.580000E-3,1.497600E-1]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  Proportion of numeric attributes with outliers > 0.81364
+                     +--yes: [1.133333E-4,7.000000E-5,1.466667E-3]
+                     +--no:  LxIxF > 623808.0
+                            +--yes: Diversity > 0.16429
+                            |      +--yes: [6.200000E-5,8.800000E-5,4.198000E-3]
+                            |      +--no:  [2.000000E-5,1.800000E-5,3.740000E-4]
+                            |             ExampleIDs: index: 'GnegativePseACC'
+
+                            +--no:  Bound > 62.0
+                                   +--yes: Attributes > 19.0
+                                   |      +--yes: Mean of kurtosis > 2.88893
+                                   |      |      +--yes: [0,0,2.500000E-5]
+                                   |      |      +--no:  [0,0,1.000000E-5]
+                                   |      +--no:  [0,5.000000E-6,1.500000E-5]
+                                   +--no:  [6.666667E-6,0,5.333333E-5]
+
+Pruned Model
+************
+
+Distinct labelsets > 1497.0
++--yes: [2.195000E-3,1.795500E-2,5.471150E-1]
++--no:  LxIxF > 1.26082E8
+       +--yes: [6.666667E-4,1.496667E-3,7.853500E-2]
+       +--no:  Bound > 710.0
+              +--yes: [2.314286E-4,4.342857E-4,2.003571E-2]
+              +--no:  [3.208333E-5,3.125000E-5,1.147500E-3]
+                     ExampleIDs: index: 'GnegativePseACC'
+
+
+Summary
+*******
+
+Runs: 40
+Induction time: 5.6000E-2 sec
+Preprocessing time: 0 sec
+Prediction Time (total for ClusModel.Original, 40 runs, 0 examples): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Mean number of tests
+     Original: 20.7
+     Pruned: 6.3
+
+Training error
+--------------
+
+Number of examples: 1560
+Mean absolute error (MAE)
+   Default        : [3.2430E-4,1.8134E-3,6.5676E-2]: 2.2605E-2
+   Original       : [6.4267E-5,8.2839E-4,3.1176E-2]: 1.0690E-2
+   Pruned         : [1.0534E-4,9.2266E-4,3.5749E-2]: 1.2259E-2
+Mean squared error (MSE)
+   Default        : [2.7113E-7,2.5076E-5,2.5013E-2]: 8.3462E-3
+   Original       : [2.2092E-8,1.0019E-5,1.0542E-2]: 3.5175E-3
+   Pruned         : [3.5493E-8,1.0488E-5,1.1254E-2]: 3.7550E-3
+Root mean squared error (RMSE)
+   Default        : [5.2071E-4,5.0075E-3,1.5816E-1]: 5.4561E-2
+   Original       : [1.4863E-4,3.1653E-3,1.0268E-1]: 3.5330E-2
+   Pruned         : [1.8840E-4,3.2385E-3,1.0609E-1]: 3.6504E-2
+Weighted root mean squared error (RMSE) (Weights [3685787.534,39853.342,39.953])
+   Default        : [9.9967E-1,9.9967E-1,9.9967E-1]: 9.9967E-1
+   Original       : [2.8535E-1,6.3190E-1,6.4900E-1]: 5.2208E-1
+   Pruned         : [3.6169E-1,6.4651E-1,6.7055E-1]: 5.5959E-1
+Root Relative Squared Error (RRMSE)
+   Default        : [9.9967E-1,9.9967E-1,9.9967E-1]: 9.9967E-1
+   Original       : [2.8535E-1,6.3190E-1,6.4900E-1]: 5.2208E-1
+   Pruned         : [3.6169E-1,6.4651E-1,6.7055E-1]: 5.5959E-1
+Pearson correlation coefficient
+   Default        : [2.5641E-2,2.5641E-2,2.5641E-2], Avg r^2: 6.5746E-4
+   Original       : [9.5842E-1,7.7505E-1,7.6079E-1], Avg r^2: 6.9936E-1
+   Pruned         : [9.3230E-1,7.6290E-1,7.4186E-1], Avg r^2: 6.6719E-1
+
+Testing error
+-------------
+
+Number of examples: 40
+Mean absolute error (MAE)
+   Default        : [3.3271E-4,1.8576E-3,6.7353E-2]: 2.3181E-2
+   Original       : [1.9151E-4,1.7391E-3,6.1376E-2]: 2.1102E-2
+   Pruned         : [1.8590E-4,1.7587E-3,6.1025E-2]: 2.0990E-2
+Mean squared error (MSE)
+   Default        : [2.8540E-7,2.6395E-5,2.6330E-2]: 8.7854E-3
+   Original       : [2.0117E-7,3.4901E-5,3.4798E-2]: 1.1611E-2
+   Pruned         : [1.9571E-7,3.4874E-5,3.4528E-2]: 1.1521E-2
+Root mean squared error (RMSE)
+   Default        : [5.3423E-4,5.1376E-3,1.6226E-1]: 5.5979E-2
+   Original       : [4.4852E-4,5.9077E-3,1.8654E-1]: 6.4299E-2
+   Pruned         : [4.4239E-4,5.9055E-3,1.8582E-1]: 6.4055E-2
+Weighted root mean squared error (RMSE) (Weights [3685787.534,39853.342,39.953])
+   Default        : [1.0256,1.0256,1.0256]: 1.0256
+   Original       : [8.6108E-1,1.1794,1.1791]: 1.0732
+   Pruned         : [8.4932E-1,1.1789,1.1745]: 1.0676
+Root Relative Squared Error (RRMSE)
+   Default        : [1.0256,1.0256,1.0256]: 1.0256
+   Original       : [8.6108E-1,1.1794,1.1791]: 1.0732
+   Pruned         : [8.4932E-1,1.1789,1.1745]: 1.0676
+Pearson correlation coefficient
+   Default        : [-1.0000E0,-1.0000E0,-1], Avg r^2: 1.0000E0
+   Original       : [5.9509E-1,1.2852E-1,1.4449E-1], Avg r^2: 1.3051E-1
+   Pruned         : [6.0356E-1,1.2756E-1,1.4749E-1], Avg r^2: 1.3410E-1
+

@@ -1,0 +1,156 @@
+
+<div class="col-lg-6 offset-lg-3" style="padding-top: 100px">
+<!-- <app-collapsible-tree></app-collapsible-tree> -->
+  <mat-card itemscope itemtype ="https://schema.org/Dataset">
+    <mat-card-title itemprop="name" class = "dataset-title">{{title}}</mat-card-title>
+    <mat-card-content>
+      <p *ngIf = "keywords!=''" itemprop="keywords"><span>Keywords: </span>{{keywords}}</p>
+      <p *ngIf = "description!=''" itemprop="description"><span>Description: </span>{{description}}</p>
+      <p *ngIf = "license!='na'" itemprop="license"><span>License: </span><a href="{{license}}" target="_blank">{{license}}</a></p>
+      <p *ngIf = "license=='na'" itemprop="license"><span>License: </span>not provided</p>
+      
+      <div *ngIf = "sameAsArray.length>0">
+        <span>Same as: </span>
+        <li *ngFor="let sameAsElement of sameAsArray">
+            <a href="{{sameAsElement}}" target="_blank" itemprop="sameAs">{{sameAsElement}}</a>
+            <span *ngIf="sameAsElement!=sameAsArray[sameAsArray.length-1]">, </span>
+        </li>
+        <br><br>
+      </div>
+      <div *ngIf="identifierArray.length>0">
+        <span>Identifiers: </span>
+        <li *ngFor="let identifierElement of identifierArray">
+            <a  itemprop="identifier" *ngIf = "identifierElement.startsWith('http')" href="{{identifierElement}}" target="_blank">{{identifierElement}}</a>
+            <span itemprop="identifier" *ngIf = "!identifierElement.startsWith('http')">{{identifierElement}}</span>
+            <span *ngIf="identifierElement!=identifierArray[identifierArray.length-1]">, </span>
+        </li>
+        <br><br>
+      </div>
+      <div *ngIf="creatorArray.length>0">
+        <span>Creator(s): </span>
+        <li *ngFor="let creatorElement of creatorArray" itemprop="creator">
+            <a href="{{creatorElement.url}}" target="_blank" itemprop="url" ><span itemprop="name">{{creatorElement.name}}</span></a>
+            <span *ngIf="creatorElement.name!=creatorArray[creatorArray.length-1].name">, </span>
+        </li>
+      </div>     
+      <br>
+      <p *ngIf = "metaFeaturesTrainPath!=''"><span>Download meta-features calculated on the train dataset: </span><a href="{{metaFeaturesTrainPath}}"  class="download_file"  role="button" target = "_blank">{{title+"_train.json"}}</a></p>
+      <p *ngIf = "metaFeaturesTestPath!=''"><span>Download meta-features calculated on the test dataset: </span><a href="{{metaFeaturesTestPath}}"  class="download_file"  role="button" target = "_blank">{{title+"_test.json"}}</a></p>
+      <p *ngIf = "trainDatasetPath!=''&&license!='na'"><span>Download the {{title}} train dataset: </span><a href="{{trainDatasetPath}}"  class="download_file"  role="button" target = "_blank">{{title+"_train.arff"}}</a></p>
+      <p *ngIf = "testDatasetPath!=''&&license!='na'"><span>Download the {{title}} test dataset: </span><a href="{{trainDatasetPath}}"  class="download_file"  role="button" target = "_blank">{{title+"_test.arff"}}</a></p>
+      <p *ngIf = "annotationsPath!=''"><span>Download annotations: </span><a href="{{annotationsPath}}"  class="download_file"  role="button" target = "_blank">{{title+".rdf"}}</a>
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <br>
+
+  <div>
+    <div>
+        <ng4-loading-spinner > </ng4-loading-spinner>
+        <div>
+          <plotly-plot *ngIf = 'barData.length>0'
+          [data]="barData"
+          [config]= "{displayModeBar: false}"
+          [useResizeHandler]="true" 
+          [layout]="{
+            title: 'Label distribution',
+            height: 600,
+            margin: {
+              b: 260
+            },
+            xaxis: {
+              type: 'category'
+            }
+          }"> 
+          </plotly-plot>
+          <br>
+        </div>
+        <div [ngClass]='dataSourceFeatures?.data?.length > 0  ? "visible": "hidden"'>
+          <table mat-table [dataSource]="dataSourceFeatures" matSort #sorterFeatures="matSort" class="mat-elevation-z8" matSortActive="created" matSortDisableClear matSortDirection="asc" >
+              <ng-container matColumnDef="featureName">                       
+                  <th mat-header-cell *matHeaderCellDef style="font-size:13pt; " mat-sort-header><a>Feature</a></th>
+                  <td mat-cell *matCellDef="let element">{{element.featureName}}</td>
+              </ng-container> 
+              <ng-container matColumnDef="featureType">                       
+                  <th mat-header-cell *matHeaderCellDef style="font-size:13pt; " mat-sort-header>Type </th>
+                  <td mat-cell *matCellDef="let element">{{element.featureType}}</td>
+              </ng-container> 
+              <ng-container matColumnDef="boxplot">                       
+                <th mat-header-cell *matHeaderCellDef style="font-size:13pt;">Distribution (train set) </th>
+                <td mat-cell *matCellDef="let element"  style="font-size:13pt;">
+                  <plotly-plot *ngIf = "element.featureType == 'numeric'"
+                  [data]="[
+                  {
+                    x: element.featureCharacteristic,
+                    boxpoints : false,
+                    type: 'box',
+                    name: ''
+                  }
+                ]"
+                 [layout]="{
+                  autosize: false,
+                  width: 300,
+                  height: 100,
+                  margin: {
+                    l: 20,
+                    r: 30,
+                    b: 20,
+                    t: 20
+                  }
+                }"
+                [config]= "{displayModeBar: false}"
+                [useResizeHandler]="true" [style]="{position: 'relative', width: '100%', height: '100%'}"></plotly-plot>
+                <plotly-plot *ngIf = "element.featureType == 'nominal'"
+                [data]="[
+                {
+                  x: element.featureLabeles,
+                  y: element.featureValues,
+                  type: 'bar'
+                }
+              ]"
+              [layout]="{
+                xaxis: {
+                  type: 'category'
+                },
+                autosize: false,
+                width: 300,
+                height: 130,
+                margin: {
+                  l: 30,
+                  r: 30,
+                  b: 25,
+                  t: 10
+                }
+              }"
+              [config]= "{displayModeBar: false}"></plotly-plot>
+                </td>
+              </ng-container>           
+              <tr mat-header-row *matHeaderRowDef="displayedColumnsFeatures"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumnsFeatures;"></tr> 
+          </table>
+          <div class="paginator" style="min-width: 624px;width: 100%;">
+              <mat-paginator #paginatorFeatures = "matPaginator" [pageSizeOptions]="[10, 50, 100]" showFirstLastButtons ></mat-paginator>
+          </div> 
+        </div>
+        <br>
+        <div [ngClass]='dataSourceMeta?.data?.length > 0  ? "visible": "hidden"' style="padding-bottom: 150px;">
+            <table style="width:100%;min-width: 624px;" mat-table [dataSource]="dataSourceMeta" matSort #sorterMeta="matSort" class="mat-elevation-z8" matSortActive="created" matSortDisableClear matSortDirection="asc" >
+                <ng-container matColumnDef="mfLabel">                       
+                    <th mat-header-cell *matHeaderCellDef style="font-size:13pt; text-align: center" mat-sort-header><a>Meta feature</a></th>
+                    <td mat-cell *matCellDef="let element">{{element.mfLabel}}</td>
+                </ng-container> 
+                <ng-container matColumnDef="mfValue">                       
+                    <th mat-header-cell *matHeaderCellDef style="font-size:13pt;  text-align: center" mat-sort-header>Value </th>
+                    <td mat-cell *matCellDef="let element">{{element.mfValue}}</td>
+                </ng-container>                 
+                <tr mat-header-row *matHeaderRowDef="displayedColumnsMeta"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumnsMeta;"></tr> 
+            </table>
+            <div class="paginator" style="min-width: 624px;">
+                <mat-paginator #paginatorMeta = "matPaginator" [pageSizeOptions]="[10, 50, 100]" showFirstLastButtons ></mat-paginator>
+            </div> 
+        </div>
+    </div>
+  </div>
+</div>
+

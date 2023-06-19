@@ -1,0 +1,5 @@
+README
+
+1) run MTR_dataset.py
+2) rename the features in "dataset_metric.arff" according to the "store_targets.csv"
+3) run Clus from cmd with java -jar clus.jar -xval metrics_file.s

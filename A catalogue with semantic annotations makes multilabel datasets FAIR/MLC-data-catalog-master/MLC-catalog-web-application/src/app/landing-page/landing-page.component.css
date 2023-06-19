@@ -1,0 +1,39 @@
+.containerA {
+   background: url('../../ML-wallpaper-dark.png') repeat-y center center; 
+   /* background-size:100% 100%; 
+   height: 100vh!important; */
+   /* -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover; */
+   /* background-size: cover; */
+   height: 100vh;
+   width: 100%;
+   padding: 0;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .centered-div {
+    width: 70%;
+    height: 40%;
+    color: rgb(221, 223, 233);
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+ }
+ #welcome{
+    font-size: 50pt;
+ }
+
+ .landing-button{
+     background-color: #5b7b91!important;
+     font-size: 20pt;
+     color: rgb(221, 223, 233);
+ }
+ .landing-button:hover{
+    background-color: #466174!important;
+ }

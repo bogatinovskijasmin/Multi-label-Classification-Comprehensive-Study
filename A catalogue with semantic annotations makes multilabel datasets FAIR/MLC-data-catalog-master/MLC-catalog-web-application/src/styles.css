@@ -1,0 +1,69 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.multiselect-dropdown{
+    background-color: white;
+}
+th{
+    font-size: 18px;
+    color: white!important;
+    line-height: 1.4;
+    /* background-color: #009999; */
+    background-color: rgba(42,63,95,.7);
+}
+
+/* tr:nth-child(even) {
+    background-color: #e8f3f3;
+    background-color: #f0f0f0;
+} */
+
+body{
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    background-color: #f0f0f0; 
+    /* background-color: #fafafa;  */
+}
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 10px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+table {
+  /* text-align: center !important; */
+  width: 100%;
+}
+
+.mat-header-cell {
+  /* text-align: center; */
+}
+
+/* .multiselect-dropdown[_ngcontent-c9] .dropdown-btn[_ngcontent-c9] .selected-item[_ngcontent-c9]{
+  background: rgba(42,63,95,.7)!important;
+  border: 0px solid rgba(42,63,95,.7)!important;
+} */
+
+.multi-label span.selected-item.ng-star-inserted {
+  background: white!important;
+  border: 0px!important;
+  color: black!important;
+}
+
+.multi-label .multiselect-dropdown {
+  margin-top: 8px;
+}

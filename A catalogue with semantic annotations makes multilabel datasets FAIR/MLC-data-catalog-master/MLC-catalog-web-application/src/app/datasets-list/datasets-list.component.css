@@ -1,0 +1,51 @@
+table {
+    width: 100%;
+}
+
+.showQuery{
+    color:rgba(0,0,0,.54);   
+    float: right;     
+}
+.paginator{
+    font-size: 12px;
+}
+
+.hidden{
+    display: none;
+}
+.visible{
+   visibility: visible;
+   margin-top: 0px!important;
+} 
+a.showQuery{
+   margin-top: 18px; 
+}
+td.mat-cell{
+   color: rgb(111, 111, 111);
+}
+
+th.mat-sort-header-sorted {
+    color: black;
+}
+
+.noMatch {
+    font-size: 15pt;
+    
+}
+.noMatch > a{
+    color:rgba(0,0,0,.54);
+    font-size: 12pt;
+    font-style: oblique;
+}
+
+a {
+    color: black;
+}
+.angular-with-newlines {
+    white-space: pre-wrap;
+}
+
+a:hover { 
+    text-decoration: underline!important; 
+}
+    

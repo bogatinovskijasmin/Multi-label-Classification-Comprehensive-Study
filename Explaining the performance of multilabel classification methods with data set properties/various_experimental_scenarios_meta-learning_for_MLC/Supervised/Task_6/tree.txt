@@ -1,0 +1,23 @@
+Labels > 53.0
++--yes: Ratio of unconditionally dependent label pairs by chi-square test > 0.02810810810810811
+|      +--yes: Bound > 2990.0
+|      |      +--yes: [3.825000E-1,3.880000E-1,3.730000E-1]
+|      |      +--no:  [4.820000E-1,4.806667E-1,4.550000E-1]
+|      +--no:  CVIR inter class > 0.9888463527838548
+|             +--yes: [2.375000E-1,2.640000E-1,2.275000E-1]
+|             +--no:  [3.070000E-1,3.475000E-1,3.380000E-1]
++--no:  Mean of skewness of numeric attributes > 0.003614186172063957
+       +--yes: CVIR inter class > 0.7635135453164861
+       |      +--yes: Ratio of unconditionally dependent label pairs by chi-square test > 0.2307692307692308
+       |      |      +--yes: [6.374000E-1,6.446000E-1,6.168000E-1]
+       |      |      +--no:  Kurtosis cardinality > 5.297587658243397
+       |      |             +--yes: [3.915000E-1,4.050000E-1,3.370000E-1]
+       |      |             +--no:  [5.220000E-1,5.353333E-1,4.850000E-1]
+       |      +--no:  Attributes > 1006.0
+       |             +--yes: [6.613333E-1,5.486667E-1,8.916667E-1]
+       |             +--no:  [7.106667E-1,7.081667E-1,6.756667E-1]
+       +--no:  Average examples per labelset > 2.5172413793103448
+              +--yes: LxIxF > 9342540.0
+              |      +--yes: [7.838000E-1,7.860000E-1,7.736000E-1]
+              |      +--no:  [9.358000E-1,9.316000E-1,9.514000E-1]
+              +--no:  [6.010000E-1,5.960000E-1,5.545000E-1]

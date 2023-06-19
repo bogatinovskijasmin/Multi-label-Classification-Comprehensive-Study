@@ -1,0 +1,61 @@
+.hidden{
+    display: none;
+}
+.visible{
+   visibility: visible;
+   margin-top: 0px!important;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 3px;
+}
+
+.node text {
+  font: 12px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 2px;
+}
+.mat-column-boxplot {
+  flex: 0 0 40% !important;
+  min-width: 200px !important;
+}
+.mat-column-featureType {
+  flex: 0 0 20% !important;
+  min-width: 100px !important;
+}
+.mat-column-featureName {
+  flex: 0 0 40% !important;
+  min-width: 200px !important;
+}
+/* mat-header-cell {
+  display:flex;
+  justify-content:flex-end;
+ }
+
+ ::ng-deep .mat-sort-header-container {
+  display:flex;
+  justify-content:center;
+} */
+
+mat-cell cdk-column-boxplot mat-column-boxplot ng-star-inserted{
+  padding: 0px!important;
+  float: right;
+}
+
+mat-card-title.dataset-title{
+  color: darkblue!important;
+  text-align: center!important;
+}
+mat-card-content>div>span, mat-card-content>p>span{
+  color: darkblue!important;
+  font-size: 16px;
+}
+li{
+  display: inline!important;
+}

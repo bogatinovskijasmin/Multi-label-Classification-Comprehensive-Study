@@ -1,0 +1,282 @@
+Clus run metaDataset
+********************
+
+Date: 4/13/20 3:25 PM
+File: AUCROC_MICRO.out
+Attributes: 52 (input: 50, output: 1)
+Missing values: No
+
+[General]
+Verbose = 1
+RandomSeed = 0
+ResourceInfoLoaded = No
+DoNotInduce = No
+LoggingProperties = logging.properties
+
+[Data]
+File = /home/matilda/PycharmProjects/MetaLearningForMLC/Meta_learning_MLC/LearningScenarios/Supervised/Task_9_AA_vs_PT/dataset_clus_AUCROC_MICRO_.arff
+TestSet = None
+PruneSet = None
+XVal = 40
+RemoveMissingTarget = No
+NormalizeData = None
+
+[Attributes]
+Target = 52
+Clustering = 52
+Descriptive = 2-51
+Key = None
+Disable = None
+Weights = Normalize
+ClusteringWeights = 1.0
+ReduceMemoryNominalAttrs = No
+GIS = None
+
+[Constraints]
+Syntactic = None
+MaxSize = Infinity
+MaxError = 0.0
+MaxDepth = Infinity
+
+[Nominal]
+MEstimate = 1.0
+
+[Model]
+MinimalWeight = 2.0
+MinimalNumberExamples = 0
+MinimalKnownWeight = 0.0
+ParamTuneNumberFolds = 39
+NominalSubsetTests = Yes
+
+[Tree]
+Heuristic = Gain
+HeuristicComplexity = N2
+SetDistance = GSMDistance
+TupleDistance = Euclidean
+TSDistance = DTW
+PruningMethod = C45
+BinarySplit = Yes
+ConvertToRules = No
+AlternativeSplits = No
+Optimize = []
+MSENominal = No
+SplitSampling = None
+MissingClusteringAttrHandling = EstimateFromParentNode
+MissingTargetAttrHandling = ParentNode
+InductionOrder = DepthFirst
+EntropyType = StandardEntropy
+ConsiderUnlableInstancesInIGCalc = No
+SpatialMatrix = Binary
+SpatialMeasure = GlobalMoran
+Bandwidth = 0.001
+Longlat = No
+NumNeightbours = 0.0
+Alpha = 1.0
+SplitPosition = Exact
+
+[SemiSupervised]
+SemiSupervisedMethod = PCT
+StoppingCriteria = NoneAdded
+UnlabeledCriteria = Threshold
+ConfidenceThreshold = 0.8
+ConfidenceMeasure = Variance
+Iterations = 10
+K = 5
+UnlabeledData = 
+PercentageLabeled = 5
+UseWeights = No
+AirbagTrials = 0
+ExhaustiveSearchThresholds = [0.5,0.6,0.7,0.8,0.9,0.99]
+OOBErrorCalculation = LabeledOnly
+Normalization = MinMaxNormalization
+Aggregation = Average
+CalibrateHmcThreshold = No
+PruningWhenTuning = No
+InternalFolds = 5
+WeightScoresFile = NO
+PossibleWeights = [0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0]
+
+[Output]
+ShowModels = [Default, Pruned, Others]
+TrainErrors = Yes
+ValidErrors = Yes
+TestErrors = Yes
+AllFoldModels = Yes
+AllFoldErrors = No
+AllFoldDatasets = No
+UnknownFrequency = No
+BranchFrequency = No
+ShowInfo = [Key]
+PrintModelAndExamples = Yes
+WriteErrorFile = No
+WriteModelFile = No
+WritePerBagModelFile = Yes
+WriteOOBFile = No
+WritePredictions = []
+GzipOutput = No
+ModelIDFiles = No
+WriteCurves = No
+OutputPythonModel = No
+PythonModelType = Object
+OutputROSSubspaces = No
+OutputJSONModel = No
+OutputDatabaseQueries = No
+OutputClowdFlowsJSON = No
+ComputeSpearman = No
+
+Run: 01
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.001
+Induction Time: 2.0000E-3 sec
+Pruning Time: 0 sec
+Prediction Time (total for ClusModel.Original): 
+	0 microsecs
+	0 millisecs
+	0 secs
+Prediction Time (average for ClusModel.Original): 0 microsecs
+Model information:
+     Default: Nodes = 1; Leaves = 1; Depth = 1
+     Original: Nodes = 11; Leaves = 6; Depth = 6
+     Pruned: Nodes = 11; Leaves = 6; Depth = 6
+
+Training error
+--------------
+
+Number of examples: 40
+Classification Error
+   Default: 
+   Attribute: target
+     REAL\PRED | 1 |  0 |
+     -----------------------
+             1 | 0 | 16 | 16
+             0 | 0 | 24 | 24
+     -----------------------
+               | 0 | 40 | 40
+     Accuracy: 6.000000E-1
+     Cramer's coefficient: 0
+
+   Original: 
+   Attribute: target
+     REAL\PRED |  1 |  0 |
+     ------------------------
+             1 | 16 |  0 | 16
+             0 |  0 | 24 | 24
+     ------------------------
+               | 16 | 24 | 40
+     Accuracy: 1
+     Cramer's coefficient: 1
+
+   Pruned: 
+   Attribute: target
+     REAL\PRED |  1 |  0 |
+     ------------------------
+             1 | 16 |  0 | 16
+             0 |  0 | 24 | 24
+     ------------------------
+               | 16 | 24 | 40
+     Accuracy: 1
+     Cramer's coefficient: 1
+
+Weighted mean squared error (MSE) for Nominal Attributes (Weights [2.083])
+   Default        : [1]
+   Original       : [0]
+   Pruned         : [0]
+averageAUROC
+   Default        : 5.000000E-1
+   Original       : 1
+   Pruned         : 1
+averageAUPRC
+   Default        : 4.000000E-1
+   Original       : 1
+   Pruned         : 1
+
+Testing error
+-------------
+
+Number of examples: 40
+Classification Error
+   Default: 
+   Attribute: target
+     REAL\PRED | 1 |  0 |
+     -----------------------
+             1 | 0 | 16 | 16
+             0 | 0 | 24 | 24
+     -----------------------
+               | 0 | 40 | 40
+     Accuracy: 6.000000E-1
+     Cramer's coefficient: 0
+
+   Original: 
+   Attribute: target
+     REAL\PRED |  1 |  0 |
+     ------------------------
+             1 | 12 |  4 | 16
+             0 |  7 | 17 | 24
+     ------------------------
+               | 19 | 21 | 40
+     Accuracy: 7.250000E-1
+     Cramer's coefficient: 4.496355E-1
+
+   Pruned: 
+   Attribute: target
+     REAL\PRED |  1 |  0 |
+     ------------------------
+             1 | 12 |  4 | 16
+             0 |  7 | 17 | 24
+     ------------------------
+               | 19 | 21 | 40
+     Accuracy: 7.250000E-1
+     Cramer's coefficient: 4.496355E-1
+
+Weighted mean squared error (MSE) for Nominal Attributes (Weights [2.083])
+   Default        : [1.0519]
+   Original       : [1.1083]
+   Pruned         : [1.1083]
+averageAUROC
+   Default        : 0
+   Original       : 7.447917E-1
+   Pruned         : 7.447917E-1
+averageAUPRC
+   Default        : 2.336227E-1
+   Original       : 6.223814E-1
+   Pruned         : 6.223814E-1
+
+Default Model
+*************
+
+[0] [24.0]: 40
+
+Original Model
+**************
+
+Instances > 1024.0
++--yes: [0] [12.0]: 12
++--no:  Max IR inter class > 35.25
+       +--yes: [1] [11.0]: 11
+       +--no:  Average gain ratio > 0.04053998158295757
+              +--yes: [1] [2.0]: 2
+              +--no:  Ratio of number of instances to the number of attributes > 0.1875
+                     +--yes: [0] [9.0]: 9
+                     +--no:  Ratio of number of instances to the number of attributes > 0.10417340666450987
+                            +--yes: [1] [3.0]: 3
+                            +--no:  [0] [3.0]: 3
+
+Pruned Model
+************
+
+Instances > 1024.0
++--yes: [0] [12.0]: 12
++--no:  Max IR inter class > 35.25
+       +--yes: [1] [11.0]: 11
+       +--no:  Average gain ratio > 0.04053998158295757
+              +--yes: [1] [2.0]: 2
+              +--no:  Ratio of number of instances to the number of attributes > 0.1875
+                     +--yes: [0] [9.0]: 9
+                     +--no:  Ratio of number of instances to the number of attributes > 0.10417340666450987
+                            +--yes: [1] [3.0]: 3
+                            +--no:  [0] [3.0]: 3
+

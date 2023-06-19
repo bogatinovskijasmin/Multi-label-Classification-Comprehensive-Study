@@ -1,0 +1,63 @@
+Attributes
+Average absolute correlation between numeric attributes
+Average examples per labelset
+Average gain ratio
+Bound
+CVIR inter class
+Cardinality
+DefaultAccuracy
+Density
+Distinct labelsets
+Diversity
+Instances
+Kurtosis cardinality
+Labels
+LxIxF
+Max IR inter class
+Max IR intra class
+Max IR per labelset
+Maximal entropy of labels
+Mean examples per labelset
+Mean of IR inter class
+Mean of IR intra class
+Mean of IR per labelset
+Mean of entropies of labels
+Mean of entropies of nominal attributes
+Mean of kurtosis
+Mean of mean of numeric attributes
+Mean of skewness of numeric attributes
+Mean of standard deviation of IR intra class
+Mean of standard deviation of numeric attributes
+Minimal entropy of labels
+Number of binary attributes
+Number of labelsets up to 10 examples
+Number of labelsets up to 2 examples
+Number of labelsets up to 5 examples
+Number of labelsets up to 50 examples
+Number of nominal attributes
+Number of numeric attributes
+Number of unconditionally dependent label pairs by chi-square test
+Number of unique labelsets
+Proportion of binary attributes
+Proportion of distinct labelsets
+Proportion of maxim label combination (PMax)
+Proportion of nominal attributes
+Proportion of numeric attributes
+Proportion of numeric attributes with outliers
+Proportion of unique label combination (PUniq)
+Ratio of number of instances to the number of attributes
+Ratio of number of labelsets up to 10 examples
+Ratio of number of labelsets up to 2 examples
+Ratio of number of labelsets up to 5 examples
+Ratio of number of labelsets up to 50 examples
+Ratio of unconditionally dependent label pairs by chi-square test
+RatioTestToPower
+RatioTotalToPower
+RatioTrainToPower
+RatioUnseenToTest
+SCUMBLE
+Skewness cardinality
+Standard deviation of examples per labelset
+Standard deviation of label cardinality
+TotalDistinctClasses
+UnseenInTrain

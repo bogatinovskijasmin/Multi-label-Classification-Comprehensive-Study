@@ -1,0 +1,17 @@
+&
+(executable="MBRexecution.sh")
+(jobname="ABPM_MBR")
+(stdout = "ABPM_MBR.log")
+(join = yes)
+(walltime = "12 hours")
+(gmlog = "log")
+(memory = "7000")
+(count="1")
+(countpernode="1")
+(inputfiles = ("algorithmConfiguration.py" "/home/jasminb/PycharmProjects/MasterThesis_/algorithmConfiguration.py") 
+              ("evaluation_script.py"  "/home/jasminb/PycharmProjects/MasterThesis_/evaluation_script.py") 
+              ("version_control_script.py"  "/home/jasminb/PycharmProjects/MasterThesis_/version_control_script.py") 
+              ("execution_script.py"  "/home/jasminb/PycharmProjects/MasterThesis_/execution_script.py") 
+              ("dataSetsPreprocessing.py" "/home/jasminb/PycharmProjects/MasterThesis_/dataSetsPreprocessing.py"))
+(outputfiles = ("resultsABPM_MBR.tar.gz" ))"
+(queue != "gridgpu")

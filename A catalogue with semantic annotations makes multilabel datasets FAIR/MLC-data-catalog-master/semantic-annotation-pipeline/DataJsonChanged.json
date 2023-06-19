@@ -1,0 +1,3433 @@
+  {
+		"U": {
+			"unlabeled" : {
+					"label": "clustering task",
+					"URI": "http://www.ontodm.com/OntoDM-core/OntoDM_000264",
+					"dataset specification" : {
+								"label" : "feature-based unlabeled dataset",
+								"URI" : "http://www.ontodm.com/OntoDM-core/OntoDM_608558",
+								"datatype" : {
+										"without missing": {
+												"label": "feature-based unlabeled data without missing values",
+												"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_a50532d9_addf_4c63_b990_1a5c5eaef483",
+												"descriptive FC" : {
+																"label": "descriptive record of primitives without missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																"is_datatype_role_of": {
+																		"label": "record of primitives datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																}
+												}
+										},
+										"with missing": {
+												"label": "feature-based unlabeled data with missing values",
+												"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_81dd40f7_b9c8_4a39_b64f_b43d35ad7bd1",
+												"descriptive FC" : {
+																"label": "descriptive record of primitives with missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																"is_datatype_role_of": {
+																		"label": "record of choice(primitive,void)",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																}
+													}
+										}
+								}
+					}
+			},
+			"online unlabeled" : {
+					"label": "clustering task",
+					"URI": "http://www.ontodm.com/OntoDM-core/OntoDM_000264",
+					"dataset specification" : {
+								"label" : "feature-based unlabeled data stream",
+								"URI" : "http://www.ontodm.com/OntoDM-core/OntoDM_000002",
+								"datatype" : {
+										"without missing": {
+												"label": "feature-based unlabeled data stream without missing values",
+												"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_9ea73d2f_0e31_4a8a_a46f_0296b24b792a",
+												"has_base_datatype":{
+													"label": "feature-based unlabeled data without missing values base type",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes#DMType_b5af437a_5ac8_4498_8e07_952d4b9f9a96",
+													"is_datatype_role_of": {
+														"label": "feature-based unlabeled data without missing values",
+														"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_a50532d9_addf_4c63_b990_1a5c5eaef483",
+														"descriptive FC" : {
+																		"label": "descriptive record of primitives without missing values field component",
+																		"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																		"is_datatype_role_of": {
+																				"label": "record of primitives datatype",
+																				"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																		}
+														}
+													}												
+												}
+										},
+										"with missing": {
+												"label": "feature-based unlabeled data stream with missing values",
+												"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_8d592baa_aff0_42dc_897e_49b4ec4d3487",
+												"has_base_datatype": {
+													"label": "feature-based unlabeled data with missing values base type",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes#DMType_86256372_9b32_4299_bed0_210543ffacaa",
+													"is_datatype_role_of": {
+														"label": "feature-based unlabeled data with missing values",
+														"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DType_81dd40f7_b9c8_4a39_b64f_b43d35ad7bd1",
+														"descriptive FC" : {
+															"label": "descriptive record of primitives with missing values field component",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+															"is_datatype_role_of": {
+																	"label": "record of choice(primitive,void)",
+																	"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+															}
+														}
+														
+													}
+												}
+												
+										}
+								}
+					}
+			}
+		},
+        "TS": {
+			"supervised":{ 
+					"label": "supervised time-series prediction task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDM_208012",
+					"dataset specification": {
+								"label": "feature-based time-series prediction dataset",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDM_794067",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based completely labeled data without missing values and with sequence of reals output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_202fadd8_b737_475d_902b_933e71b53414",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives without missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																"is_datatype_role_of": {
+																		"label": "record of primitives datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																}
+													},
+													"target FC" : {
+																"label": "completely labeled target sequence of real field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000010",
+																"is_datatype_role_of" : {
+																		"label" : "sequence of real datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_974622",
+																		"has_base_datatype" :{
+																			"label" : "real datatype",
+																			"URI" : "http://ontodm.com/OntoDT#OntoDT_150012"
+																		}
+																}
+													}
+										},
+										"with missing": {
+													"label": "feature-based completely labeled data with missing values and with sequence of reals output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_49719afb_1f75_44ec_a727_2e96ff46334f",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives with missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																"is_datatype_role_of": {
+																		"label": "record of choice(primitive,void)",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																}
+													},
+													"target FC" : {
+																"label": "completely labeled target sequence of real field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000010",
+																"is_datatype_role_of" : {
+																		"label" : "sequence of real datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_974622",
+																		"has_base_datatype" :{
+																			"label" : "real datatype",
+																			"URI" : "http://ontodm.com/OntoDT#OntoDT_150012"
+																		}
+																}
+													}
+										}
+								}
+					}
+								
+			},
+			"semi-supervised":{ 
+					"label": "semi-supervised time-series prediction task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000016",
+					"dataset specification": {
+								"label": "feature-based time-series semi-labeled prediction dataset",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000077",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based semi-labeled data without missing values and with sequence of reals output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_76fc21e8_506d_4cd4_a781_98c8cdf0d67f",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives without missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																"is_datatype_role_of": {
+																		"label": "record of primitives datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																}
+													},
+													"target FC" : {
+																"label": "semi-labeled target sequence of reals field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_0a3bbbc1_1fb2_41d8_adce_ebaa67db5200",
+																"is_datatype_role_of" : {
+																		"label" : "choice(sequence of reals,void) datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_551e6ce6_d82a_4a58_8b36_1889399a718d",
+																		"has_alternative_component" : {
+																				"void" : {
+																					"label" : "void alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																					"is_datatype_role_of" : {
+																							"label" : "void datatype",
+																							"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																					}
+																				},
+																				"non-void" : {
+																					"label" : "sequence of real alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_b7741223_c7c7_4d2c_af40_1fc442237fc1", 
+																					"is_datatype_role_of" : {
+																						"label" : "sequence of real datatype",
+																						"URI" : "http://ontodm.com/OntoDT#OntoDT_974622",
+																						"has_base_datatype" :{
+																							"label" : "real datatype",
+																							"URI" : "http://ontodm.com/OntoDT#OntoDT_150012"
+																						}
+																					}
+																				}
+																		}
+																}
+													}
+										},
+										"with missing": {
+													"label": "feature-based semi-labeled data with missing values and with sequence of reals output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_18cbc01d_00db_4804_9878_8a77c6c41649",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives with missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																"is_datatype_role_of": {
+																		"label": "record of choice(primitive,void)",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																}
+													},
+													"target FC" : {
+																"label": "semi-labeled target sequence of reals field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_0a3bbbc1_1fb2_41d8_adce_ebaa67db5200",
+																"is_datatype_role_of" : {
+																		"label" : "choice(sequence of reals,void) datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_551e6ce6_d82a_4a58_8b36_1889399a718d",
+																		"has_alternative_component" : {
+																				"void" : {
+																					"label" : "void alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																					"is_datatype_role_of" : {
+																							"label" : "void datatype",
+																							"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																					}
+																				},
+																				"non-void" : {
+																					"label" : "sequence of real alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_b7741223_c7c7_4d2c_af40_1fc442237fc1", 
+																					"is_datatype_role_of" : {
+																						"label" : "sequence of real datatype",
+																						"URI" : "http://ontodm.com/OntoDT#OntoDT_974622",
+																						"has_base_datatype" :{
+																							"label" : "real datatype",
+																							"URI" : "http://ontodm.com/OntoDT#OntoDT_150012"
+																						}
+																					}
+																				}
+																		}
+																}
+													}
+										}
+								}
+					}
+								
+			},
+			"online supervised": { 
+					"label": "online supervised time-series prediction task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000060",
+					"dataset specification": {
+								"label": "feature-based time-series prediction data stream",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000117",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based completely labeled stream data without missing values and with sequence of reals output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_4a62ea53_8c82_4e8d_95e7_4f053186270e",
+													"has_base_datatype":{
+															"label": "feature-based completely labeled data without missing values and with sequence of reals output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_2001286bc134_375c_484a_bcc0_ff3f0fa1399c",
+															"is_datatype_role_of": {
+																	"label": "feature-based completely labeled data without missing values and with sequence of reals output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_202fadd8_b737_475d_902b_933e71b53414",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives without missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																			"is_datatype_role_of": {
+																					"label": "record of primitives datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "completely labeled target sequence of real field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000010",
+																			"is_datatype_role_of" : {
+																					"label" : "sequence of real datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_974622",
+																					"has_base_datatype" :{
+																						"label" : "real datatype",
+																						"URI" : "http://ontodm.com/OntoDT#OntoDT_150012"
+																					}
+																			}
+																	}									
+															}
+													}
+													
+										},
+										"with missing": {
+													"label": "feature-based completely labeled stream data with missing values and with sequence of reals output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_9f24e3f7_698e_44b5_97b9_92fcde578057",
+													"has_base_datatype":{
+															"label": "feature-based completely labeled data with missing values and with sequence of reals output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_2001f3a63e2a_045e_4904_b747_aa35b7c5a9c0",
+															"is_datatype_role_of": {
+																	"label": "feature-based completely labeled data with missing values and with sequence of reals output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_49719afb_1f75_44ec_a727_2e96ff46334f",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives with missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																			"is_datatype_role_of": {
+																					"label": "record of choice(primitive,void)",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "completely labeled target sequence of real field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000010",
+																			"is_datatype_role_of" : {
+																					"label" : "sequence of real datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_974622",
+																					"has_base_datatype" :{
+																						"label" : "real datatype",
+																						"URI" : "http://ontodm.com/OntoDT#OntoDT_150012"
+																					}
+																			}
+																	}																
+															}
+													}
+										}
+								}
+					}
+								
+			},
+			"online semi-supervised": { 
+					"label": "online semi-supervised time-series prediction task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000040",
+					"dataset specification": {
+								"label": "feature-based time-series semi-labeled prediction data stream",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000096",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based semi-labeled stream data without missing values and with sequence of reals output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_c87481d0_adca_49e0_b447_1ac89ff705f6",
+													"has_base_datatype":{
+															"label": "feature-based semi-labeled data without missing values and with sequence of reals output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_2001214f45a2_b81c_4c59_ac3c_8bb84b2c97c1",
+															"is_datatype_role_of": {
+																	"label": "feature-based semi-labeled data without missing values and with sequence of reals output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_76fc21e8_506d_4cd4_a781_98c8cdf0d67f",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives without missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																			"is_datatype_role_of": {
+																					"label": "record of primitives datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "semi-labeled target sequence of reals field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_0a3bbbc1_1fb2_41d8_adce_ebaa67db5200",
+																			"is_datatype_role_of" : {
+																					"label" : "choice(sequence of reals,void) datatype",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_551e6ce6_d82a_4a58_8b36_1889399a718d",
+																					"has_alternative_component" : {
+																							"void" : {
+																								"label" : "void alternative component",
+																								"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																								"is_datatype_role_of" : {
+																										"label" : "void datatype",
+																										"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																								}
+																							},
+																							"non-void" : {
+																								"label" : "sequence of real alternative component",
+																								"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_b7741223_c7c7_4d2c_af40_1fc442237fc1", 
+																								"is_datatype_role_of" : {
+																									"label" : "sequence of real datatype",
+																									"URI" : "http://ontodm.com/OntoDT#OntoDT_974622",
+																									"has_base_datatype" :{
+																										"label" : "real datatype",
+																										"URI" : "http://ontodm.com/OntoDT#OntoDT_150012"
+																									}
+																								}
+																							}
+																					}
+																			}
+																	}																	
+															}
+													}
+										},
+										"with missing": {
+													"label": "feature-based semi-labeled stream data with missing values and with single real output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_1b34e8c7_7dd1_4e42_8ada_77d54eeaa3ee",
+													"has_base_datatype":{
+															"label": "feature-based semi-labeled data with missing values and with single real output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_2001e18c3c7c_2ec4_4709_845f_89ff301561e7",
+															"is_datatype_role_of": {
+																	"label": "feature-based semi-labeled data with missing values and with single real output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_dd567a57_e7f2_4d8f_951e_848e851b2582",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives with missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																			"is_datatype_role_of": {
+																					"label": "record of choice(primitive,void)",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "semi-labeled target real field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_56b082c9_cdea_4fdb_a2bb_bd96124b5313",
+																			"is_datatype_role_of" : {
+																					"label" : "choice(real,void) datatype",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_67b0b849_55f7_4af4_8015_c6d5c767bd69",
+																					"has_alternative_component" : {
+																							"void" : {
+																									"label" : "void alternative component",
+																									"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																									"is_datatype_role_of" : {
+																											"label" : "void datatype",
+																											"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																									}				
+																							},
+																							"non-void" : {
+																									"label" : "real alternative component",
+																									"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_8184c0b7_631d_4e61_bad4_466e7b21d77e", 
+																									"is_datatype_role_of" : {
+																											"label" : "real datatype",
+																											"URI" : "http://ontodm.com/OntoDT#OntoDT_150012"
+																									}
+																							}
+																					}
+																			}
+																	}																	
+															}
+													}
+										}
+								}
+					}								
+			}
+		},
+		"HMLC-tree": {
+			"supervised":{ 
+					"label": "supervised tree based hierarchical classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDM_542264",
+					"dataset specification": {
+								"label": "tree-based hierarchical classification dataset",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDM_308048",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based completely labeled data without missing values and with tree with named nodes output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_f2690363_442f_4aad_94a5_eeb414aa6236",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives without missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																"is_datatype_role_of": {
+																		"label": "record of primitives datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																}
+													},
+													"target FC" : {
+																"label": "completely labeled target tree with named nodes field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_ecddc86f_9580_4bee_af4d_bdf5d5c7f61c",
+																"is_datatype_role_of" : {
+																		"label" : "tree with named nodes datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT#OntoDT_004c390e_eaf3_4960_9918_c02cbd396ea4"
+																}
+													}
+										},
+										"with missing": {
+													"label": "feature-based completely labeled data with missing values and with tree with named nodes output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_364a4b9b_1625_4969_9a89_96534e277807",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives with missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																"is_datatype_role_of": {
+																		"label": "record of choice(primitive,void)",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																}
+													},
+													"target FC" : {
+																"label": "completely labeled target tree with named nodes field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_ecddc86f_9580_4bee_af4d_bdf5d5c7f61c",
+																"is_datatype_role_of" : {
+																		"label" : "tree with named nodes datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT#OntoDT_004c390e_eaf3_4960_9918_c02cbd396ea4"
+																}
+													}
+										}
+								}
+					}
+								
+			},
+			"semi-supervised":{ 
+					"label": "semi-supervised tree based hierarchical classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000009",
+					"dataset specification": {
+								"label": "tree-based hierarchical semi-labeled classification dataset",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000080",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based semi-labeled data without missing values and with tree with named nodes output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_0828465e_098c_4555_83fd_476899808b69",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives without missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																"is_datatype_role_of": {
+																		"label": "record of primitives datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																}
+													},
+													"target FC" : {
+																"label": "semi-labeled target tree with named nodes field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_74c34296_4494_4da6_a0f8_07d1b6b7703f",
+																"is_datatype_role_of" : {
+																		"label" : "choice(tree with named nodes,void) datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_ec6568d3_2e28_4794_8f29_0812e28eba73",
+																		"has_alternative_component" : {
+																				"void" : {
+																					"label" : "void alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																					"is_datatype_role_of" : {
+																							"label" : "void datatype",
+																							"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																					}
+																				},
+																				"non-void" : {
+																					"label" : "tree with named nodes alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_60835997_e92b_4b83_99b8_4fdc04b557da", 
+																					"is_datatype_role_of" : {
+																						"label" : "tree with named nodes datatype",
+																						"URI" : "http://www.ontodm.com/OntoDT#OntoDT_004c390e_eaf3_4960_9918_c02cbd396ea4"
+																					}
+																				}
+																		}
+																}
+													}
+										},
+										"with missing": {
+													"label": "feature-based semi-labeled data with missing values and with discrete tree output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_b7b577be_4fd3_4d60_80f8_0081d1e2d5f8",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives with missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																"is_datatype_role_of": {
+																		"label": "record of choice(primitive,void)",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																}
+													},
+													"target FC" : {
+																"label": "semi-labeled target tree with named nodes field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_74c34296_4494_4da6_a0f8_07d1b6b7703f",
+																"is_datatype_role_of" : {
+																		"label" : "choice(tree with named nodes,void) datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_ec6568d3_2e28_4794_8f29_0812e28eba73",
+																		"has_alternative_component" : {
+																				"void" : {
+																					"label" : "void alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																					"is_datatype_role_of" : {
+																							"label" : "void datatype",
+																							"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																					}
+																				},
+																				"non-void" : {
+																					"label" : "tree with named nodes alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_60835997_e92b_4b83_99b8_4fdc04b557da", 
+																					"is_datatype_role_of" : {
+																						"label" : "tree with named nodes datatype",
+																						"URI" : "http://www.ontodm.com/OntoDT#OntoDT_004c390e_eaf3_4960_9918_c02cbd396ea4"
+																					}
+																				}
+																		}
+																}
+													}
+										}
+								}
+					}
+								
+			},
+			"online supervised": { 
+					"label": "online supervised tree-based hierarchical classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000053",
+					"dataset specification": {
+								"label": "tree-based hierarchical classification data stream",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000120",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based completely labeled stream data without missing values and with tree with named nodes output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_78f8e3bf_14fa_4275_b805_6c2bc8ac95e9",
+													"has_base_datatype":{
+															"label": "feature-based completely labeled data without missing values and with tree with named nodes output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_da1af518_e47d_4e0f_ad90_1f4c2fb4540d",
+															"is_datatype_role_of": {
+																	"label": "feature-based completely labeled data without missing values and with tree with named nodes output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_f2690363_442f_4aad_94a5_eeb414aa6236",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives without missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																			"is_datatype_role_of": {
+																					"label": "record of primitives datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "completely labeled target tree with named nodes field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_ecddc86f_9580_4bee_af4d_bdf5d5c7f61c",
+																			"is_datatype_role_of" : {
+																					"label" : "tree with named nodes datatype",
+																					"URI" : "http://www.ontodm.com/OntoDT#OntoDT_004c390e_eaf3_4960_9918_c02cbd396ea4"
+																			}
+																	}									
+															}
+													}
+													
+										},
+										"with missing": {
+													"label": "feature-based completely labeled stream data with missing values and with tree with named nodes output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_2786b9b4_1b69_40a9_a088_117aedcf9bbe",
+													"has_base_datatype":{
+															"label": "feature-based completely labeled data with missing values and with tree with named nodes output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_d88a9f02_3981_498d_beab_8caf55f52f8f",
+															"is_datatype_role_of": {
+																	"label": "feature-based completely labeled data with missing values and with tree with named nodes output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_364a4b9b_1625_4969_9a89_96534e277807",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives with missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																			"is_datatype_role_of": {
+																					"label": "record of choice(primitive,void)",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "completely labeled target tree with named nodes field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_ecddc86f_9580_4bee_af4d_bdf5d5c7f61c",
+																			"is_datatype_role_of" : {
+																					"label" : "tree with named nodes datatype",
+																					"URI" : "http://www.ontodm.com/OntoDT#OntoDT_004c390e_eaf3_4960_9918_c02cbd396ea4"
+																			}
+																	}																
+															}
+													}
+										}
+								}
+					}
+								
+			},
+			"online semi-supervised": { 
+					"label": "online semi-supervised tree-based hierarchical classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000033",
+					"dataset specification": {
+								"label": "tree-based hierarchical semi-labeled classification data stream",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000099",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based semi-labeled stream data without missing values and with tree with named nodes output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_6fe8e7ad_699e_424c_8cf0_81a281e5cf83",
+													"has_base_datatype":{
+															"label": "feature-based semi-labeled data without missing values and with tree with named nodes output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_11cfc598_536b_426c_99a4_769eb3cc2972",
+															"is_datatype_role_of": {
+																	"label": "feature-based semi-labeled data without missing values and with tree with named nodes output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_0828465e_098c_4555_83fd_476899808b69",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives without missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																			"is_datatype_role_of": {
+																					"label": "record of primitives datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "semi-labeled target tree with named nodes field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_74c34296_4494_4da6_a0f8_07d1b6b7703f",
+																			"is_datatype_role_of" : {
+																					"label" : "choice(tree with named nodes,void) datatype",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_ec6568d3_2e28_4794_8f29_0812e28eba73",
+																					"has_alternative_component" : {
+																							"void" : {
+																								"label" : "void alternative component",
+																								"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																								"is_datatype_role_of" : {
+																										"label" : "void datatype",
+																										"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																								}
+																							},
+																							"non-void" : {
+																								"label" : "tree with named nodes alternative component",
+																								"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_60835997_e92b_4b83_99b8_4fdc04b557da", 
+																								"is_datatype_role_of" : {
+																									"label" : "tree with named nodes datatype",
+																									"URI" : "http://www.ontodm.com/OntoDT#OntoDT_004c390e_eaf3_4960_9918_c02cbd396ea4"
+																								}
+																							}
+																					}
+																			}
+																	}																	
+															}
+													}
+										},
+										"with missing": {
+													"label": "feature-based semi-labeled stream data with missing values and with tree with named nodes output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_26ca5e73_e344_49d0_8011_0da4dd8a089f",
+													"has_base_datatype":{
+															"label": "feature-based semi-labeled data with missing values and with tree with named nodes output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_043ba353_562d_420a_972b_2591cf984d97",
+															"is_datatype_role_of": {
+																	"label": "feature-based semi-labeled data with missing values and with tree with named nodes output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_b7b577be_4fd3_4d60_80f8_0081d1e2d5f8",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives with missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																			"is_datatype_role_of": {
+																					"label": "record of choice(primitive,void)",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "semi-labeled target tree with named nodes field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_74c34296_4494_4da6_a0f8_07d1b6b7703f",
+																			"is_datatype_role_of" : {
+																					"label" : "choice(tree with named nodes,void) datatype",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_ec6568d3_2e28_4794_8f29_0812e28eba73",
+																					"has_alternative_component" : {
+																							"void" : {
+																								"label" : "void alternative component",
+																								"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																								"is_datatype_role_of" : {
+																										"label" : "void datatype",
+																										"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																								}
+																							},
+																							"non-void" : {
+																								"label" : "tree with named nodes alternative component",
+																								"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_60835997_e92b_4b83_99b8_4fdc04b557da", 
+																								"is_datatype_role_of" : {
+																									"label" : "tree with named nodes datatype",
+																									"URI" : "http://www.ontodm.com/OntoDT#OntoDT_004c390e_eaf3_4960_9918_c02cbd396ea4"
+																								}
+																							}
+																					}
+																			}
+																	}																		
+															}
+													}
+										}
+								}
+					}								
+			}
+		},
+		"HMLC-DAG": {
+			"supervised":{ 
+					"label": "supervised DAG based hierarchical classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDM_491182",
+					"dataset specification": {
+								"label": "DAG-based hierarchical classification dataset",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDM_063973",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based completely labeled data without missing values and with DAG with named nodes output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_7772c321_6739_404b_a626_ab383f2e0ce3",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives without missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																"is_datatype_role_of": {
+																		"label": "record of primitives datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																}
+													},
+													"target FC" : {
+																"label": "completely labeled target DAG with named nodes field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_41a4dffb_07fd_4619_84bb_7ac9493fb816",
+																"is_datatype_role_of" : {
+																		"label" : "DAG with named nodes datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT#OntoDT_fdc29bbe_5fe1_4d0c_87dd_2414b82a13f7"
+																}
+													}
+										},
+										"with missing": {
+													"label": "feature-based completely labeled data with missing values and with DAG with named nodes output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_aeb412c9_5b8d_4b48_9214_b0a0e525eb7d",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives with missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																"is_datatype_role_of": {
+																		"label": "record of choice(primitive,void)",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																}
+													},
+													"target FC" : {
+																"label": "completely labeled target DAG with named nodes field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_41a4dffb_07fd_4619_84bb_7ac9493fb816",
+																"is_datatype_role_of" : {
+																		"label" : "DAG with named nodes datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT#OntoDT_fdc29bbe_5fe1_4d0c_87dd_2414b82a13f7"
+																}
+													}
+										}
+								}
+					}
+								
+			},
+			"semi-supervised":{ 
+					"label": "semi-supervised DAG based hierarchical classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000008",
+					"dataset specification": {
+								"label": "DAG-based hierarchical semi-labeled classification dataset",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000079",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based semi-labeled data without missing values and with DAG with named nodes output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_4617850d_e036_4ba6_aa35_3d0f00d0606a",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives without missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																"is_datatype_role_of": {
+																		"label": "record of primitives datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																}
+													},
+													"target FC" : {
+																"label": "semi-labeled target DAG with named nodes field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_4da1a040_3dda_4ad6_b45b_a7173a535e10",
+																"is_datatype_role_of" : {
+																		"label" : "choice(DAG with named nodes,void) datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_b2e1779b_3d4e_4477_a8b1_12d12137f987",
+																		"has_alternative_component" : {
+																				"void" : {
+																					"label" : "void alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																					"is_datatype_role_of" : {
+																							"label" : "void datatype",
+																							"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																					}
+																				},
+																				"non-void" : {
+																					"label" : "DAG with named nodes alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_f258b968_dd46_4a02_ada7_90d4743e7946", 
+																					"is_datatype_role_of" : {
+																						"label" : "DAG with named nodes datatype",
+																						"URI" : "http://www.ontodm.com/OntoDT#OntoDT_fdc29bbe_5fe1_4d0c_87dd_2414b82a13f7"
+																					}
+																				}
+																		}
+																}
+													}
+										},
+										"with missing": {
+													"label": "feature-based semi-labeled data with missing values and with DAG with named nodes output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_cc89a1d2_e3f1_4bf3_95f6_e06494c63f64",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives with missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																"is_datatype_role_of": {
+																		"label": "record of choice(primitive,void)",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																}
+													},
+													"target FC" : {
+																"label": "semi-labeled target DAG with named nodes field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_4da1a040_3dda_4ad6_b45b_a7173a535e10",
+																"is_datatype_role_of" : {
+																		"label" : "choice(DAG with named nodes,void) datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_b2e1779b_3d4e_4477_a8b1_12d12137f987",
+																		"has_alternative_component" : {
+																				"void" : {
+																					"label" : "void alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																					"is_datatype_role_of" : {
+																							"label" : "void datatype",
+																							"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																					}
+																				},
+																				"non-void" : {
+																					"label" : "DAG with named nodes alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_f258b968_dd46_4a02_ada7_90d4743e7946", 
+																					"is_datatype_role_of" : {
+																						"label" : "DAG with named nodes datatype",
+																						"URI" : "http://www.ontodm.com/OntoDT#OntoDT_fdc29bbe_5fe1_4d0c_87dd_2414b82a13f7"
+																					}
+																				}
+																		}
+																}
+													}
+										}
+								}
+					}
+								
+			},
+			"online supervised": { 
+					"label": "online supervised DAG based hierarchical classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000052",
+					"dataset specification": {
+								"label": "DAG-based hierarchical classification data stream",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000119",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based completely labeled stream data without missing values and with DAG with named nodes output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_57e967e2_0b53_4418_a8d6_1466d8ec6dfc",
+													"has_base_datatype":{
+															"label": "feature-based completely labeled data without missing values and with DAG with named nodes output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_d4e98f70_7bfd_48f7_98e1_d051a1cc073c",
+															"is_datatype_role_of": {
+																	"label": "feature-based completely labeled data without missing values and with DAG with named nodes output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_7772c321_6739_404b_a626_ab383f2e0ce3",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives without missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																			"is_datatype_role_of": {
+																					"label": "record of primitives datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "completely labeled target DAG with named nodes field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_41a4dffb_07fd_4619_84bb_7ac9493fb816",
+																			"is_datatype_role_of" : {
+																					"label" : "DAG with named nodes datatype",
+																					"URI" : "http://www.ontodm.com/OntoDT#OntoDT_fdc29bbe_5fe1_4d0c_87dd_2414b82a13f7"
+																			}
+																	}									
+															}
+													}
+													
+										},
+										"with missing": {
+													"label": "feature-based completely labeled stream data with missing values and with DAG with named nodes output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_53f77b1a_f8f6_444c_b529_e6993c29e1af",
+													"has_base_datatype":{
+															"label": "feature-based completely labeled data with missing values and with DAG with named nodes output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_128072ad_7d84_4bec_89f9_14fe44d6b84a",
+															"is_datatype_role_of": {
+																	"label": "feature-based completely labeled data with missing values and with DAG with named nodes output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_aeb412c9_5b8d_4b48_9214_b0a0e525eb7d",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives with missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																			"is_datatype_role_of": {
+																					"label": "record of choice(primitive,void)",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "completely labeled target DAG with named nodes field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_41a4dffb_07fd_4619_84bb_7ac9493fb816",
+																			"is_datatype_role_of" : {
+																					"label" : "DAG with named nodes datatype",
+																					"URI" : "http://www.ontodm.com/OntoDT#OntoDT_fdc29bbe_5fe1_4d0c_87dd_2414b82a13f7"
+																			}
+																	}																
+															}
+													}
+										}
+								}
+					}
+								
+			},
+			"online semi-supervised": { 
+					"label": "online semi-supervised DAG based hierarchical classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000032",
+					"dataset specification": {
+								"label": "DAG-based hierarchical semi-labeled classification data stream",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000098",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based semi-labeled stream data without missing values and with DAG with named nodes output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_67b9e24e_604b_4d41_87e9_3e496aeb382b",
+													"has_base_datatype":{
+															"label": "feature-based semi-labeled data without missing values and with DAG with named nodes output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_07b16663_5d20_440b_b33f_88597a9fd390",
+															"is_datatype_role_of": {
+																	"label": "feature-based semi-labeled data without missing values and with DAG with named nodes output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_4617850d_e036_4ba6_aa35_3d0f00d0606a",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives without missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																			"is_datatype_role_of": {
+																					"label": "record of primitives datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "semi-labeled target DAG with named nodes field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_4da1a040_3dda_4ad6_b45b_a7173a535e10",
+																			"is_datatype_role_of" : {
+																					"label" : "choice(DAG with named nodes,void) datatype",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_b2e1779b_3d4e_4477_a8b1_12d12137f987",
+																					"has_alternative_component" : {
+																							"void" : {
+																								"label" : "void alternative component",
+																								"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																								"is_datatype_role_of" : {
+																										"label" : "void datatype",
+																										"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																								}
+																							},
+																							"non-void" : {
+																								"label" : "DAG with named nodes alternative component",
+																								"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_f258b968_dd46_4a02_ada7_90d4743e7946", 
+																								"is_datatype_role_of" : {
+																									"label" : "DAG with named nodes datatype",
+																									"URI" : "http://www.ontodm.com/OntoDT#OntoDT_fdc29bbe_5fe1_4d0c_87dd_2414b82a13f7"
+																								}
+																							}
+																					}
+																			}
+																	}																	
+															}
+													}
+										},
+										"with missing": {
+													"label": "feature-based semi-labeled stream data with missing values and with DAG with named nodes output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_46c7a25d_544a_4648_8b73_1586c636ff6b",
+													"has_base_datatype":{
+															"label": "feature-based semi-labeled data with missing values and with DAG with named nodes output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_b173e538_13b8_4539_ad4a_c5d254c2674e",
+															"is_datatype_role_of": {
+																	"label": "feature-based semi-labeled data with missing values and with DAG with named nodes output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_cc89a1d2_e3f1_4bf3_95f6_e06494c63f64",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives with missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																			"is_datatype_role_of": {
+																					"label": "record of choice(primitive,void)",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "semi-labeled target DAG with named nodes field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_4da1a040_3dda_4ad6_b45b_a7173a535e10",
+																			"is_datatype_role_of" : {
+																					"label" : "choice(DAG with named nodes,void) datatype",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_b2e1779b_3d4e_4477_a8b1_12d12137f987",
+																					"has_alternative_component" : {
+																							"void" : {
+																								"label" : "void alternative component",
+																								"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																								"is_datatype_role_of" : {
+																										"label" : "void datatype",
+																										"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																								}
+																							},
+																							"non-void" : {
+																								"label" : "DAG with named nodes alternative component",
+																								"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_f258b968_dd46_4a02_ada7_90d4743e7946", 
+																								"is_datatype_role_of" : {
+																									"label" : "DAG with named nodes datatype",
+																									"URI" : "http://www.ontodm.com/OntoDT#OntoDT_fdc29bbe_5fe1_4d0c_87dd_2414b82a13f7"
+																								}
+																							}
+																					}
+																			}
+																	}																		
+															}
+													}
+										}
+								}
+					}								
+			}
+		},
+		"R": {
+			"supervised":{ 
+					"label": "supervised regression task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDM_837886",
+					"dataset specification": {
+								"label": "regression dataset",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDM_686944",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based completely labeled data without missing values and with single real output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_1717e7e8_d7ce_4866_aa9c_ed2656a34df6",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives without missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																"is_datatype_role_of": {
+																		"label": "record of primitives datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																}
+													},
+													"target FC" : {
+																"label": "completely labeled target real field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000009",
+																"is_datatype_role_of" : {
+																		"label" : "real datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_150012"
+																}
+													}
+										},
+										"with missing": {
+													"label": "feature-based completely labeled data with missing values and with single real output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_0f147cc0_121c_4824_ad09_4f7dee09ad5b",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives with missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																"is_datatype_role_of": {
+																		"label": "record of choice(primitive,void)",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																}
+													},
+													"target FC" : {
+																"label": "completely labeled target real field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000009",
+																"is_datatype_role_of" : {
+																		"label" : "real datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_150012"
+																}
+													}
+										}
+								}
+					}
+								
+			},
+			"semi-supervised":{ 
+					"label": "semi-supervised regression task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000023",
+					"dataset specification": {
+								"label": "semi-labeled regression dataset",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000092",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based semi-labeled data without missing values and with single real output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_671bb2ab_be8b_4da1_bc07_65f832413ff8",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives without missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																"is_datatype_role_of": {
+																		"label": "record of primitives datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																}
+													},
+													"target FC" : {
+																"label": "semi-labeled target real field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_56b082c9_cdea_4fdb_a2bb_bd96124b5313",
+																"is_datatype_role_of" : {
+																		"label" : "choice(real,void) datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_67b0b849_55f7_4af4_8015_c6d5c767bd69",
+																		"has_alternative_component" : {
+																				"void" : {
+																					"label" : "void alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																					"is_datatype_role_of" : {
+																							"label" : "void datatype",
+																							"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																					}
+																				},
+																				"non-void" : {
+																					"label" : "real alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_8184c0b7_631d_4e61_bad4_466e7b21d77e", 
+																					"is_datatype_role_of" : {
+																							"label" : "real datatype",
+																							"URI" : "http://ontodm.com/OntoDT#OntoDT_150012"
+																					}
+																				}
+																		}
+																}
+													}
+										},
+										"with missing": {
+													"label": "feature-based semi-labeled data with missing values and with single real output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_dd567a57_e7f2_4d8f_951e_848e851b2582",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives with missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																"is_datatype_role_of": {
+																		"label": "record of choice(primitive,void)",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																}
+													},
+													"target FC" : {
+																"label": "semi-labeled target real field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_56b082c9_cdea_4fdb_a2bb_bd96124b5313",
+																"is_datatype_role_of" : {
+																		"label" : "choice(real,void) datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_67b0b849_55f7_4af4_8015_c6d5c767bd69",
+																		"has_alternative_component" : {
+																				"void" : {
+																					"label" : "void alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																					"is_datatype_role_of" : {
+																							"label" : "void datatype",
+																							"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																					}
+																				},
+																				"non-void" : {
+																					"label" : "real alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_8184c0b7_631d_4e61_bad4_466e7b21d77e", 
+																					"is_datatype_role_of" : {
+																							"label" : "real datatype",
+																							"URI" : "http://ontodm.com/OntoDT#OntoDT_150012"
+																					}
+																				}
+																		}
+																}
+													}
+										}
+								}
+					}
+								
+			},
+			"online supervised": { 
+					"label": "online supervised regression task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000067",
+					"dataset specification": {
+								"label": "regression data stream",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000133",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based completely labeled stream data without missing values and with single real output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_18b9366a_0907_4569_a7e5_64205aaaa45c",
+													"has_base_datatype":{
+															"label": "feature-based completely labeled data without missing values and with single real output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_2001f67ffe57_9054_4b08_816b_08c2d5981b09",
+															"is_datatype_role_of": {
+																	"label": "feature-based completely labeled data without missing values and with single real output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_1717e7e8_d7ce_4866_aa9c_ed2656a34df6",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives without missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																			"is_datatype_role_of": {
+																					"label": "record of primitives datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "completely labeled target real field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000009",
+																			"is_datatype_role_of" : {
+																					"label" : "real datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_150012"
+																			}
+																	}										
+															}
+													}
+													
+										},
+										"with missing": {
+													"label": "feature-based completely labeled stream data with missing values and with single real output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_69d6f942_8bd5_4e2c_8616_c1347d91f17d",
+													"has_base_datatype":{
+															"label": "feature-based completely labeled data with missing values and with single real output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_20014874f9f8_6b04_4829_8453_69854343787d",
+															"is_datatype_role_of": {
+																	"label": "feature-based completely labeled data with missing values and with single real output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_0f147cc0_121c_4824_ad09_4f7dee09ad5b",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives with missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																			"is_datatype_role_of": {
+																					"label": "record of choice(primitive,void)",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "completely labeled target real field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000009",
+																			"is_datatype_role_of" : {
+																					"label" : "real datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_150012"
+																			}
+																	}																	
+															}
+													}
+										}
+								}
+					}
+								
+			},
+			"online semi-supervised": { 
+					"label": "online semi-supervised regression task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000047",
+					"dataset specification": {
+								"label": "semi-labeled regression data stream",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000111",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based semi-labeled stream data without missing values and with single real output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_ff64da0c_cd4d_4cc6_a7b8_98a78d7dcf88",
+													"has_base_datatype":{
+															"label": "feature-based semi-labeled data without missing values and with single real output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_2001370bbd99_179d_436e_8be9_e77f26f99f0d",
+															"is_datatype_role_of": {
+																	"label": "feature-based semi-labeled data without missing values and with single real output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_671bb2ab_be8b_4da1_bc07_65f832413ff8",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives without missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																			"is_datatype_role_of": {
+																					"label": "record of primitives datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "semi-labeled target real field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_56b082c9_cdea_4fdb_a2bb_bd96124b5313",
+																			"is_datatype_role_of" : {
+																					"label" : "choice(real,void) datatype",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_67b0b849_55f7_4af4_8015_c6d5c767bd69",
+																					"has_alternative_component" : {
+																							"void" : {
+																									"label" : "void alternative component",
+																									"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																									"is_datatype_role_of" : {
+																											"label" : "void datatype",
+																											"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																									}				
+																							},
+																							"non-void" : {
+																									"label" : "real alternative component",
+																									"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_8184c0b7_631d_4e61_bad4_466e7b21d77e", 
+																									"is_datatype_role_of" : {
+																											"label" : "real datatype",
+																											"URI" : "http://ontodm.com/OntoDT#OntoDT_150012"
+																									}
+																							}
+																					}
+																			}
+																	}																	
+															}
+													}
+										},
+										"with missing": {
+													"label": "feature-based semi-labeled stream data with missing values and with single real output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_1b34e8c7_7dd1_4e42_8ada_77d54eeaa3ee",
+													"has_base_datatype":{
+															"label": "feature-based semi-labeled data with missing values and with single real output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_2001e18c3c7c_2ec4_4709_845f_89ff301561e7",
+															"is_datatype_role_of": {
+																	"label": "feature-based semi-labeled data with missing values and with single real output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_dd567a57_e7f2_4d8f_951e_848e851b2582",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives with missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																			"is_datatype_role_of": {
+																					"label": "record of choice(primitive,void)",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "semi-labeled target real field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_56b082c9_cdea_4fdb_a2bb_bd96124b5313",
+																			"is_datatype_role_of" : {
+																					"label" : "choice(real,void) datatype",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_67b0b849_55f7_4af4_8015_c6d5c767bd69",
+																					"has_alternative_component" : {
+																							"void" : {
+																									"label" : "void alternative component",
+																									"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																									"is_datatype_role_of" : {
+																											"label" : "void datatype",
+																											"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																									}				
+																							},
+																							"non-void" : {
+																									"label" : "real alternative component",
+																									"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_8184c0b7_631d_4e61_bad4_466e7b21d77e", 
+																									"is_datatype_role_of" : {
+																											"label" : "real datatype",
+																											"URI" : "http://ontodm.com/OntoDT#OntoDT_150012"
+																									}
+																							}
+																					}
+																			}
+																	}																	
+															}
+													}
+										}
+								}
+					}								
+			}
+		},		
+		"BC": {
+			"supervised":{ 
+					"label": "supervised binary classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDM_208659",
+					"dataset specification": {
+								"label": "binary classification dataset",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDM_609184",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based completely labeled data without missing values and with single boolean output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_0cbe0c65_81b6_4639_bfdd_616ed2c86ee5",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives without missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																"is_datatype_role_of": {
+																		"label": "record of primitives datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																}
+													},
+													"target FC" : {
+																"label": "completely labeled target boolean field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000007",
+																"is_datatype_role_of" : {
+																		"label" : "boolean datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT#OntoDT_0000002"
+																}
+													}
+													},
+										"with missing": {
+													"label": "feature-based completely labeled data with missing values and with single boolean output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_2fea1a31_2259_40cf_8200_9a0e923d0c8d",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives with missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																"is_datatype_role_of": {
+																		"label": "record of choice(primitive,void)",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																}
+													}
+													,
+													"target FC" : {
+																"label": "completely labeled target boolean field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000007",
+																"is_datatype_role_of" : {
+																		"label" : "boolean datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT#OntoDT_0000002"
+																}
+													}
+										}
+								}
+					}
+								
+			},
+			"semi-supervised":{ 
+					"label": "semi-supervised binary classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000021",
+					"dataset specification": {
+								"label": "binary semi-labeled classification dataset",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000090",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based semi-labeled data without missing values and with single boolean output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_97cb660a_41fa_4743_8609_8310800feaed",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives without missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																"is_datatype_role_of": {
+																		"label": "record of primitives datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																}
+													},
+													"target FC" : {
+																"label": "semi-labeled target boolean field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_ee2313c3_8016_4ed5_a661_8c5eab70c725",
+																"is_datatype_role_of" : {
+																		"label" : "choice(boolean,void) datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_b9a22ef1_37b1_4962_a62a_c35302adb0cf",
+																		"has_alternative_component" : {
+																				"void" : {
+																					"label" : "void alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																					"is_datatype_role_of" : {
+																							"label" : "void datatype",
+																							"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																					}
+																				},
+																				"non-void" : {
+																					"label" : "boolean alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_eaedd662_8158_467f_8f2f_d605035567eb", 
+																					"is_datatype_role_of" : {
+																							"label" : "boolean datatype",
+																							"URI" : "http://www.ontodm.com/OntoDT#OntoDT_0000002"
+																					}
+																				}
+																		}
+																}																
+													}
+										},
+										"with missing": {
+													"label": "feature-based semi-labeled data with missing values and with single boolean output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_ea6edf61_c89a_4446_b2be_1d037bab6bb1",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives with missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																"is_datatype_role_of": {
+																		"label": "record of choice(primitive,void)",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																}
+													},
+													"target FC" : {
+																"label": "semi-labeled target boolean field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_ee2313c3_8016_4ed5_a661_8c5eab70c725",
+																"is_datatype_role_of" : {
+																		"label" : "choice(boolean,void) datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_b9a22ef1_37b1_4962_a62a_c35302adb0cf",
+																		"has_alternative_component" : {
+																				"void" : {
+																					"label" : "void alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																					"is_datatype_role_of" : {
+																							"label" : "void datatype",
+																							"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																					}
+																				},
+																				"non-void" : {
+																					"label" : "boolean alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_eaedd662_8158_467f_8f2f_d605035567eb", 
+																					"is_datatype_role_of" : {
+																							"label" : "boolean datatype",
+																							"URI" : "http://www.ontodm.com/OntoDT#OntoDT_0000002"
+																					}
+																				}
+																		}
+																}																
+													}
+										}
+								}
+					}
+								
+			},
+			"online supervised": { 
+					"label": "online supervised binary classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000065",
+					"dataset specification": {
+								"label": "binary classification data stream",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000131",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based completely labeled stream data without missing values and with single boolean output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_6f7d4d27_1319_4e98_988d_b368ee47b39f",
+													"has_base_datatype":{
+															"label": "feature-based completely labeled data without missing values and with single boolean output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_20012240851d_3356_483c_a476_954ab32f6d2a",
+															"is_datatype_role_of": {
+																	"label": "feature-based completely labeled data without missing values and with single boolean output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_0cbe0c65_81b6_4639_bfdd_616ed2c86ee5",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives without missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																			"is_datatype_role_of": {
+																					"label": "record of primitives datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "completely labeled target boolean field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000007",
+																			"is_datatype_role_of" : {
+																					"label" : "boolean datatype",
+																					"URI" : "http://www.ontodm.com/OntoDT#OntoDT_0000002"
+																			}
+																	}																	
+															}
+													}
+										},
+										"with missing": {
+													"label": "feature-based completely labeled stream data with missing values and with single boolean output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_5212f5de_051c_4b0e_9320_4866a1aa6a88",
+													"has_base_datatype":{
+															"label": "feature-based completely labeled data with missing values and with single boolean output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_2001088b1f3e_5e6b_4381_a186_36b55781aadd",
+															"is_datatype_role_of": {
+																	"label": "feature-based completely labeled data with missing values and with single boolean output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_2fea1a31_2259_40cf_8200_9a0e923d0c8d",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives with missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																			"is_datatype_role_of": {
+																					"label": "record of choice(primitive,void)",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "completely labeled target boolean field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000007",
+																			"is_datatype_role_of" : {
+																					"label" : "boolean datatype",
+																					"URI" : "http://www.ontodm.com/OntoDT#OntoDT_0000002"
+																			}
+																	}
+																	
+															}
+													}
+										}
+								}
+					}
+								
+			},
+			"online semi-supervised": { 
+					"label": "online semi-supervised binary classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000045",
+					"dataset specification": {
+								"label": "binary semi-labeled classification data stream",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000109",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based semi-labeled stream data without missing values and with single boolean output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_77ced916_e3da_4aff_bc1e_2af4a8e4cf75",
+													"has_base_datatype":{
+															"label": "feature-based semi-labeled data without missing values and with single boolean output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_2001153de441_ccdb_42eb_bd30_fb0dfb1f7673",
+															"is_datatype_role_of": {
+																	"label": "feature-based semi-labeled data without missing values and with single boolean output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_97cb660a_41fa_4743_8609_8310800feaed",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives without missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																			"is_datatype_role_of": {
+																					"label": "record of primitives datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "semi-labeled target boolean field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_ee2313c3_8016_4ed5_a661_8c5eab70c725",
+																			"is_datatype_role_of" : {
+																					"label" : "choice(boolean,void) datatype",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_b9a22ef1_37b1_4962_a62a_c35302adb0cf",
+																					"has_alternative_component" : {
+																							"void" : {
+																									"label" : "void alternative component",
+																									"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																									"is_datatype_role_of" : {
+																											"label" : "void datatype",
+																											"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																									}
+																							},
+																							"non-void" : {
+																									"label" : "boolean alternative component",
+																									"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_eaedd662_8158_467f_8f2f_d605035567eb", 
+																									"is_datatype_role_of" : {
+																											"label" : "boolean datatype",
+																											"URI" : "http://www.ontodm.com/OntoDT#OntoDT_0000002"
+																									}
+																							}
+																					}
+																			}																
+																	}
+																	
+															}
+													}
+										},
+										"with missing": {
+													"label": "feature-based semi-labeled stream data with missing values and with single boolean output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_a788e8e3_ef55_4ccd_8cbb_d4740cdf1f72",
+													"has_base_datatype":{
+															"label": "feature-based semi-labeled data with missing values and with single boolean output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_2001f8d12623_1645_44ed_add6_acdcf37b684a",
+															"is_datatype_role_of": {
+																	"label": "feature-based semi-labeled data with missing values and with single boolean output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_ea6edf61_c89a_4446_b2be_1d037bab6bb1",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives with missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																			"is_datatype_role_of": {
+																					"label": "record of choice(primitive,void)",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "semi-labeled target boolean field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_ee2313c3_8016_4ed5_a661_8c5eab70c725",
+																			"is_datatype_role_of" : {
+																					"label" : "choice(boolean,void) datatype",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_b9a22ef1_37b1_4962_a62a_c35302adb0cf",
+																					"has_alternative_component" : {
+																							"void" : {
+																									"label" : "void alternative component",
+																									"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																									"is_datatype_role_of" : {
+																											"label" : "void datatype",
+																											"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																									}
+																							},
+																							"non-void" : {
+																									"label" : "boolean alternative component",
+																									"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_eaedd662_8158_467f_8f2f_d605035567eb", 
+																									"is_datatype_role_of" : {
+																											"label" : "boolean datatype",
+																											"URI" : "http://www.ontodm.com/OntoDT#OntoDT_0000002"
+																									}
+																							}
+																					}
+																			}																
+																	}
+																	
+															}
+													}
+													}
+								}
+					}
+								
+			}
+		},
+		"MCC": {
+			"supervised":{ 
+					"label": "supervised multi-class classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDM_913132",
+					"dataset specification": {
+								"label": "multi-class classification dataset",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDM_636747",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based completely labeled data without missing values and with single discrete output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_2784c303_1baa_4afa_aacc_12ed6f727bab",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives without missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																"is_datatype_role_of": {
+																		"label": "record of primitives datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																}
+													},
+													"target FC" : {
+																"label": "completely labeled target discrete field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000008",
+																"is_datatype_role_of" : {
+																		"label" : "discrete datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_608148"
+																}
+													}
+													},
+										"with missing": {
+													"label": "feature-based completely labeled data with missing values and with single discrete output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_36b35053_212c_46cd_9359_6e1a04aa515a",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives with missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																"is_datatype_role_of": {
+																		"label": "record of choice(primitive,void)",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																}
+													},
+													"target FC" : {
+																"label": "completely labeled target discrete field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000008",
+																"is_datatype_role_of" : {
+																		"label" : "discrete datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_608148"
+																}
+													}
+										}
+								}
+					}
+								
+			},
+			"semi-supervised":{ 
+					"label": "semi-supervised multi-class classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000022",
+					"dataset specification": {
+								"label": "multi-class semi-labeled classification dataset",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000091",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based semi-labeled data without missing values and with single discrete output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_de2448a1_9d71_490c_8a59_787132e32f04",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives without missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																"is_datatype_role_of": {
+																		"label": "record of primitives datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																}
+													},
+													"target FC" : {
+																"label": "semi-labeled target discrete field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_486ff933_8b58_4c04_a2b1_128367f475c2",
+																"is_datatype_role_of" : {
+																		"label" : "choice(discrete,void) datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_96956353_6e87_42b9_940b_999fd72253c7",
+																		"has_alternative_component" : {
+																				"void" : {
+																					"label" : "void alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																					"is_datatype_role_of" : {
+																							"label" : "void datatype",
+																							"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																					}
+																				},
+																				"non-void" : {
+																					"label" : "discrete alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_6d214e6d_4584_47c9_bdcc_846ea01b4a9e", 
+																					"is_datatype_role_of" : {
+																							"label" : "discrete datatype",
+																							"URI" : "http://ontodm.com/OntoDT#OntoDT_608148"
+																					}
+																				}
+																		}
+																}
+													}
+										},
+										"with missing": {
+													"label": "feature-based semi-labeled data with missing values and with single discrete output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_30f2f5f1_7e94_413d_a9c5_2dcef3378a65",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives with missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																"is_datatype_role_of": {
+																		"label": "record of choice(primitive,void)",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																}
+													},
+													"target FC" : {
+																"label": "semi-labeled target discrete field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_486ff933_8b58_4c04_a2b1_128367f475c2",
+																"is_datatype_role_of" : {
+																		"label" : "choice(discrete,void) datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_96956353_6e87_42b9_940b_999fd72253c7",
+																		"has_alternative_component" : {
+																				"void" : {
+																					"label" : "void alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																					"is_datatype_role_of" : {
+																							"label" : "void datatype",
+																							"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																					}
+																				},
+																				"non-void" : {
+																					"label" : "discrete alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_6d214e6d_4584_47c9_bdcc_846ea01b4a9e", 
+																					"is_datatype_role_of" : {
+																							"label" : "discrete datatype",
+																							"URI" : "http://ontodm.com/OntoDT#OntoDT_608148"
+																					}
+																				}
+																		}
+																}
+													}
+										}
+								}
+					}								
+			},
+			"online supervised": { 
+					"label": "online supervised multi-class classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000066",
+					"dataset specification": {
+								"label": "multi-class classification data stream",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000132",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based completely labeled stream data without missing values and with single discrete output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_327d9a24_6bcb_44da_aac7_a3d6e326ca34",
+													"has_base_datatype":{
+															"label": "feature-based completely labeled data without missing values and with single discrete output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_20013e43e15c_bba1_4776_98fe_73d8a9ee5d72",
+															"is_datatype_role_of": {
+																	"label": "feature-based completely labeled data without missing values and with single discrete output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_2784c303_1baa_4afa_aacc_12ed6f727bab",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives without missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																			"is_datatype_role_of": {
+																					"label": "record of primitives datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "completely labeled target discrete field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000008",
+																			"is_datatype_role_of" : {
+																					"label" : "discrete datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_608148"
+																			}
+																	}																	
+															}
+													}
+										},
+										"with missing": {
+													"label": "feature-based completely labeled stream data with missing values and with single discrete output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_0ef77c93_a6c1_4c38_a2e9_9d5556d07fb2",
+													"has_base_datatype":{
+															"label": "feature-based completely labeled stream data with missing values and with single discrete output",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_0ef77c93_a6c1_4c38_a2e9_9d5556d07fb2",
+															"is_datatype_role_of": {
+																	"label": "feature-based completely labeled data with missing values and with single discrete output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_36b35053_212c_46cd_9359_6e1a04aa515a",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives with missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																			"is_datatype_role_of": {
+																					"label": "record of choice(primitive,void)",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "completely labeled target discrete field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000008",
+																			"is_datatype_role_of" : {
+																					"label" : "discrete datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_608148"
+																			}
+																	}																		
+															}
+													}
+										}
+								}
+					}
+								
+			},
+			"online semi-supervised": { 
+					"label": "online semi-supervised multi-class classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000046",
+					"dataset specification": {
+								"label": "multi-class semi-labeled classification data stream",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000110",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based semi-labeled stream data without missing values and with single discrete output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_760741de_ab5b_483c_804d_2e6a5bc765c8",
+													"has_base_datatype":{
+															"label": "feature-based semi-labeled data without missing values and with single discrete output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_20016963a864_b1e2_498d_8b21_5ca947bfbae5",
+															"is_datatype_role_of": {
+																	"label": "feature-based semi-labeled data without missing values and with single discrete output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_de2448a1_9d71_490c_8a59_787132e32f04",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives without missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																			"is_datatype_role_of": {
+																					"label": "record of primitives datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "semi-labeled target discrete field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_486ff933_8b58_4c04_a2b1_128367f475c2",
+																			"is_datatype_role_of" : {
+																					"label" : "choice(discrete,void) datatype",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_96956353_6e87_42b9_940b_999fd72253c7",
+																					"has_alternative_component" : {
+																							"void" : {
+																									"label" : "void alternative component",
+																									"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																											"is_datatype_role_of" : {
+																													"label" : "void datatype",
+																													"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																											}
+																							},
+																							"non-void" : {
+																									"label" : "discrete alternative component",
+																									"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_6d214e6d_4584_47c9_bdcc_846ea01b4a9e", 
+																											"is_datatype_role_of" : {
+																													"label" : "discrete datatype",
+																													"URI" : "http://ontodm.com/OntoDT#OntoDT_608148"
+																									}
+																							}
+																					}
+																			}
+																	}																	
+															}
+													}
+										},
+										"with missing": {
+													"label": "feature-based semi-labeled stream data with missing values and with single discrete output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_c03649fb_2dd4_42b7_bd00_e6210bdfd00b",
+													"has_base_datatype":{
+															"label": "feature-based semi-labeled data with missing values and with single discrete output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_2001e09b3459_8b6c_475a_b780_0abff181b59c",
+															"is_datatype_role_of": {
+																	"label": "feature-based semi-labeled data with missing values and with single discrete output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_30f2f5f1_7e94_413d_a9c5_2dcef3378a65",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives with missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																			"is_datatype_role_of": {
+																					"label": "record of choice(primitive,void)",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "semi-labeled target discrete field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_486ff933_8b58_4c04_a2b1_128367f475c2",
+																			"is_datatype_role_of" : {
+																					"label" : "choice(discrete,void) datatype",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_96956353_6e87_42b9_940b_999fd72253c7",
+																					"has_alternative_component" : {
+																							"void" : {
+																									"label" : "void alternative component",
+																									"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																											"is_datatype_role_of" : {
+																													"label" : "void datatype",
+																													"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																											}
+																							},
+																							"non-void" : {
+																									"label" : "discrete alternative component",
+																									"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_6d214e6d_4584_47c9_bdcc_846ea01b4a9e", 
+																											"is_datatype_role_of" : {
+																													"label" : "discrete datatype",
+																													"URI" : "http://ontodm.com/OntoDT#OntoDT_608148"
+																									}
+																							}
+																					}
+																			}
+																	}																	
+															}
+													}
+										}
+								}
+					}								
+			}
+		},
+		"MLC": {
+			"supervised":{ 
+					"label": "supervised multi-label classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDM_510504",
+					"dataset specification": {
+								"label": "multi-label classification dataset",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDM_541005",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based completely labeled data without missing values and with set of discrete output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_1986c67d_57ff_4c3b_9d57_bd6e292a3458",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives without missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																"is_datatype_role_of": {
+																		"label": "record of primitives datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																}
+													},
+													"target FC" : {
+																"label": "completely labeled target set of discrete field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000014",
+																"is_datatype_role_of" : {
+																		"label" : "set of discrete datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_377271",
+																		"has_base_datatype":{
+																			"label": "discrete datatype",
+																			"URI": "http://ontodm.com/OntoDT#OntoDT_608148"
+																		}
+																}
+													}
+										},
+										"with missing": {
+													"label": "feature-based completely labeled data with missing values and with set of discrete output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_79585c56_653c_4b7c_b7df_0a7a1e0328eb",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives with missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																"is_datatype_role_of": {
+																		"label": "record of choice(primitive,void)",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																}
+													},
+													"target FC" : {
+																"label": "completely labeled target set of discrete field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000014",
+																"is_datatype_role_of" : {
+																		"label" : "set of discrete datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_377271",
+																		"has_base_datatype":{
+																			"label": "discrete datatype",
+																			"URI": "http://ontodm.com/OntoDT#OntoDT_608148"
+																		}
+																}
+													}
+										}
+								}
+					}								
+			},
+			"semi-supervised":{ 
+					"label": "semi-supervised multi-label classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000010",
+					"dataset specification": {
+								"label": "multi-label semi-labeled classification dataset",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000081",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based semi-labeled data without missing values and with set of discrete output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_7d6ac24b_8393_42cf_9434_466451f447a5",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives without missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																"is_datatype_role_of": {
+																		"label": "record of primitives datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																}
+													},
+													"target FC" : {
+																"label": "semi-labeled target set of discrete field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_7bdb8a25_f80c_4a55_ac2f_28ffaae86406",
+																"is_datatype_role_of" : {
+																		"label" : "choice(set of discrete,void) datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DType_22221bf7_2291_42ef_a915_d2cd832b92c3",
+																		"has_alternative_component" : {
+																				"void" : {
+																					"label" : "void alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																					"is_datatype_role_of" : {
+																							"label" : "void datatype",
+																							"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																					}
+																				},
+																				"non-void" : {
+																					"label" : "set of discrete alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DType_ab96b5d9_f6b9_479f_94dd_97b6d985a970", 
+																					"is_datatype_role_of" : {
+																							"label" : "set of discrete datatype",
+																							"URI" : "http://ontodm.com/OntoDT#OntoDT_377271",
+																							"has_base_datatype":{
+																									"label": "discrete datatype",
+																									"URI": "http://ontodm.com/OntoDT#OntoDT_608148"
+																							}
+																					}
+																				}
+																		}
+																}
+													}
+										},
+										"with missing": {
+													"label": "feature-based semi-labeled data with missing values and with set of discrete output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_4945d082_94c0_483c_8afb_13af455385f3",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives with missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																"is_datatype_role_of": {
+																		"label": "record of choice(primitive,void)",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																}
+													},
+													"target FC" : {
+																"label": "semi-labeled target set of discrete field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_7bdb8a25_f80c_4a55_ac2f_28ffaae86406",
+																"is_datatype_role_of" : {
+																		"label" : "choice(set of discrete,void) datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DType_22221bf7_2291_42ef_a915_d2cd832b92c3",
+																		"has_alternative_component" : {
+																				"void" : {
+																					"label" : "void alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																					"is_datatype_role_of" : {
+																							"label" : "void datatype",
+																							"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																					}
+																				},
+																				"non-void" : {
+																					"label" : "set of discrete alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DType_ab96b5d9_f6b9_479f_94dd_97b6d985a970", 
+																					"is_datatype_role_of" : {
+																							"label" : "set of discrete datatype",
+																							"URI" : "http://ontodm.com/OntoDT#OntoDT_377271",
+																							"has_base_datatype":{
+																									"label": "discrete datatype",
+																									"URI": "http://ontodm.com/OntoDT#OntoDT_608148"
+																							}
+																					}
+																				}
+																		}
+																}
+													}
+										}
+								}
+					}								
+			},
+			"online supervised": { 
+					"label": "online supervised multi-label classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000054",
+					"dataset specification": {
+								"label": "multi-label classification data stream",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000121",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based completely labeled stream data without missing values and with set of discrete output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_79dac775_c83b_4141_ab7b_f3bf61444ea1",
+													"has_base_datatype":{
+															"label": "feature-based completely labeled data without missing values and with set of discrete output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_2001d842d8c3_7d3b_452e_bd97_e1e6497e52bc",
+															"is_datatype_role_of": {
+																	"label": "feature-based completely labeled data without missing values and with set of discrete output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_1986c67d_57ff_4c3b_9d57_bd6e292a3458",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives without missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																			"is_datatype_role_of": {
+																					"label": "record of primitives datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "completely labeled target set of discrete field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000014",
+																			"is_datatype_role_of" : {
+																					"label" : "set of discrete datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_377271",
+																					"has_base_datatype":{
+																							"label": "discrete datatype",
+																							"URI": "http://ontodm.com/OntoDT#OntoDT_608148"
+																					}
+																			}
+																	}																	
+															}
+													}
+										},
+										"with missing": {
+													"label": "feature-based completely labeled stream data with missing values and with set of discrete output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_215f81d1_45d3_4e04_a8e1_f4be78c4be10",
+													"has_base_datatype":{
+															"label": "feature-based completely labeled stream data with missing values and with set of discrete output",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_215f81d1_45d3_4e04_a8e1_f4be78c4be10",
+															"is_datatype_role_of": {
+																	"label": "feature-based completely labeled data with missing values and with set of discrete output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_79585c56_653c_4b7c_b7df_0a7a1e0328eb",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives with missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																			"is_datatype_role_of": {
+																					"label": "record of choice(primitive,void)",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "completely labeled target set of discrete field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000014",
+																			"is_datatype_role_of" : {
+																					"label" : "set of discrete datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_377271",
+																					"has_base_datatype":{
+																							"label": "discrete datatype",
+																							"URI": "http://ontodm.com/OntoDT#OntoDT_608148"
+																					}
+																			}
+																	}																		
+															}
+													}
+										}
+								}
+					}								
+			},
+			"online semi-supervised": { 
+					"label": "online semi-supervised multi-label classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000034",
+					"dataset specification": {
+								"label": "multi-label semi-labeled classification data stream",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000100",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based semi-labeled stream data without missing values and with set of discrete output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_c3f7230d_b78c_4a55_a6db_5f77cd676e44",
+													"has_base_datatype":{
+															"label": "feature-based semi-labeled data without missing values and with set of discrete output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_2001b0742021_5fd3_4a69_8b48_bb47f0695965",
+															"is_datatype_role_of": {
+																	"label": "feature-based semi-labeled data without missing values and with set of discrete output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_7d6ac24b_8393_42cf_9434_466451f447a5",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives without missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																			"is_datatype_role_of": {
+																					"label": "record of primitives datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "semi-labeled target set of discrete field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_7bdb8a25_f80c_4a55_ac2f_28ffaae86406",
+																			"is_datatype_role_of" : {
+																					"label" : "choice(set of discrete,void) datatype",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DType_22221bf7_2291_42ef_a915_d2cd832b92c3",
+																					"has_alternative_component" : {
+																							"void" : {
+																									"label" : "void alternative component",
+																									"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																									"is_datatype_role_of" : {
+																											"label" : "void datatype",
+																											"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																									}
+																							},
+																							"non-void" : {
+																									"label" : "set of discrete alternative component",
+																									"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DType_ab96b5d9_f6b9_479f_94dd_97b6d985a970", 
+																									"is_datatype_role_of" : {
+																											"label" : "set of discrete datatype",
+																											"URI" : "http://ontodm.com/OntoDT#OntoDT_377271",
+																											"has_base_datatype":{
+																													"label": "discrete datatype",
+																													"URI": "http://ontodm.com/OntoDT#OntoDT_608148"
+																											}
+																									}
+																							}
+																					}
+																			}
+																	}																	
+															}
+													}
+										},
+										"with missing": {
+													"label": "feature-based semi-labeled stream data with missing values and with set of discrete output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_2b0d0b24_a957_49d5_b764_e99760a50e4a",
+													"has_base_datatype":{
+															"label": "feature-based semi-labeled data with missing values and with set of discrete output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_200180b53abe_6ad9_426d_ad47_7d0b96b8f1aa",
+															"is_datatype_role_of": {
+																	"label": "feature-based semi-labeled data with missing values and with set of discrete output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_4945d082_94c0_483c_8afb_13af455385f3",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives with missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																			"is_datatype_role_of": {
+																					"label": "record of choice(primitive,void)",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "semi-labeled target set of discrete field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_7bdb8a25_f80c_4a55_ac2f_28ffaae86406",
+																			"is_datatype_role_of" : {
+																					"label" : "choice(set of discrete,void) datatype",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DType_22221bf7_2291_42ef_a915_d2cd832b92c3",
+																					"has_alternative_component" : {
+																							"void" : {
+																									"label" : "void alternative component",
+																									"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																									"is_datatype_role_of" : {
+																											"label" : "void datatype",
+																											"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																									}
+																							},
+																							"non-void" : {
+																									"label" : "set of discrete alternative component",
+																									"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DType_ab96b5d9_f6b9_479f_94dd_97b6d985a970", 
+																									"is_datatype_role_of" : {
+																											"label" : "set of discrete datatype",
+																											"URI" : "http://ontodm.com/OntoDT#OntoDT_377271",
+																											"has_base_datatype":{
+																													"label": "discrete datatype",
+																													"URI": "http://ontodm.com/OntoDT#OntoDT_608148"
+																											}
+																									}
+																							}
+																					}
+																			}
+																	}																	
+															}
+													}
+										}
+								}
+					}								
+			}
+		},
+		"MTBL": {
+			"supervised":{ 
+					"label": "supervised multi-target binary classification",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDM_231548",
+					"dataset specification": {
+								"label": "multi-target binary classification dataset",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDM_727807",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based completely labeled data without missing values and with record of booleans output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_3799994c_0802_47d0_8432_f2ba50f1f238",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives without missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																"is_datatype_role_of": {
+																		"label": "record of primitives datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																}
+													},
+													"target FC" : {
+																"label": "completely labeled target record of boolean field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000016",
+																"is_datatype_role_of" : {
+																		"label" : "record of boolean datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_360708",
+																		"has_field_component" : {
+																				"label" : "boolean field component",
+																				"URI" : "http://ontodm.com/OntoDT#OntoDT_395046",
+																				"is_datatype_role_of" : {
+																						"label" : "boolean datatype",
+																						"URI": "http://www.ontodm.com/OntoDT#OntoDT_0000002"
+																				}
+																		}
+																}
+													}
+										},
+										"with missing": {
+													"label": "feature-based completely labeled data with missing values and with record of booleans output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_df9be182_a1d9_4c09_a19b_a25420819f8a",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives with missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																"is_datatype_role_of": {
+																		"label": "record of choice(primitive,void)",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																}
+													},
+													"target FC" : {
+																"label": "completely labeled target record of boolean field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000016",
+																"is_datatype_role_of" : {
+																		"label" : "record of boolean datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_360708",
+																		"has_field_component" : {
+																				"label" : "boolean field component",
+																				"URI" : "http://ontodm.com/OntoDT#OntoDT_395046",
+																				"is_datatype_role_of" : {
+																						"label" : "boolean datatype",
+																						"URI": "http://www.ontodm.com/OntoDT#OntoDT_0000002"
+																				}
+																		}
+																}
+													}
+										}
+								}
+					}								
+			},
+			"semi-supervised":{ 
+					"label": "semi-supervised multi-target binary classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000013",
+					"dataset specification": {
+								"label": "multi-target semi-labeled binary classification dataset",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000083",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based semi-labeled data without missing values and with record of booleans output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_e315484c_076e_4c0f_b7fe_67e1cec88f3e",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives without missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																"is_datatype_role_of": {
+																		"label": "record of primitives datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																}
+													},
+													"target FC" : {
+																"label": "semi-labeled target record of boolean field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_991011eb_d37b_4e44_bd66_6337ba613744",
+																"is_datatype_role_of" : {
+																		"label" : "choice(record of boolean,void) datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_0bdd747c_fd46_4457_90d4_e479ee6e2b9c",
+																		"has_alternative_component" : {
+																			"void" : {
+																					"label" : "void alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																					"is_datatype_role_of" : {
+																						"label" : "void datatype",
+																						"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																					}		
+																			},
+																			"non-void" : {
+																					"label" : "record of boolean alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_c4ca7145_a76e_4a30_8bc7_e09410b7acf5", 
+																					"is_datatype_role_of" : {
+																							"label" : "record of boolean datatype",
+																							"URI" : "http://ontodm.com/OntoDT#OntoDT_360708",
+																							"has_field_component" : {
+																									"label" : "boolean field component",
+																									"URI" : "http://ontodm.com/OntoDT#OntoDT_395046",
+																									"is_datatype_role_of" : {
+																											"label" : "boolean datatype",
+																											"URI": "http://www.ontodm.com/OntoDT#OntoDT_0000002"
+																									}
+																							}
+																					}
+																			}
+																		}
+																}
+													}
+										},
+										"with missing": {
+													"label": "feature-based semi-labeled data with missing values and with record of booleans output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_e1a64912_2db0_4cf5_9104_a00b155cadbf",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives with missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																"is_datatype_role_of": {
+																		"label": "record of choice(primitive,void)",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																}
+													},
+													"target FC" : {
+																"label": "semi-labeled target record of boolean field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_991011eb_d37b_4e44_bd66_6337ba613744",
+																"is_datatype_role_of" : {
+																		"label" : "choice(record of boolean,void) datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_0bdd747c_fd46_4457_90d4_e479ee6e2b9c",
+																		"has_alternative_component" : {
+																			"void" : {
+																					"label" : "void alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																					"is_datatype_role_of" : {
+																						"label" : "void datatype",
+																						"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																					}		
+																			},
+																			"non-void" : {
+																					"label" : "record of boolean alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_c4ca7145_a76e_4a30_8bc7_e09410b7acf5", 
+																					"is_datatype_role_of" : {
+																							"label" : "record of boolean datatype",
+																							"URI" : "http://ontodm.com/OntoDT#OntoDT_360708",
+																							"has_field_component" : {
+																									"label" : "boolean field component",
+																									"URI" : "http://ontodm.com/OntoDT#OntoDT_395046",
+																									"is_datatype_role_of" : {
+																											"label" : "boolean datatype",
+																											"URI": "http://www.ontodm.com/OntoDT#OntoDT_0000002"
+																									}
+																							}
+																					}
+																			}
+																		}
+																}
+													}
+										}
+								}
+					}								
+			},
+			"online supervised": { 
+					"label": "online supervised multi-label classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000054",
+					"dataset specification": {
+								"label": "multi-target binary classification data stream",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000124",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based completely labeled stream data without missing values and with record of booleans output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_d7a8511b_728c_4d37_b10b_71df365961f1",
+													"has_base_datatype":{
+															"label": "feature-based completely labeled data without missing values and with record of booleans output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_2001301876b4_5246_4518_a396_819c234a36a1",
+															"is_datatype_role_of": {
+																	"label": "feature-based completely labeled data without missing values and with record of booleans output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_3799994c_0802_47d0_8432_f2ba50f1f238",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives without missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																			"is_datatype_role_of": {
+																					"label": "record of primitives datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "completely labeled target record of boolean field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000016",
+																			"is_datatype_role_of" : {
+																					"label" : "record of boolean datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_360708",
+																					"has_field_component" : {
+																							"label" : "boolean field component",
+																							"URI" : "http://ontodm.com/OntoDT#OntoDT_395046",
+																							"is_datatype_role_of" : {
+																								"label" : "boolean datatype",
+																								"URI": "http://www.ontodm.com/OntoDT#OntoDT_0000002"
+																							}
+																					}
+																			}
+																	}
+															}
+													}
+										},
+										"with missing": {
+													"label": "feature-based completely labeled stream data with missing values and with record of booleans output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_6a2a9178_9992_4a42_bb77_7c7eeac6c6f6",
+													"has_base_datatype":{
+															"label": "feature-based completely labeled data with missing values and with record of booleans output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_20010d4d084c_8187_48bd_8398_44305e2407f2",
+															"is_datatype_role_of": {
+																	"label": "feature-based completely labeled data with missing values and with record of booleans output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_df9be182_a1d9_4c09_a19b_a25420819f8a",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives with missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																			"is_datatype_role_of": {
+																					"label": "record of choice(primitive,void)",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "completely labeled target record of boolean field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000016",
+																			"is_datatype_role_of" : {
+																					"label" : "record of boolean datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_360708",
+																					"has_field_component" : {
+																							"label" : "boolean field component",
+																							"URI" : "http://ontodm.com/OntoDT#OntoDT_395046",
+																							"is_datatype_role_of" : {
+																								"label" : "boolean datatype",
+																								"URI": "http://www.ontodm.com/OntoDT#OntoDT_0000002"
+																							}
+																					}
+																			}
+																	}																	
+															}
+													}
+										}
+								}
+					}								
+			},
+			"online semi-supervised": { 
+					"label": "online semi-supervised multi-target binary classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000037",
+					"dataset specification": {
+								"label": "multi-target semi-labeled binary classification data stream",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000102",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based semi-labeled stream data without missing values and with record of booleans output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_33df8994_62e4_43af_80d4_c8b7f77cffe6",
+													"has_base_datatype":{
+															"label": "feature-based semi-labeled data without missing values and with record of booleans output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_20016dcd0a53_8591_4a7d_9a08_0c5e370b7011",
+															"is_datatype_role_of": {
+																	"label": "feature-based semi-labeled data without missing values and with record of booleans output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_e315484c_076e_4c0f_b7fe_67e1cec88f3e",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives without missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																			"is_datatype_role_of": {
+																					"label": "record of primitives datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																			}
+																	},
+																	"target FC" : {
+																"label": "semi-labeled target record of boolean field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_991011eb_d37b_4e44_bd66_6337ba613744",
+																"is_datatype_role_of" : {
+																		"label" : "choice(record of boolean,void) datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_0bdd747c_fd46_4457_90d4_e479ee6e2b9c",
+																		"has_alternative_component" : {
+																			"void" : {
+																					"label" : "void alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																					"is_datatype_role_of" : {
+																						"label" : "void datatype",
+																						"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																					}		
+																			},
+																			"non-void" : {
+																					"label" : "record of boolean alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_c4ca7145_a76e_4a30_8bc7_e09410b7acf5", 
+																					"is_datatype_role_of" : {
+																							"label" : "record of boolean datatype",
+																							"URI" : "http://ontodm.com/OntoDT#OntoDT_360708",
+																							"has_field_component" : {
+																									"label" : "boolean field component",
+																									"URI" : "http://ontodm.com/OntoDT#OntoDT_395046",
+																									"is_datatype_role_of" : {
+																											"label" : "boolean datatype",
+																											"URI": "http://www.ontodm.com/OntoDT#OntoDT_0000002"
+																									}
+																							}
+																					}
+																			}
+																		}
+																}
+													}
+															}
+													}
+										},
+										"with missing": {
+													"label": "feature-based semi-labeled stream data with missing values and with record of booleans output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_c33de9c9_56aa_4b17_8ff2_16ad766b26bd",
+													"has_base_datatype":{
+															"label": "feature-based semi-labeled data with missing values and with record of booleans output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_2001553fd18b_79ff_4139_ae9d_ceffb5680b0e",
+															"is_datatype_role_of": {
+																	"label": "feature-based semi-labeled data with missing values and with record of booleans output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_e1a64912_2db0_4cf5_9104_a00b155cadbf",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives with missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																			"is_datatype_role_of": {
+																					"label": "record of choice(primitive,void)",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "semi-labeled target record of boolean field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_991011eb_d37b_4e44_bd66_6337ba613744",
+																			"is_datatype_role_of" : {
+																					"label" : "choice(record of boolean,void) datatype",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_0bdd747c_fd46_4457_90d4_e479ee6e2b9c",
+																					"has_alternative_component" : {
+																					"void" : {
+																							"label" : "void alternative component",
+																							"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																							"is_datatype_role_of" : {
+																								"label" : "void datatype",
+																								"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																							}		
+																					},
+																					"non-void" : {
+																							"label" : "record of boolean alternative component",
+																							"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_c4ca7145_a76e_4a30_8bc7_e09410b7acf5", 
+																							"is_datatype_role_of" : {
+																									"label" : "record of boolean datatype",
+																									"URI" : "http://ontodm.com/OntoDT#OntoDT_360708",
+																									"has_field_component" : {
+																											"label" : "boolean field component",
+																											"URI" : "http://ontodm.com/OntoDT#OntoDT_395046",
+																											"is_datatype_role_of" : {
+																													"label" : "boolean datatype",
+																													"URI": "http://www.ontodm.com/OntoDT#OntoDT_0000002"
+																											}
+																									}
+																							}
+																					}
+																			}
+																			}
+																}
+															}
+													}
+											}
+								}
+					}								
+			}
+		},
+		"MTMCC": {
+			"supervised":{ 
+					"label": "supervised multi-target multi-class classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDM_815320",
+					"dataset specification": {
+								"label": "multi-target multi-class classification dataset",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDM_636213",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based completely labeled data without missing values and with record of discrete output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_c550e2ea_0088_45e5_a543_a099c6e98d0a",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives without missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																"is_datatype_role_of": {
+																		"label": "record of primitives datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																}
+													},
+													"target FC" : {
+																"label": "completely labeled target record of discrete field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000017",
+																"is_datatype_role_of" : {
+																		"label" : "record of discrete datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_595741",
+																		"has_field_component" : {
+																				"label": "discrete field component",
+																				"URI" : "http://ontodm.com/OntoDT#OntoDT_233572",
+																				"is_datatype_role_of" : {
+																						"label" : "discrete datatype",
+																						"URI" : "http://ontodm.com/OntoDT#OntoDT_608148"
+																				}
+																		}
+																}
+													}
+										},
+										"with missing": {
+													"label": "feature-based completely labeled data with missing values and with record of discrete output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_4ac83a1c_cce7_4f2a_83bd_7e7b41270db3",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives with missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																"is_datatype_role_of": {
+																		"label": "record of choice(primitive,void)",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																}
+													},
+													"target FC" : {
+																"label": "completely labeled target record of discrete field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000017",
+																"is_datatype_role_of" : {
+																		"label" : "record of discrete datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_595741",
+																		"has_field_component" : {
+																				"label": "discrete field component",
+																				"URI" : "http://ontodm.com/OntoDT#OntoDT_233572",
+																				"is_datatype_role_of" : {
+																						"label" : "discrete datatype",
+																						"URI" : "http://ontodm.com/OntoDT#OntoDT_608148"
+																				}
+																		}
+																}
+													}
+										}
+								}
+					}
+								
+			},
+			"semi-supervised":{ 
+					"label": "semi-supervised multi-target multi-class classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000014",
+					"dataset specification": {
+								"label": "multi-target semi-labeled multi-class classification dataset",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000084",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based semi-labeled data without missing values and with record of discrete output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_a7c8afdc_9044_4395_83e3_70c2dfdd9a2a",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives without missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																"is_datatype_role_of": {
+																		"label": "record of primitives datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																}
+													},
+													"target FC" : {
+																"label": "semi-labeled target record of discrete field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_65bfb085_9c9f_4cd7_8dbe_b6ac3050d18c",
+																"is_datatype_role_of" : {
+																		"label" : "choice(record of discrete,void) datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_d8e7015d_33c6_4777_a7c2_d6b50a5dac98",
+																		"has_alternative_component" : {
+																				"void" : {
+																						"label" : "void alternative component",
+																						"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																						"is_datatype_role_of" : {
+																								"label" : "void datatype",
+																								"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																						}
+																				},
+																				"non-void" : {
+																							"label" : "record of discrete alternative component",
+																							"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_c79d8061_3c06_4f95_a46b_62ee277ffc17", 
+																							"is_datatype_role_of" : {
+																								"label" : "record of discrete datatype",
+																								"URI" : "http://ontodm.com/OntoDT#OntoDT_595741",
+																								"has_field_component" : {
+																										"label": "discrete field component",
+																										"URI" : "http://ontodm.com/OntoDT#OntoDT_233572",
+																										"is_datatype_role_of" : {
+																												"label" : "discrete datatype",
+																												"URI" : "http://ontodm.com/OntoDT#OntoDT_608148"
+																										}
+																								}
+																					}
+																				}
+																		}
+																}
+													}
+										},
+										"with missing": {
+													"label": "feature-based semi-labeled data with missing values and with record of discrete output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_9eb02c37_d506_4623_a758_06adfc7aa488",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives with missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																"is_datatype_role_of": {
+																		"label": "record of choice(primitive,void)",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																}
+													},
+													"target FC" : {
+																"label": "semi-labeled target record of discrete field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_65bfb085_9c9f_4cd7_8dbe_b6ac3050d18c",
+																"is_datatype_role_of" : {
+																		"label" : "choice(record of discrete,void) datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_d8e7015d_33c6_4777_a7c2_d6b50a5dac98",
+																		"has_alternative_component" : {
+																				"void" : {
+																						"label" : "void alternative component",
+																						"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																						"is_datatype_role_of" : {
+																								"label" : "void datatype",
+																								"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																						}
+																				},
+																				"non-void" : {
+																							"label" : "record of discrete alternative component",
+																							"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_c79d8061_3c06_4f95_a46b_62ee277ffc17", 
+																							"is_datatype_role_of" : {
+																								"label" : "record of discrete datatype",
+																								"URI" : "http://ontodm.com/OntoDT#OntoDT_595741",
+																								"has_field_component" : {
+																										"label": "discrete field component",
+																										"URI" : "http://ontodm.com/OntoDT#OntoDT_233572",
+																										"is_datatype_role_of" : {
+																												"label" : "discrete datatype",
+																												"URI" : "http://ontodm.com/OntoDT#OntoDT_608148"
+																										}
+																								}
+																					}
+																				}
+																		}
+																}
+													}
+										}
+								}
+					}								
+			},
+			"online supervised": { 
+					"label": "online supervised multi-target multi-class classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000058",
+					"dataset specification": {
+								"label": "multi-target multi-class classification data stream",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000125",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based completely labeled stream data without missing values and with record of discrete output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_f35b351a_bc06_42c4_b77a_480df9981efb",
+													"has_base_datatype":{
+															"label": "feature-based completely labeled data without missing values and with record of discrete output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_2001d498b087_4a14_48f5_9e28_05129a72841b",
+															"is_datatype_role_of": {
+																	"label": "feature-based completely labeled data without missing values and with record of discrete output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_c550e2ea_0088_45e5_a543_a099c6e98d0a",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives without missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																			"is_datatype_role_of": {
+																					"label": "record of primitives datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "completely labeled target record of discrete field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000017",
+																			"is_datatype_role_of" : {
+																					"label" : "record of discrete datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_595741",
+																					"has_field_component" : {
+																							"label": "discrete field component",
+																							"URI" : "http://ontodm.com/OntoDT#OntoDT_233572",
+																							"is_datatype_role_of" : {
+																									"label" : "discrete datatype",
+																									"URI" : "http://ontodm.com/OntoDT#OntoDT_608148"
+																							}
+																					}
+																			}
+																	}																	
+															}
+													}
+										},
+										"with missing": {
+													"label": "feature-based completely labeled stream data with missing values and with record of discrete output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_5b23bb15_d3d4_4bbe_9762_010aa639dee2",
+													"has_base_datatype":{
+															"label": "feature-based completely labeled data with missing values and with record of discrete output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_2001fb2cfbc4_6d55_4468_9a05_4a123f4f4458",
+															"is_datatype_role_of": {
+																	"label": "feature-based completely labeled data with missing values and with record of discrete output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_4ac83a1c_cce7_4f2a_83bd_7e7b41270db3",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives with missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																			"is_datatype_role_of": {
+																					"label": "record of choice(primitive,void)",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "completely labeled target record of discrete field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000017",
+																			"is_datatype_role_of" : {
+																					"label" : "record of discrete datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_595741",
+																					"has_field_component" : {
+																							"label": "discrete field component",
+																							"URI" : "http://ontodm.com/OntoDT#OntoDT_233572",
+																							"is_datatype_role_of" : {
+																									"label" : "discrete datatype",
+																									"URI" : "http://ontodm.com/OntoDT#OntoDT_608148"
+																							}
+																					}
+																			}
+																	}
+																	
+															}
+													}
+										}
+								}
+					}								
+			},
+			"online semi-supervised": { 
+					"label": "online semi-supervised multi-target multi-class classification task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000038",
+					"dataset specification": {
+								"label": "multi-target semi-labeled multi-class classification data stream",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000103",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based semi-labeled stream data without missing values and with record of discrete output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_b83370e1_361f_4738_895d_9d66cbaf53e0",
+													"has_base_datatype":{
+															"label": "feature-based semi-labeled data without missing values and with record of discrete output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_2001b0b094c0_db39_4869_8535_9bf808a981d5",
+															"is_datatype_role_of": {
+																	"label": "feature-based semi-labeled data without missing values and with record of discrete output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_a7c8afdc_9044_4395_83e3_70c2dfdd9a2a",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives without missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																			"is_datatype_role_of": {
+																					"label": "record of primitives datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																			}
+																	},
+																	"target FC" : {
+																		"label": "semi-labeled target record of discrete field component",
+																		"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_65bfb085_9c9f_4cd7_8dbe_b6ac3050d18c",
+																		"is_datatype_role_of" : {
+																				"label" : "choice(record of discrete,void) datatype",
+																				"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_d8e7015d_33c6_4777_a7c2_d6b50a5dac98",
+																				"has_alternative_component" : {
+																						"void" : {
+																								"label" : "void alternative component",
+																								"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																								"is_datatype_role_of" : {
+																										"label" : "void datatype",
+																										"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																								}
+																						},
+																						"non-void" : {
+																									"label" : "record of discrete alternative component",
+																									"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_c79d8061_3c06_4f95_a46b_62ee277ffc17", 
+																									"is_datatype_role_of" : {
+																										"label" : "record of discrete datatype",
+																										"URI" : "http://ontodm.com/OntoDT#OntoDT_595741",
+																										"has_field_component" : {
+																												"label": "discrete field component",
+																												"URI" : "http://ontodm.com/OntoDT#OntoDT_233572",
+																												"is_datatype_role_of" : {
+																														"label" : "discrete datatype",
+																														"URI" : "http://ontodm.com/OntoDT#OntoDT_608148"
+																												}
+																										}
+																							}
+																						}
+																				}
+																		}
+															}
+																	
+															}
+													}
+										},
+										"with missing": {
+													"label": "feature-based semi-labeled stream data with missing values and with record of discrete output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_9e1dddec_b730_4c9a_950f_d6fdcba301d6",
+													"has_base_datatype":{
+															"label": "feature-based semi-labeled data with missing values and with record of discrete output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_2001ca1e136e_3221_4305_a599_5023c0a11008",
+															"is_datatype_role_of": {
+																	"label": "feature-based semi-labeled data with missing values and with record of discrete output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_9eb02c37_d506_4623_a758_06adfc7aa488",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives with missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																			"is_datatype_role_of": {
+																					"label": "record of choice(primitive,void)",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																			}
+																	},
+																	"target FC" : {
+																		"label": "semi-labeled target record of discrete field component",
+																		"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_65bfb085_9c9f_4cd7_8dbe_b6ac3050d18c",
+																		"is_datatype_role_of" : {
+																				"label" : "choice(record of discrete,void) datatype",
+																				"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_d8e7015d_33c6_4777_a7c2_d6b50a5dac98",
+																				"has_alternative_component" : {
+																						"void" : {
+																								"label" : "void alternative component",
+																								"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																								"is_datatype_role_of" : {
+																										"label" : "void datatype",
+																										"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																								}
+																						},
+																						"non-void" : {
+																									"label" : "record of discrete alternative component",
+																									"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_c79d8061_3c06_4f95_a46b_62ee277ffc17", 
+																									"is_datatype_role_of" : {
+																										"label" : "record of discrete datatype",
+																										"URI" : "http://ontodm.com/OntoDT#OntoDT_595741",
+																										"has_field_component" : {
+																												"label": "discrete field component",
+																												"URI" : "http://ontodm.com/OntoDT#OntoDT_233572",
+																												"is_datatype_role_of" : {
+																														"label" : "discrete datatype",
+																														"URI" : "http://ontodm.com/OntoDT#OntoDT_608148"
+																												}
+																										}
+																							}
+																						}
+																				}
+																		}
+															}																	
+															}
+													}
+										}
+								}
+					}								
+			}
+		},
+		"MTR": {
+			"supervised":{ 
+					"label": "supervised multi-target regression task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDM_506961",
+					"dataset specification": {
+								"label": "multi-target regression dataset",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDM_565974",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based completely labeled data without missing values and with record of reals output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_b54fc26d_2460_4217_abcc_7fcfd51224ff",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives without missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																"is_datatype_role_of": {
+																		"label": "record of primitives datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																}
+													},
+													"target FC" : {
+																"label": "completely labeled target record of reals field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000018",
+																"is_datatype_role_of" : {
+																		"label" : "record of real datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_471356",
+																		"has_field_component" : {
+																				"label" : "real field component",
+																				"URI" : "http://ontodm.com/OntoDT#OntoDT_387565",
+																				"is_datatype_role_of" : {
+																						"label" : "real datatype",
+																						"URI" : "http://ontodm.com/OntoDT#OntoDT_150012"
+																				}
+																		}
+																}
+													}
+										},
+										"with missing": {
+													"label": "feature-based completely labeled data with missing values and with record of reals output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_cfbadc29_2bff_4edc_8031_210d23589cda",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives with missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																"is_datatype_role_of": {
+																		"label": "record of choice(primitive,void)",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																}
+													},
+													"target FC" : {
+																"label": "completely labeled target record of reals field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000018",
+																"is_datatype_role_of" : {
+																		"label" : "record of real datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_471356",
+																		"has_field_component" : {
+																				"label" : "real field component",
+																				"URI" : "http://ontodm.com/OntoDT#OntoDT_387565",
+																				"is_datatype_role_of" : {
+																						"label" : "real datatype",
+																						"URI" : "http://ontodm.com/OntoDT#OntoDT_150012"
+																				}
+																		}
+																}
+													}
+										}
+								}
+					}								
+			},
+			"semi-supervised":{ 
+					"label": "semi-supervised multi-target regression task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000015",
+					"dataset specification": {
+								"label": "multi-target semi-labeled regression dataset",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000085",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based semi-labeled data without missing values and with record of reals output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_75863b45_3915_41d6_ad68_d3531afa3477",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives without missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																"is_datatype_role_of": {
+																		"label": "record of primitives datatype",
+																		"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																}
+													},
+													"target FC" : {
+																"label": "semi-labeled target record of reals field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_7ecc4073_bcca_4842_a081_11da91b50838",
+																"is_datatype_role_of" : {
+																		"label" : "choice(record of reals,void) datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_1ee18f9c_8348_4b52_82ab_4783ef57fa30",
+																		"has_alternative_component" : {
+																			"void" : {
+																					"label" : "void alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																					"is_datatype_role_of" : {
+																							"label" : "void datatype",
+																							"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																					}
+																			},
+																			"non-void" : {
+																					"label" : "record of reals alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_a2397721_2c02_4f52_9bf3_59ee9656cff4", 
+																					"is_datatype_role_of" : {
+																						"label" : "record of real datatype",
+																						"URI" : "http://ontodm.com/OntoDT#OntoDT_471356",
+																						"has_field_component" : {
+																								"label" : "real field component",
+																								"URI" : "http://ontodm.com/OntoDT#OntoDT_387565",
+																								"is_datatype_role_of" : {
+																										"label" : "real datatype",
+																										"URI" : "http://ontodm.com/OntoDT#OntoDT_150012"
+																								}
+																						}
+																			}
+																			}
+																		}
+																}
+													}
+										},
+										"with missing": {
+													"label": "feature-based semi-labeled data with missing values and with record of reals output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_d306d8a8_135a_4974_8d43_edff5762c594",
+													"descriptive FC" : {
+																"label": "descriptive record of primitives with missing values field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																"is_datatype_role_of": {
+																		"label": "record of choice(primitive,void)",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																}
+													},
+													"target FC" : {
+																"label": "semi-labeled target record of reals field component",
+																"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_7ecc4073_bcca_4842_a081_11da91b50838",
+																"is_datatype_role_of" : {
+																		"label" : "choice(record of reals,void) datatype",
+																		"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_1ee18f9c_8348_4b52_82ab_4783ef57fa30",
+																		"has_alternative_component" : {
+																			"void" : {
+																					"label" : "void alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																					"is_datatype_role_of" : {
+																							"label" : "void datatype",
+																							"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																					}
+																			},
+																			"non-void" : {
+																					"label" : "record of reals alternative component",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_a2397721_2c02_4f52_9bf3_59ee9656cff4", 
+																					"is_datatype_role_of" : {
+																						"label" : "record of real datatype",
+																						"URI" : "http://ontodm.com/OntoDT#OntoDT_471356",
+																						"has_field_component" : {
+																								"label" : "real field component",
+																								"URI" : "http://ontodm.com/OntoDT#OntoDT_387565",
+																								"is_datatype_role_of" : {
+																										"label" : "real datatype",
+																										"URI" : "http://ontodm.com/OntoDT#OntoDT_150012"
+																								}
+																						}
+																			}
+																			}
+																		}
+																}
+													}
+										}
+								}
+					}								
+			},
+			"online supervised": { 
+					"label": "online supervised multi-target regression task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000059",
+					"dataset specification": {
+								"label": "multi-target regression data stream",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000126",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based completely labeled stream data without missing values and with record of reals output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_698a3651_b3d4_41f8_b1bf_eed65b59b48a",
+													"has_base_datatype":{
+															"label": "feature-based completely labeled data without missing values and with record of reals output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_20016b8d72ac_2632_4684_a2f4_b397a097cc8a",
+															"is_datatype_role_of": {
+																	"label": "feature-based completely labeled data without missing values and with record of reals output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_b54fc26d_2460_4217_abcc_7fcfd51224ff",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives without missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																			"is_datatype_role_of": {
+																					"label": "record of primitives datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "completely labeled target record of reals field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000018",
+																			"is_datatype_role_of" : {
+																					"label" : "record of real datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_471356",
+																					"has_field_component" : {
+																							"label" : "real field component",
+																							"URI" : "http://ontodm.com/OntoDT#OntoDT_387565",
+																							"is_datatype_role_of" : {
+																									"label" : "real datatype",
+																									"URI" : "http://ontodm.com/OntoDT#OntoDT_150012"
+																							}
+																					}
+																			}
+																	}																	
+															}
+													}
+										},
+										"with missing": {
+													"label": "feature-based completely labeled stream data with missing values and with record of reals output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_1b9faa04_dffe_4950_a67c_b8b8f5527f31",
+													"has_base_datatype":{
+															"label": "feature-based completely labeled data with missing values and with record of reals output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_2001fc58f959_5cb5_45cf_a697_43dfe56f1cda",
+															"is_datatype_role_of": {
+																	"label": "feature-based completely labeled data with missing values and with record of reals output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_cfbadc29_2bff_4edc_8031_210d23589cda",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives with missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																			"is_datatype_role_of": {
+																					"label": "record of choice(primitive,void)",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																			}
+																	},
+																	"target FC" : {
+																			"label": "completely labeled target record of reals field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000018",
+																			"is_datatype_role_of" : {
+																					"label" : "record of real datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_471356",
+																					"has_field_component" : {
+																							"label" : "real field component",
+																							"URI" : "http://ontodm.com/OntoDT#OntoDT_387565",
+																							"is_datatype_role_of" : {
+																									"label" : "real datatype",
+																									"URI" : "http://ontodm.com/OntoDT#OntoDT_150012"
+																							}
+																					}
+																			}
+																	}
+																	
+															}
+													}
+													}
+								}
+					}
+								
+			},
+			"online semi-supervised": { 
+					"label": "online semi-supervised multi-target regression task",
+				   	"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000039",
+					"dataset specification": {
+								"label": "multi-target semi-labeled regression data stream",
+								"URI": "http://www.ontodm.com/OntoDM-core/OntoDT_10000000104",
+								"datatype": {
+										"without missing": {
+													"label": "feature-based semi-labeled stream data without missing values and with record of reals output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_4bbfeb5b_8741_4f7d_bee2_e55e5fa2d5fe",
+													"has_base_datatype":{
+															"label": "feature-based semi-labeled data without missing values and with record of reals output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_2001bce6f357_0880_4439_bf33_c69d4b889fe3",
+															"is_datatype_role_of": {
+																	"label": "feature-based semi-labeled data without missing values and with record of reals output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_75863b45_3915_41d6_ad68_d3531afa3477",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives without missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT#OntoDT_UC_0000020",
+																			"is_datatype_role_of": {
+																					"label": "record of primitives datatype",
+																					"URI" : "http://ontodm.com/OntoDT#OntoDT_521859"
+																			}
+																	},
+																	"target FC" : {
+																		"label": "semi-labeled target record of reals field component",
+																		"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_7ecc4073_bcca_4842_a081_11da91b50838",
+																		"is_datatype_role_of" : {
+																				"label" : "choice(record of reals,void) datatype",
+																				"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_1ee18f9c_8348_4b52_82ab_4783ef57fa30",
+																				"has_alternative_component" : {
+																					"void" : {
+																							"label" : "void alternative component",
+																							"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																							"is_datatype_role_of" : {
+																									"label" : "void datatype",
+																									"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																							}
+																					},
+																					"non-void" : {
+																							"label" : "record of reals alternative component",
+																							"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_a2397721_2c02_4f52_9bf3_59ee9656cff4", 
+																							"is_datatype_role_of" : {
+																								"label" : "record of real datatype",
+																								"URI" : "http://ontodm.com/OntoDT#OntoDT_471356",
+																								"has_field_component" : {
+																										"label" : "real field component",
+																										"URI" : "http://ontodm.com/OntoDT#OntoDT_387565",
+																										"is_datatype_role_of" : {
+																												"label" : "real datatype",
+																												"URI" : "http://ontodm.com/OntoDT#OntoDT_150012"
+																										}
+																								}
+																					}
+																					}
+																				}
+																		}
+															}																
+															}
+													}
+										},
+										"with missing": {
+													"label": "feature-based semi-labeled stream data with missing values and with record of reals output",
+													"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_7338de59_9d4d_4e68_b1b5_3c7d12f9c611",
+													"has_base_datatype":{
+															"label": "feature-based semi-labeled data with missing values and with record of reals output base type",
+															"URI": "http://www.ontodm.com/OntoDT/DMtypes/NDDO_2001ecac6bb6_bb56_48fe_bce3_ee3581b71b8d",
+															"is_datatype_role_of": {
+																	"label": "feature-based semi-labeled data with missing values and with record of reals output",
+																	"URI": "http://www.ontodm.com/OntoDT/DMtypes/DType_d306d8a8_135a_4974_8d43_edff5762c594",
+																	"descriptive FC" : {
+																			"label": "descriptive record of primitives with missing values field component",
+																			"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_5094d6ca_2dfd_4c8d_89ac_168830a9cf1e",
+																			"is_datatype_role_of": {
+																					"label": "record of choice(primitive,void)",
+																					"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_bf5a6f27_79ea_4c93_8a55_28c6d98b12ab"
+																			}
+																	},
+																	"target FC" : {
+																		"label": "semi-labeled target record of reals field component",
+																		"URI": "http://www.ontodm.com/OntoDT/DMtypes/DMType_7ecc4073_bcca_4842_a081_11da91b50838",
+																		"is_datatype_role_of" : {
+																				"label" : "choice(record of reals,void) datatype",
+																				"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_1ee18f9c_8348_4b52_82ab_4783ef57fa30",
+																				"has_alternative_component" : {
+																					"void" : {
+																							"label" : "void alternative component",
+																							"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_42e2a078_79a8_48f4_8f7d_dfdea663ea53", 
+																							"is_datatype_role_of" : {
+																									"label" : "void datatype",
+																									"URI" : "http://www.ontodm.com/OntoDT#OntoDM-Viz_00000"
+																							}
+																					},
+																					"non-void" : {
+																							"label" : "record of reals alternative component",
+																							"URI" : "http://www.ontodm.com/OntoDT/DMtypes/DMType_a2397721_2c02_4f52_9bf3_59ee9656cff4", 
+																							"is_datatype_role_of" : {
+																								"label" : "record of real datatype",
+																								"URI" : "http://ontodm.com/OntoDT#OntoDT_471356",
+																								"has_field_component" : {
+																										"label" : "real field component",
+																										"URI" : "http://ontodm.com/OntoDT#OntoDT_387565",
+																										"is_datatype_role_of" : {
+																												"label" : "real datatype",
+																												"URI" : "http://ontodm.com/OntoDT#OntoDT_150012"
+																										}
+																								}
+																					}
+																					}
+																				}
+																		}
+															}																
+															}
+													}
+										}
+								}
+					}								
+			}
+		}
+	}

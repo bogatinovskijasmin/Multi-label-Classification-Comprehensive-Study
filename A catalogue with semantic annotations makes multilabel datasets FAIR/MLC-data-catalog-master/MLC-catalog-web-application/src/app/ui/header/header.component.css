@@ -1,0 +1,22 @@
+span{
+    color: white;
+}
+.navbar-brand{
+    font-size: 15pt;
+    padding-top: 10px;
+}
+.navbar{
+    z-index: 100;
+    /* background-color: #009999; */
+    background-color: #1f2b33!important;
+}
+.nav-item{
+    font-size: 15pt;
+    color: rgb(209, 210, 218)!important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-item:hover{
+    color: rgb(155, 156, 161)!important;
+    font-family: Arial, Helvetica, sans-serif;
+}
